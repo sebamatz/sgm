@@ -21,31 +21,36 @@ export const translations = {
       title: "Our Services",
       web: {
         title: "Web Development",
-        description: "Creating responsive and dynamic web applications using cutting-edge technologies.",
+        description:
+          "Creating responsive and dynamic web applications using cutting-edge technologies.",
         longDescription:
           "Our web development service focuses on building modern, scalable, and user-friendly websites and web applications. We use the latest frameworks and technologies to ensure your web presence is not just visually appealing but also performant and secure.",
       },
       backend: {
         title: "Backend Development",
-        description: "Building robust and scalable server-side solutions to power your applications.",
+        description:
+          "Building robust and scalable server-side solutions to power your applications.",
         longDescription:
           "Our backend development service provides the foundation for your digital products. We design and implement efficient, secure, and scalable server-side architectures that can handle high loads and complex business logic.",
       },
       mobile: {
         title: "Mobile App Development",
-        description: "Developing cross-platform mobile applications for iOS and Android devices.",
+        description:
+          "Developing cross-platform mobile applications for iOS and Android devices.",
         longDescription:
           "We specialize in creating native and cross-platform mobile applications that provide seamless user experiences across iOS and Android devices. Our mobile apps are designed to be fast, responsive, and aligned with the latest mobile design trends.",
       },
       erp: {
         title: "ERP Customization",
-        description: "Tailoring ERP systems to meet your specific business needs and processes.",
+        description:
+          "Tailoring ERP systems to meet your specific business needs and processes.",
         longDescription:
           "Our ERP customization service helps businesses optimize their operations by tailoring Enterprise Resource Planning systems to their unique needs. We integrate, customize, and extend ERP solutions to streamline your business processes and improve overall efficiency.",
       },
       legacy: {
         title: "Legacy Systems Migration",
-        description: "Modernizing and migrating old systems to current technologies for improved efficiency.",
+        description:
+          "Modernizing and migrating old systems to current technologies for improved efficiency.",
         longDescription:
           "We help businesses transition from outdated legacy systems to modern, efficient technologies. Our legacy systems migration service ensures a smooth transition, minimizing disruption while maximizing the benefits of updated technology stacks.",
       },
@@ -69,7 +74,8 @@ export const translations = {
       copyright: "© 2025 SGM Software Development. All rights reserved.",
     },
     clients: {
-      title: "Trusted by Industry Leaders",
+      subtitle: "Trusted By Industry Leaders",
+      title: "Powering the world's most ambitious brands.",
     },
   },
   el: {
@@ -85,16 +91,17 @@ export const translations = {
       getStarted: "Ξεκινήστε",
     },
     hero: {
-      title: "Καινοτόμες Λύσεις Software Development",
+      title: "Καινοτόμες Λύσεις Software",
       subtitle:
         "Μετατρέπουμε ιδέες σε εφαρμογές. Αφήστε την SGM Software Development να χτίσει το μέλλον μαζί σας.",
-      cta: "Εξερευνήστε τις Υπηρεσίες μας",
+      cta: "Οι Υπηρεσίες μας",
     },
     services: {
       title: "Οι Υπηρεσίες μας",
       web: {
         title: "Ανάπτυξη Ιστοσελίδων",
-        description: "Δημιουργούμε δυναμικές και προσαρμοστικές εφαρμογές ιστού χρησιμοποιώντας τεχνολογίες αιχμής.",
+        description:
+          "Δημιουργούμε δυναμικές και προσαρμοστικές εφαρμογές ιστού χρησιμοποιώντας τεχνολογίες αιχμής.",
         longDescription:
           "Η υπηρεσία ανάπτυξης ιστοσελίδων μας επικεντρώνεται στη δημιουργία σύγχρονων, κλιμακούμενων και φιλικών προς το χρήστη ιστοσελίδων και διαδικτυακών εφαρμογών. Χρησιμοποιούμε τα πιο σύγχρονα πλαίσια και τεχνολογίες για να διασφαλίσουμε ότι η διαδικτυακή σας παρουσία είναι όχι μόνο οπτικά ελκυστική αλλά και αποδοτική και ασφαλής.",
       },
@@ -107,7 +114,8 @@ export const translations = {
       },
       mobile: {
         title: "Ανάπτυξη Εφαρμογών για Κινητά",
-        description: "Αναπτύσσουμε εφαρμογές για κινητά για συσκευές iOS και Android.",
+        description:
+          "Αναπτύσσουμε εφαρμογές για κινητά για συσκευές iOS και Android.",
         longDescription:
           "Ειδικευόμαστε στη δημιουργία εγγενών και cross-platform εφαρμογών για κινητά που παρέχουν απρόσκοπτες εμπειρίες χρήστη σε συσκευές iOS και Android. Οι εφαρμογές μας για κινητά είναι σχεδιασμένες να είναι γρήγορες, ανταποκρίσιμες και ευθυγραμμισμένες με τις τελευταίες τάσεις σχεδιασμού για κινητά.",
       },
@@ -136,28 +144,29 @@ export const translations = {
     },
     contact: {
       title: "Επικοινωνήστε μαζί μας",
-      name: "Όνομα",
+      name: "ονομα",
       email: "Email",
-      message: "Μήνυμα",
+      message: "Μηνυμα",
       submit: "Αποστολή Μηνύματος",
     },
     footer: {
-      copyright: "© 2025 SGM Software Development. Όλα τα δικαιώματα διατηρούνται.",
+      copyright:
+        "© 2025 SGM Software Development. Όλα τα δικαιώματα διατηρούνται.",
     },
     clients: {
-      title: "Εμπιστεύονται από Ηγέτες της Βιομηχανίας",
+      subtitle: "Εμπιστοσυνη Απο Κορυφαιες Εταιρειες",
+      title: "Ενδυναμώνουμε τα πιο φιλόδοξα brands παγκοσμίως.",
     },
   },
-}
+};
 
-export const defaultLocale = 'en'
-export const locales = ['en', 'el'] as const
+export const defaultLocale = "en";
+export const locales = ["en", "el"] as const;
 
-export type Locale = (typeof locales)[number]
+export type Locale = (typeof locales)[number];
 
 export function getLocale(lang?: string): Locale {
-  if (!lang) return defaultLocale
-  const locale = locales.find(l => l === lang)
-  return locale || defaultLocale
+  if (!lang) return defaultLocale;
+  const locale = locales.find((l) => l === lang);
+  return locale || defaultLocale;
 }
-
