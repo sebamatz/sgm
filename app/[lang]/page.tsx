@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/header";
 import Hero from "./components/hero";
 import Services from "./components/services";
 import Clients from "./components/clients";
