@@ -1,23 +1,38 @@
-import { notFound } from "next/navigation"
-import { translations } from "../../../lib/translations"
+import { notFound } from "next/navigation";
+import { translations } from "../../../lib/translations";
 
-export default function ServicePage({ params }: { params: { lang: string; service: string } }) {
-  const t = translations[params.lang as keyof typeof translations]
-  const serviceData = t.services[params.service as keyof typeof t.services]
+export default async function ServicePage({
+  params,
+}: {
+  params: Promise<{ lang: string; service: string }>;
+}) {
+  const { lang, service } = await params;
 
-  if (!serviceData) {
-    notFound()
+  const t = translations[lang as keyof typeof translations];
+
+  if (!t || !t.services) {
+    notFound();
   }
 
+  const serviceData = t.services[service as keyof typeof t.services];
+
+  // 🛠️ THE TYPE GUARD FIX: Kills the TS error by filtering out strings
+  if (!serviceData || typeof serviceData === "string") {
+    notFound();
+  }
+
+  // TypeScript now confidently knows 'serviceData' is your object
   return (
     <div className="container mx-auto py-20 px-4">
-      <h1 className="text-4xl font-bold mb-8 text-primary">{serviceData.title}</h1>
+      <h1 className="text-4xl font-bold mb-8 text-primary">
+        {serviceData.title}
+      </h1>
       <p className="text-xl mb-8 text-primary/80">{serviceData.description}</p>
       <div className="prose prose-invert max-w-none">
         <p>{serviceData.longDescription}</p>
       </div>
     </div>
-  )
+  );
 }
 
 export function generateStaticParams() {
@@ -32,6 +47,5 @@ export function generateStaticParams() {
     { lang: "el", service: "mobile" },
     { lang: "el", service: "erp" },
     { lang: "el", service: "legacy" },
-  ]
+  ];
 }
-
