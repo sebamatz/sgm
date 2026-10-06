@@ -1,10 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ArrowUpRight, Mail, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, Mail, CheckCircle2, AlertCircle } from "lucide-react";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (container: string | HTMLElement, options: any) => string;
+      reset: (widgetId: string) => void;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
 
 export default function Contact({
   lang,
@@ -18,20 +28,74 @@ export default function Contact({
   const t = translations;
   const premiumEase = [0.16, 1, 0.3, 1] as const;
 
-  // 🛠️ DISTINCT HOOKS: Taking absolute control of the data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [timestamp, setTimestamp] = useState<number | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
 
-  // 🛠️ UI States
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string>("");
+
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<string | null>(null);
+
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+  useEffect(() => {
+    setTimestamp(Date.now());
+  }, []);
+
+  useEffect(() => {
+    if (!turnstileSiteKey || !turnstileRef.current) return;
+
+    const loadTurnstile = () => {
+      if (window.turnstile && turnstileRef.current && !turnstileWidgetId.current) {
+        turnstileWidgetId.current = window.turnstile.render(turnstileRef.current, {
+          sitekey: turnstileSiteKey,
+          callback: (token: string) => setTurnstileToken(token),
+          "error-callback": () => {
+            console.warn("Turnstile error");
+            setTurnstileToken("");
+          },
+        });
+      }
+    };
+
+    if (window.turnstile) {
+      loadTurnstile();
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+      script.async = true;
+      script.defer = true;
+      script.onload = loadTurnstile;
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      if (window.turnstile && turnstileWidgetId.current) {
+        window.turnstile.remove(turnstileWidgetId.current);
+        turnstileWidgetId.current = null;
+      }
+    };
+  }, [turnstileSiteKey]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
 
-    const payload = { name, email, message };
+    const payload = {
+      name,
+      email,
+      message,
+      honeypot,
+      timestamp,
+      ...(turnstileSiteKey && turnstileToken ? { botToken: turnstileToken } : {}),
+    };
 
     try {
       const response = await fetch("/api/contact", {
@@ -40,19 +104,27 @@ export default function Contact({
         body: JSON.stringify(payload),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setIsSuccess(true);
-        // Wipe the fields instantly upon success
         setName("");
         setEmail("");
         setMessage("");
+        setHoneypot("");
+        setTimestamp(Date.now());
+
+        if (window.turnstile && turnstileWidgetId.current) {
+          window.turnstile.reset(turnstileWidgetId.current);
+        }
 
         setTimeout(() => setIsSuccess(false), 5000);
       } else {
-        console.error("Failed to send");
+        setError(data.error || "Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error("API Error", error);
+      setError("Network error. Please check your connection and try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -101,8 +173,19 @@ export default function Contact({
             transition={{ duration: 1, delay: 0.2 }}
             className="w-full lg:col-span-5 lg:pl-8 pt-4"
           >
-            {/* 🛠️ Wired the onSubmit handler */}
             <form onSubmit={handleSubmit} className="space-y-12">
+              {/* Honeypot field - hidden from users */}
+              <div className="absolute opacity-0 pointer-events-none" aria-hidden="true">
+                <Input
+                  type="text"
+                  name="website"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
               <div className="group relative">
                 <label className="block text-xs font-black uppercase tracking-[0.2em] text-zinc-500 group-focus-within:text-blue-500 transition-colors duration-300 mb-4">
                   {t.name}
@@ -111,10 +194,10 @@ export default function Contact({
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  /* 🛠️ INJECTED: text-white guarantees visibility */
                   className="rounded-none border-x-0 border-t-0 border-b border-white/10 bg-transparent p-2 text-white text-xl md:text-2xl focus-visible:ring-0 focus-visible:border-blue-500 transition-all duration-500 h-14"
                   required
                   disabled={isSubmitting}
+                  maxLength={100}
                 />
               </div>
 
@@ -126,10 +209,10 @@ export default function Contact({
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  /* 🛠️ INJECTED: text-white guarantees visibility */
                   className="rounded-none border-x-0 border-t-0 border-b border-white/10 bg-transparent p-2 text-white text-xl md:text-2xl focus-visible:ring-0 focus-visible:border-blue-500 transition-all duration-500 h-14"
                   required
                   disabled={isSubmitting}
+                  maxLength={255}
                 />
               </div>
 
@@ -141,12 +224,23 @@ export default function Contact({
                   rows={4}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  /* 🛠️ INJECTED: text-white guarantees visibility */
                   className="rounded-none border-x-0 border-t-0 border-b border-white/10 bg-transparent p-2 text-white text-xl md:text-2xl focus-visible:ring-0 focus-visible:border-blue-500 transition-all duration-500 resize-none overflow-hidden"
                   required
                   disabled={isSubmitting}
+                  maxLength={5000}
                 />
               </div>
+
+              {turnstileSiteKey && (
+                <div ref={turnstileRef} className="flex justify-center" />
+              )}
+
+              {error && (
+                <div className="flex items-start gap-3 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+                  <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                  <p className="text-red-400 text-sm">{error}</p>
+                </div>
+              )}
 
               <button
                 type="submit"
@@ -157,7 +251,7 @@ export default function Contact({
                   isSuccess
                     ? "bg-green-500 text-white"
                     : "bg-white hover:bg-zinc-200 text-black"
-                } disabled:cursor-not-allowed`}
+                } disabled:cursor-not-allowed disabled:opacity-50`}
               >
                 {isSubmitting ? (
                   <span className="relative z-10 animate-pulse">
