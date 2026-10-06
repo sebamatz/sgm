@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { translations, locales } from "../lib/translations";
 import React, { ReactNode } from "react";
-import SmoothScroll from "../../components/SmoothScroll";
 
 export async function generateMetadata({
   params,
@@ -56,12 +55,8 @@ export default async function LangLayout({
 
   return (
     <>
-      {/* CSS Preload Killer */}
-      <span className="sr-only opacity-0 invisible" aria-hidden="true" />
-
-      {/* Main App Wrapper */}
-      <div lang={lang} className="min-h-screen bg-[#050505] text-foreground antialiased selection:bg-white selection:text-black overflow-x-hidden">
-        <SmoothScroll>{children as any}</SmoothScroll>
+      <div lang={lang} className="min-h-screen bg-white text-foreground antialiased">
+        {children}
       </div>
     </>
   );

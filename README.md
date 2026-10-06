@@ -37,7 +37,7 @@ To enable email delivery, you need to set up a Gmail account with an App Passwor
 Set the following environment variables in your Vercel project:
 
 **Required:**
-- `GMAIL_USER` - Your Gmail address (e.g., hello@sgmsoftware.com)
+- `GMAIL_USER` - Your Gmail address (e.g., your-email@gmail.com)
 - `GMAIL_APP_PASSWORD` - The 16-character App Password from Step 2
 
 **Optional:**

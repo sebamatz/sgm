@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import { translations, locales } from "../../../lib/translations";
 import type { Metadata } from "next";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -78,36 +76,32 @@ export default async function ServicePage({
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
-      <Header lang={lang} translations={t.header} />
-      <main className="flex-1">
-        <div className="w-full max-w-5xl mx-auto px-6 md:px-8 py-16 md:py-32">
-          <Link
-            href={`/${lang}#services`}
-            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12 group"
-          >
-            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-            <span>{t.header.services}</span>
-          </Link>
+    <div className="min-h-screen bg-white">
+      <div className="w-full max-w-4xl mx-auto px-6 md:px-8 py-32">
+        <Link
+          href={`/${lang}#services`}
+          className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 mb-12 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back
+        </Link>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6">
-            {serviceData.title}
-          </h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 mb-6">
+          {serviceData.title}
+        </h1>
 
-          <p className="text-xl md:text-2xl text-zinc-400 mb-12 leading-relaxed">
-            {serviceData.description}
+        <p className="text-xl text-neutral-600 mb-12 leading-relaxed">
+          {serviceData.description}
+        </p>
+
+        <div className="w-16 h-px bg-neutral-200 mb-12" />
+
+        <div className="prose prose-neutral max-w-none">
+          <p className="text-lg text-neutral-700 leading-relaxed">
+            {serviceData.longDescription}
           </p>
-
-          <div className="prose prose-invert prose-lg max-w-none">
-            <div className="p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-2xl">
-              <p className="text-lg text-zinc-300 leading-relaxed whitespace-pre-line">
-                {serviceData.longDescription}
-              </p>
-            </div>
-          </div>
         </div>
-      </main>
-      <Footer translations={t.footer} />
+      </div>
     </div>
   );
 }
