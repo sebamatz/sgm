@@ -197,8 +197,12 @@ export default function Contact({
                   className="rounded-none border-x-0 border-t-0 border-b border-white/10 bg-transparent p-2 text-white text-xl md:text-2xl focus-visible:ring-0 focus-visible:border-blue-500 transition-all duration-500 h-14"
                   required
                   disabled={isSubmitting}
+                  minLength={2}
                   maxLength={100}
                 />
+                {name.length > 0 && name.length < 2 && (
+                  <p className="text-xs text-zinc-500 mt-2">Minimum 2 characters</p>
+                )}
               </div>
 
               <div className="group relative">
@@ -227,8 +231,12 @@ export default function Contact({
                   className="rounded-none border-x-0 border-t-0 border-b border-white/10 bg-transparent p-2 text-white text-xl md:text-2xl focus-visible:ring-0 focus-visible:border-blue-500 transition-all duration-500 resize-none overflow-hidden"
                   required
                   disabled={isSubmitting}
+                  minLength={10}
                   maxLength={5000}
                 />
+                {message.length > 0 && message.length < 10 && (
+                  <p className="text-xs text-zinc-500 mt-2">Minimum 10 characters ({message.length}/10)</p>
+                )}
               </div>
 
               {turnstileSiteKey && (
