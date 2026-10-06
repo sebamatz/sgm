@@ -142,7 +142,7 @@ export async function POST(request: Request) {
     
     const parsed = contactSchema.safeParse(body);
     if (!parsed.success) {
-      const errors = parsed.error.errors.map((e) => e.message).join(", ");
+      const errors = parsed.error.issues.map((e) => e.message).join(", ");
       return NextResponse.json(
         { error: `Validation error: ${errors}` },
         { status: 400 }
