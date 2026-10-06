@@ -154,14 +154,18 @@ export default function Contact({
                 {t.title}
               </h2>
               <div className="mt-12 flex flex-col gap-6">
-                <div className="flex items-center gap-4 text-zinc-500 hover:text-white transition-all duration-500 group cursor-pointer">
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-colors">
-                    <Mail className="w-5 h-5 group-hover:text-blue-500" />
-                  </div>
-                  <span className="text-xl font-medium text-white">
-                    hello@sgmsoftware.com
-                  </span>
-                </div>
+                <p className="text-lg text-zinc-400">
+                  Use the form to send us a message, or reach out via{" "}
+                  <a
+                    href="https://www.linkedin.com/in/sevastos-matzouranis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-400 underline transition-colors"
+                  >
+                    LinkedIn
+                  </a>
+                  .
+                </p>
               </div>
             </motion.div>
           </div>

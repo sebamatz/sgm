@@ -12,20 +12,23 @@ import {
 import Link from "next/link";
 
 const serviceIcons = {
-  web: (
+  frontend: (
     <Code className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
   ),
-  backend: (
+  custom: (
     <Server className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
   ),
-  mobile: (
-    <Smartphone className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
-  ),
-  erp: (
+  consulting: (
     <Database className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
   ),
-  legacy: (
+  platforms: (
+    <Smartphone className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
+  ),
+  enterprise: (
     <RefreshCw className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
+  ),
+  modernization: (
+    <ArrowRight className="h-8 w-8 text-white transition-transform duration-500 group-hover:scale-110" />
   ),
 };
 
@@ -62,29 +65,34 @@ export default function Services({
 }) {
   const services = [
     {
-      key: "web",
-      title: translations.web.title,
-      description: translations.web.description,
+      key: "frontend",
+      title: translations.frontend.title,
+      description: translations.frontend.description,
     },
     {
-      key: "backend",
-      title: translations.backend.title,
-      description: translations.backend.description,
+      key: "custom",
+      title: translations.custom.title,
+      description: translations.custom.description,
     },
     {
-      key: "mobile",
-      title: translations.mobile.title,
-      description: translations.mobile.description,
+      key: "consulting",
+      title: translations.consulting.title,
+      description: translations.consulting.description,
     },
     {
-      key: "erp",
-      title: translations.erp.title,
-      description: translations.erp.description,
+      key: "platforms",
+      title: translations.platforms.title,
+      description: translations.platforms.description,
     },
     {
-      key: "legacy",
-      title: translations.legacy.title,
-      description: translations.legacy.description,
+      key: "enterprise",
+      title: translations.enterprise.title,
+      description: translations.enterprise.description,
+    },
+    {
+      key: "modernization",
+      title: translations.modernization.title,
+      description: translations.modernization.description,
     },
   ];
 
