@@ -140,7 +140,7 @@ export default function Contact({
           <div className="lg:col-span-5">
             <div className="mb-12 md:mb-16">
               <p className="text-xs font-semibold tracking-wider text-indigo-600 uppercase mb-3">
-                Contact
+                {t.title}
               </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-6">
                 {t.title}

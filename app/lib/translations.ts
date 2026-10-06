@@ -16,9 +16,11 @@ export const translations = {
       subtitle:
         "Custom web applications, React/Next.js development, and frontend architecture. Delivering production-ready solutions for businesses across Greece and Europe.",
       cta: "Explore Our Services",
+      contact: "Contact",
     },
     services: {
       title: "Services",
+      back: "Back",
       frontend: {
         title: "Frontend Development & Architecture",
         description:
@@ -85,10 +87,14 @@ export const translations = {
     },
     footer: {
       copyright: "© {year} SGM Software Developers. All rights reserved.",
+      navigate: "Navigate",
+      connect: "Connect",
     },
     projects: {
       title: "Experience & Collaborations",
       subtitle: "Projects & Experience",
+      roleFreelance: "Freelance/Contract",
+      roleTeamMember: "Team Member",
       categories: {
         government: "Government & EU Institutions",
         travel: "Travel & Booking Platforms",
@@ -164,9 +170,11 @@ export const translations = {
       subtitle:
         "Custom web εφαρμογές, React/Next.js development και frontend αρχιτεκτονική. Παραδίδουμε production-ready λύσεις για επιχειρήσεις σε Ελλάδα και Ευρώπη.",
       cta: "Οι Υπηρεσίες μας",
+      contact: "Επικοινωνία",
     },
     services: {
       title: "Υπηρεσίες",
+      back: "Πίσω",
       frontend: {
         title: "Frontend Development & Αρχιτεκτονική",
         description:
@@ -234,10 +242,14 @@ export const translations = {
     footer: {
       copyright:
         "© {year} SGM Software Developers. Όλα τα δικαιώματα διατηρούνται.",
+      navigate: "Πλοήγηση",
+      connect: "Επικοινωνία",
     },
     projects: {
       title: "Εμπειρία & Συνεργασίες",
       subtitle: "Έργα & Εμπειρία",
+      roleFreelance: "Freelance/Σύμβαση",
+      roleTeamMember: "Μέλος Ομάδας",
       categories: {
         government: "Κυβερνητικοί & Φορείς ΕΕ",
         travel: "Travel & Booking Platforms",

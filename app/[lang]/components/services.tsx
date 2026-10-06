@@ -69,7 +69,7 @@ export default function Services({
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-16 md:mb-20">
           <p className="text-xs font-semibold tracking-wider text-indigo-600 uppercase mb-3">
-            Services
+            {translations.title}
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-4">
             {translations.title}

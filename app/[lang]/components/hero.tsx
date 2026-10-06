@@ -52,7 +52,7 @@ export default function Hero({ translations }: { translations: any }) {
               variant="outline"
               className="border-2 border-indigo-200 text-indigo-700 hover:bg-indigo-50 px-8 h-12 text-base font-medium transition-colors"
             >
-              Contact
+              {translations.contact}
             </Button>
           </div>
         </div>

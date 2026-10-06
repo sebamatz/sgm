@@ -59,7 +59,7 @@ export default function Clients({ translations }: { translations: any }) {
                             ? 'bg-slate-100 text-slate-700 border border-slate-200' 
                             : 'bg-indigo-100 text-indigo-700 border border-indigo-200'
                         }`}>
-                          {isTeamMember ? 'Team Member' : 'Freelance/Contract'}
+                          {isTeamMember ? t.roleTeamMember : t.roleFreelance}
                         </span>
                       </div>
                       <div className="flex items-center gap-3 text-sm text-slate-600 mb-3">

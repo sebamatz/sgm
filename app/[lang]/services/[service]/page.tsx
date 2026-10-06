@@ -83,7 +83,7 @@ export default async function ServicePage({
           className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 mb-12 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back
+          {t.services.back}
         </Link>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 mb-6">

@@ -4,7 +4,7 @@ import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { contactConfig } from "@/app/lib/contact-config";
 
-export default function Footer({ translations }: { translations: any }) {
+export default function Footer({ translations, headerTranslations }: { translations: any; headerTranslations: any }) {
   const currentYear = new Date().getFullYear();
   const copyright = translations.copyright.replace("{year}", currentYear.toString());
 
@@ -26,16 +26,20 @@ export default function Footer({ translations }: { translations: any }) {
 
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Navigate
+              {translations.navigate}
             </h4>
             <ul className="space-y-2">
-              {["Services", "About", "Contact"].map((item) => (
-                <li key={item}>
+              {[
+                { key: "services", label: headerTranslations.services },
+                { key: "about", label: headerTranslations.about },
+                { key: "contact", label: headerTranslations.contact },
+              ].map((item) => (
+                <li key={item.key}>
                   <Link
-                    href={`#${item.toLowerCase()}`}
+                    href={`#${item.key}`}
                     className="text-slate-400 hover:text-indigo-400 transition-colors text-sm"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -44,7 +48,7 @@ export default function Footer({ translations }: { translations: any }) {
 
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              Connect
+              {translations.connect}
             </h4>
             <div className="flex gap-4 mb-6">
               {contactConfig.github && (
