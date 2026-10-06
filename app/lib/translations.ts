@@ -66,7 +66,7 @@ export const translations = {
       title: "About SGM Software Developers",
       subtitle: "Experience & Expertise",
       description1:
-        "SGM Software Developers is led by Sevastos Matzouranis, a Senior Frontend Engineer and Team Leader with more than 10 years of professional experience. Based in Athens, Greece, we deliver custom software and web applications for clients across Greece and Europe.",
+        "SGM Software Developers is led by Sevastos Matzouranis, a Senior Frontend Engineer and Team Leader with more than 10 years of professional experience. Based in Greece, working fully remotely with clients across Greece and Europe.",
       description2:
         "Our founder recently led the frontend team building ENISA's Single Reporting Platform for national cybersecurity teams across the EU. Prior experience includes work for the European Patent Office, major travel and booking platforms, enterprise SaaS products, and marketplaces. We specialize in React, Next.js, TypeScript, complex UI architecture, and production systems that handle real-world requirements.",
       techTitle: "Technology Stack",
@@ -84,11 +84,11 @@ export const translations = {
       submit: "Send Message",
     },
     footer: {
-      copyright: "© 2025 SGM Software Developers. All rights reserved.",
+      copyright: "© {year} SGM Software Developers. All rights reserved.",
     },
     projects: {
       title: "Experience & Collaborations",
-      subtitle: "Projects & Clients",
+      subtitle: "Projects & Experience",
       categories: {
         government: "Government & EU Institutions",
         travel: "Travel & Booking Platforms",
@@ -214,7 +214,7 @@ export const translations = {
       title: "Σχετικά με την SGM Software Developers",
       subtitle: "Εμπειρία & Τεχνογνωσία",
       description1:
-        "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, έναν Senior Frontend Engineer και Team Leader με περισσότερα από 10 χρόνια επαγγελματικής εμπειρίας. Με έδρα την Αθήνα, παραδίδουμε custom λογισμικό και web εφαρμογές για πελάτες σε Ελλάδα και Ευρώπη.",
+        "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, έναν Senior Frontend Engineer και Team Leader με περισσότερα από 10 χρόνια επαγγελματικής εμπειρίας. Με έδρα την Ελλάδα, εργαζόμαστε πλήρως απομακρυσμένα με πελάτες σε Ελλάδα και Ευρώπη.",
       description2:
         "Ο ιδρυτής μας πρόσφατα ηγήθηκε της frontend ομάδας που κατασκεύασε το Single Reporting Platform του ENISA για εθνικές ομάδες κυβερνοασφάλειας σε ολόκληρη την ΕΕ. Προηγούμενη εμπειρία περιλαμβάνει εργασία για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, σημαντικές travel και booking platforms, enterprise SaaS προϊόντα και marketplaces. Ειδικευόμαστε σε React, Next.js, TypeScript, πολύπλοκη UI αρχιτεκτονική και production συστήματα που χειρίζονται πραγματικές απαιτήσεις.",
       techTitle: "Τεχνολογίες",
@@ -233,11 +233,11 @@ export const translations = {
     },
     footer: {
       copyright:
-        "© 2025 SGM Software Developers. Όλα τα δικαιώματα διατηρούνται.",
+        "© {year} SGM Software Developers. Όλα τα δικαιώματα διατηρούνται.",
     },
     projects: {
       title: "Εμπειρία & Συνεργασίες",
-      subtitle: "Έργα & Πελάτες",
+      subtitle: "Έργα & Εμπειρία",
       categories: {
         government: "Κυβερνητικοί & Φορείς ΕΕ",
         travel: "Travel & Booking Platforms",

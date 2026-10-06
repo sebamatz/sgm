@@ -94,7 +94,7 @@ export default function Footer({ translations }: { translations: any }) {
         <div className="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center gap-6">
           <div className="flex items-center gap-6">
             <p className="text-zinc-600 text-[11px] font-bold uppercase tracking-wider">
-              {translations.copyright || `© ${currentYear} SGM SOFTWARE`}
+              {translations.copyright.replace('{year}', currentYear.toString()) || `© ${currentYear} SGM SOFTWARE`}
             </p>
           </div>
         </div>
