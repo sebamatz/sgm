@@ -131,13 +131,6 @@ export async function POST(request: Request) {
   try {
     const clientIp = getClientIp(request);
 
-    if (isRateLimited(clientIp)) {
-      return NextResponse.json(
-        { error: "Too many submissions. Please try again later." },
-        { status: 429 }
-      );
-    }
-
     const body = await request.json();
     
     const parsed = contactSchema.safeParse(body);
@@ -166,6 +159,13 @@ export async function POST(request: Request) {
     if (timeTaken < MINIMUM_SUBMIT_TIME) {
       console.warn(`Submission too fast from IP: ${clientIp} (${timeTaken}ms)`);
       return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    if (isRateLimited(clientIp)) {
+      return NextResponse.json(
+        { error: "Too many submissions. Please try again later." },
+        { status: 429 }
+      );
     }
 
     const botVerification = await checkBotId();
