@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { z } from "zod";
+import { checkBotId } from "botid/server";
 
 const contactSchema = z.object({
   name: z
@@ -27,6 +28,7 @@ const contactSchema = z.object({
 });
 
 const MINIMUM_SUBMIT_TIME = 3000;
+const MAXIMUM_FORM_AGE = 3600000;
 const RATE_LIMIT_WINDOW = 10 * 60 * 1000;
 const MAX_SUBMISSIONS_PER_WINDOW = 3;
 const MAX_LINKS_IN_MESSAGE = 2;
@@ -90,42 +92,39 @@ function checkContentHeuristics(message: string): string | null {
   return null;
 }
 
-async function verifyBotProtection(
-  request: Request,
-  botToken?: string
-): Promise<boolean> {
-  const vercelBotScore = request.headers.get("x-vercel-bot-score");
-  
-  if (vercelBotScore !== null) {
-    const score = parseFloat(vercelBotScore);
-    if (score > 0.5) {
-      console.warn(`Vercel BotID detected potential bot (score: ${score})`);
-      return false;
-    }
+async function verifyTurnstile(botToken?: string): Promise<boolean> {
+  if (!process.env.TURNSTILE_SECRET_KEY) {
     return true;
   }
 
-  if (process.env.TURNSTILE_SECRET_KEY && botToken) {
-    try {
-      const verifyUrl = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
-      const verifyResponse = await fetch(verifyUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          secret: process.env.TURNSTILE_SECRET_KEY,
-          response: botToken,
-        }),
-      });
-
-      const verifyData = await verifyResponse.json();
-      return verifyData.success === true;
-    } catch (error) {
-      console.error("Turnstile verification error:", error);
-      return true;
-    }
+  if (!botToken) {
+    console.warn("Turnstile configured but no token provided");
+    return false;
   }
 
-  return true;
+  try {
+    const verifyUrl = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+    const verifyResponse = await fetch(verifyUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: process.env.TURNSTILE_SECRET_KEY,
+        response: botToken,
+      }),
+    });
+
+    const verifyData = await verifyResponse.json();
+    
+    if (!verifyData.success) {
+      console.warn("Turnstile verification failed:", verifyData["error-codes"]);
+      return false;
+    }
+    
+    return true;
+  } catch (error) {
+    console.error("Turnstile verification error:", error);
+    return false;
+  }
 }
 
 export async function POST(request: Request) {
@@ -157,19 +156,31 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true }, { status: 200 });
     }
 
-    if (timestamp) {
-      const timeTaken = Date.now() - timestamp;
-      if (timeTaken < MINIMUM_SUBMIT_TIME) {
-        console.warn(`Submission too fast from IP: ${clientIp} (${timeTaken}ms)`);
-        return NextResponse.json({ success: true }, { status: 200 });
-      }
+    const now = Date.now();
+    if (!timestamp || timestamp > now || timestamp < now - MAXIMUM_FORM_AGE) {
+      console.warn(`Invalid or missing timestamp from IP: ${clientIp}`);
+      return NextResponse.json({ success: true }, { status: 200 });
     }
 
-    const botCheckPassed = await verifyBotProtection(request, botToken);
-    if (!botCheckPassed) {
-      console.warn(`Bot protection failed from IP: ${clientIp}`);
+    const timeTaken = now - timestamp;
+    if (timeTaken < MINIMUM_SUBMIT_TIME) {
+      console.warn(`Submission too fast from IP: ${clientIp} (${timeTaken}ms)`);
+      return NextResponse.json({ success: true }, { status: 200 });
+    }
+
+    const botVerification = await checkBotId();
+    if (botVerification.isBot) {
+      console.warn(`Vercel BotID detected bot from IP: ${clientIp}`);
       return NextResponse.json(
-        { error: "Bot protection verification failed" },
+        { error: "Bot protection verification failed. Please try again." },
+        { status: 403 }
+      );
+    }
+
+    const turnstileValid = await verifyTurnstile(botToken);
+    if (!turnstileValid) {
+      return NextResponse.json(
+        { error: "Security verification failed. Please try again." },
         { status: 403 }
       );
     }

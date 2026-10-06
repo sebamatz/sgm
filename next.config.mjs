@@ -1,3 +1,5 @@
+import { withBotId } from 'botid/next/config';
+
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -7,9 +9,6 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -45,4 +44,4 @@ function mergeConfig(nextConfig, userConfig) {
   }
 }
 
-export default nextConfig
+export default withBotId(nextConfig)
