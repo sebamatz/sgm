@@ -11,12 +11,12 @@ import {
 import Link from "next/link";
 
 const serviceIcons = {
-  frontend: <Code className="h-6 w-6 text-neutral-900" />,
-  custom: <Server className="h-6 w-6 text-neutral-900" />,
-  consulting: <Users className="h-6 w-6 text-neutral-900" />,
-  platforms: <Smartphone className="h-6 w-6 text-neutral-900" />,
-  enterprise: <Database className="h-6 w-6 text-neutral-900" />,
-  modernization: <RefreshCw className="h-6 w-6 text-neutral-900" />,
+  frontend: <Code className="h-5 w-5 text-indigo-700" />,
+  custom: <Server className="h-5 w-5 text-indigo-700" />,
+  consulting: <Users className="h-5 w-5 text-indigo-700" />,
+  platforms: <Smartphone className="h-5 w-5 text-indigo-700" />,
+  enterprise: <Database className="h-5 w-5 text-indigo-700" />,
+  modernization: <RefreshCw className="h-5 w-5 text-indigo-700" />,
 };
 
 export default function Services({
@@ -64,32 +64,35 @@ export default function Services({
   return (
     <section
       id={id || "services"}
-      className="relative py-20 md:py-32 bg-neutral-50"
+      className="relative py-20 md:py-32 bg-slate-50"
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-900 mb-4">
+          <p className="text-xs font-semibold tracking-wider text-indigo-600 uppercase mb-3">
+            Services
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-4">
             {translations.title}
           </h2>
-          <div className="w-16 h-px bg-neutral-900" />
+          <div className="w-16 h-px bg-indigo-600" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <Link
               key={service.key}
               href={`/${lang}/services/${service.key}`}
-              className="group block p-8 border border-neutral-200 hover:border-neutral-900 transition-colors bg-white"
+              className="group block p-8 bg-indigo-50/50 border border-indigo-100 hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-100/50 hover:-translate-y-1 transition-all duration-200"
             >
-              <div className="mb-6">
+              <div className="mb-6 p-3 bg-indigo-100 rounded-lg w-fit">
                 {serviceIcons[service.key as keyof typeof serviceIcons]}
               </div>
 
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">
                 {service.title}
               </h3>
 
-              <p className="text-neutral-600 leading-relaxed text-sm">
+              <p className="text-slate-600 leading-relaxed text-sm">
                 {service.description}
               </p>
             </Link>

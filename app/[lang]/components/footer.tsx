@@ -9,23 +9,23 @@ export default function Footer({ translations }: { translations: any }) {
   const copyright = translations.copyright.replace("{year}", currentYear.toString());
 
   return (
-    <footer className="relative bg-neutral-50 py-12 border-t border-neutral-200">
+    <footer className="relative bg-slate-900 py-12 border-t border-slate-800">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="text-xl font-semibold text-neutral-900 mb-4 block"
+              className="text-xl font-semibold text-white mb-4 block"
             >
               SGM
             </Link>
-            <p className="text-neutral-600 max-w-sm text-sm leading-relaxed">
+            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
               Building innovative software solutions for the modern web.
             </p>
           </div>
 
           <div>
-            <h4 className="text-neutral-900 font-semibold mb-4 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
               Navigate
             </h4>
             <ul className="space-y-2">
@@ -33,7 +33,7 @@ export default function Footer({ translations }: { translations: any }) {
                 <li key={item}>
                   <Link
                     href={`#${item.toLowerCase()}`}
-                    className="text-neutral-600 hover:text-neutral-900 transition-colors text-sm"
+                    className="text-slate-400 hover:text-indigo-400 transition-colors text-sm"
                   >
                     {item}
                   </Link>
@@ -43,7 +43,7 @@ export default function Footer({ translations }: { translations: any }) {
           </div>
 
           <div>
-            <h4 className="text-neutral-900 font-semibold mb-4 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
               Connect
             </h4>
             <div className="flex gap-4 mb-6">
@@ -52,7 +52,7 @@ export default function Footer({ translations }: { translations: any }) {
                   href={contactConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                  className="text-slate-400 hover:text-indigo-400 transition-colors"
                 >
                   <Github className="h-5 w-5" />
                 </Link>
@@ -62,7 +62,7 @@ export default function Footer({ translations }: { translations: any }) {
                   href={contactConfig.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-neutral-600 hover:text-neutral-900 transition-colors"
+                  className="text-slate-400 hover:text-indigo-400 transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </Link>
@@ -72,7 +72,7 @@ export default function Footer({ translations }: { translations: any }) {
               <div>
                 <a
                   href={`mailto:${contactConfig.email}`}
-                  className="text-neutral-600 hover:text-neutral-900 text-sm transition-colors"
+                  className="text-slate-400 hover:text-indigo-400 text-sm transition-colors"
                 >
                   {contactConfig.email}
                 </a>
@@ -81,8 +81,8 @@ export default function Footer({ translations }: { translations: any }) {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-neutral-200">
-          <p className="text-neutral-500 text-xs">
+        <div className="pt-8 border-t border-slate-800">
+          <p className="text-slate-500 text-xs">
             {copyright}
           </p>
         </div>

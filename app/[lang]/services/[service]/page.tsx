@@ -80,24 +80,24 @@ export default async function ServicePage({
       <div className="w-full max-w-4xl mx-auto px-6 md:px-8 py-32">
         <Link
           href={`/${lang}#services`}
-          className="inline-flex items-center gap-2 text-sm text-neutral-600 hover:text-neutral-900 mb-12 transition-colors"
+          className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-indigo-700 mb-12 transition-colors group"
         >
-          <ArrowLeft className="w-4 h-4" />
+          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           Back
         </Link>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
           {serviceData.title}
         </h1>
 
-        <p className="text-xl text-neutral-600 mb-12 leading-relaxed">
+        <p className="text-xl text-slate-600 mb-12 leading-relaxed">
           {serviceData.description}
         </p>
 
-        <div className="w-16 h-px bg-neutral-200 mb-12" />
+        <div className="w-16 h-px bg-indigo-600 mb-12" />
 
-        <div className="prose prose-neutral max-w-none">
-          <p className="text-lg text-neutral-700 leading-relaxed">
+        <div className="prose prose-slate max-w-none">
+          <p className="text-lg text-slate-700 leading-relaxed">
             {serviceData.longDescription}
           </p>
         </div>
