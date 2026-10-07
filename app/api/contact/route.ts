@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { z } from "zod";
 import { checkBotId } from "botid/server";
 
@@ -193,31 +193,25 @@ export async function POST(request: Request) {
       );
     }
 
-    const gmailUser = process.env.GMAIL_USER;
-    const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
-    const recipientEmail = process.env.CONTACT_TO_EMAIL || gmailUser;
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const recipientEmail = process.env.CONTACT_TO_EMAIL || "sevastosmatzouranis@gmail.com";
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || "SGM Website <onboarding@resend.dev>";
 
-    if (!gmailUser || !gmailAppPassword) {
-      console.error("Missing Gmail credentials in environment variables");
+    if (!resendApiKey) {
+      console.error("Missing RESEND_API_KEY in environment variables");
       return NextResponse.json(
         { error: "Server configuration error" },
         { status: 500 }
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: gmailUser,
-        pass: gmailAppPassword,
-      },
-    });
+    const resend = new Resend(resendApiKey);
 
     const sanitizedName = sanitizeHtml(name);
     const sanitizedMessage = sanitizeHtml(message);
 
-    const mailOptions = {
-      from: `SGM Website <${gmailUser}>`,
+    const { data, error } = await resend.emails.send({
+      from: fromEmail,
       to: recipientEmail,
       replyTo: email,
       subject: `New contact form message from ${sanitizedName}`,
@@ -250,9 +244,15 @@ ${message}
           <p style="margin: 16px 0 0 0; color: #9ca3af; font-size: 12px; text-align: center;">This message was sent via the contact form on sgmsoftware.gr</p>
         </div>
       `,
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error("Resend API error:", error.name, error.message);
+      return NextResponse.json(
+        { error: "Failed to send message. Please try again later." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
