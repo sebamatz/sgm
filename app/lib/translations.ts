@@ -19,6 +19,21 @@ export const translations = {
       cta: "Explore Our Services",
       contact: "Contact",
     },
+    workedWith: {
+      title: "We've worked with",
+      organizations: [
+        { name: "ENISA", subtitle: "via Uni Systems" },
+        { name: "European Patent Office", subtitle: "via ARHS / Accenture" },
+        { name: "Accenture", subtitle: "" },
+        { name: "Axiomatics", subtitle: "" },
+        { name: "Let's Ferry", subtitle: "" },
+        { name: "Sword Group", subtitle: "" },
+        { name: "PeoplePerHour", subtitle: "" },
+        { name: "Aegean Taxi", subtitle: "" },
+        { name: "Greeka", subtitle: "" },
+        { name: "Ferries in Greece", subtitle: "" },
+      ],
+    },
     aiAgents: {
       title: "AI agents that work for you. With humans at the wheel.",
       subtitle:
@@ -216,6 +231,21 @@ export const translations = {
         "Custom web εφαρμογές, React/Next.js development και frontend αρχιτεκτονική. Παραδίδουμε production-ready λύσεις για επιχειρήσεις σε Ελλάδα και Ευρώπη.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
+    },
+    workedWith: {
+      title: "Έχουμε δουλέψει με",
+      organizations: [
+        { name: "ENISA", subtitle: "μέσω Uni Systems" },
+        { name: "European Patent Office", subtitle: "μέσω ARHS / Accenture" },
+        { name: "Accenture", subtitle: "" },
+        { name: "Axiomatics", subtitle: "" },
+        { name: "Let's Ferry", subtitle: "" },
+        { name: "Sword Group", subtitle: "" },
+        { name: "PeoplePerHour", subtitle: "" },
+        { name: "Aegean Taxi", subtitle: "" },
+        { name: "Greeka", subtitle: "" },
+        { name: "Ferries in Greece", subtitle: "" },
+      ],
     },
     aiAgents: {
       title: "AI agents που δουλεύουν για εσάς. Με εμάς στο τιμόνι.",
