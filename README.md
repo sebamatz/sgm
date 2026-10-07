@@ -89,6 +89,27 @@ Emails are sent with both plain text and HTML formatting:
 - Professional HTML template with form data
 - Plain text fallback for email clients that don't support HTML
 
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and configure the following variables:
+
+### Required for Contact Form
+- `RESEND_API_KEY` - API key from Resend for sending contact form emails
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` - Cloudflare Turnstile site key for anti-spam protection
+
+### Optional for Analytics & Conversion Tracking
+If not set, no tracking scripts will be loaded and no cookie consent banner will appear.
+
+- `NEXT_PUBLIC_GOOGLE_ADS_ID` - Google Ads account ID (format: `AW-XXXXXXXXXX`)
+- `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL` - Conversion label from your Google Ads conversion action
+- `NEXT_PUBLIC_GA4_ID` - Google Analytics 4 measurement ID (format: `G-XXXXXXXXXX`)
+
+When these are set, the site will:
+1. Load Google Ads and/or GA4 tracking scripts
+2. Show a cookie consent banner (implements Google Consent Mode v2)
+3. Fire conversion events on successful contact form submissions
+4. Track analytics only after user consent
+
 ## Development
 
 ```bash

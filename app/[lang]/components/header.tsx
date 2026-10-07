@@ -44,8 +44,8 @@ export default function Header({
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${
-        isScrolled 
-          ? "bg-white/80 backdrop-blur-md border-b border-slate-200" 
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md border-b border-slate-200"
           : "bg-navy-base/80 backdrop-blur-md"
       }`}
     >
@@ -73,8 +73,8 @@ export default function Header({
                 scrollToSection(item === "aiAgents" ? "ai-agents" : item);
               }}
               className={`text-sm font-medium transition-colors ${
-                isScrolled 
-                  ? "text-ink-light hover:text-ink" 
+                isScrolled
+                  ? "text-ink-light hover:text-ink"
                   : "text-slate-300 hover:text-white"
               }`}
             >
@@ -96,12 +96,12 @@ export default function Header({
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className={`lg:hidden h-10 w-10 transition-colors ${
-                  isScrolled 
-                    ? "border-slate-300 text-ink hover:bg-slate-100" 
-                    : "border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white"
+                className={`lg:hidden h-10 w-10 bg-transparent transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan ${
+                  isScrolled
+                    ? "border border-slate-300 text-ink hover:bg-slate-100 hover:text-ink focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    : "border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy-base"
                 }`}
               >
                 <Menu className="h-5 w-5" />

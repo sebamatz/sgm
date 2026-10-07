@@ -15,9 +15,24 @@ export const translations = {
     hero: {
       title: "Professional Software Development",
       subtitle:
-        "Custom web applications, React/Next.js development, and frontend architecture. Delivering production-ready solutions for businesses across Greece and Europe.",
+        "We build software that makes your work easier: applications, platforms and AI-powered automation, tailored to your business. From idea to launch, fast and reliable.",
       cta: "Explore Our Services",
       contact: "Contact",
+    },
+    workedWith: {
+      title: "We've worked with",
+      organizations: [
+        { name: "ENISA", subtitle: "via Uni Systems" },
+        { name: "European Patent Office", subtitle: "via ARHS / Accenture" },
+        { name: "Accenture", subtitle: "" },
+        { name: "Axiomatics", subtitle: "" },
+        { name: "Let's Ferry", subtitle: "" },
+        { name: "Sword Group", subtitle: "" },
+        { name: "PeoplePerHour", subtitle: "" },
+        { name: "Aegean Taxi", subtitle: "" },
+        { name: "Greeka", subtitle: "" },
+        { name: "Ferries in Greece", subtitle: "" },
+      ],
     },
     aiAgents: {
       title: "AI agents that work for you. With humans at the wheel.",
@@ -127,6 +142,220 @@ export const translations = {
       email: "Email",
       message: "Message",
       submit: "Send Message",
+      successMessage: "Your message has been sent! We'll get back to you soon.",
+    },
+    cookieConsent: {
+      message: "We use cookies for analytics and to improve your experience. You can choose to accept or reject optional cookies.",
+      accept: "Accept",
+      reject: "Reject",
+      learnMore: "Learn more",
+    },
+    privacy: {
+      title: "Privacy & Cookies",
+      lastUpdated: "Last updated: October 2026",
+      sections: {
+        intro: {
+          title: "Information We Collect",
+          content: "When you submit the contact form on this site, we collect your name, email address, and message. This information is sent to us via email using Resend and is used solely to respond to your inquiry.",
+        },
+        cookies: {
+          title: "Cookies & Analytics",
+          content: "If you accept cookies, we may use Google Analytics and Google Ads to understand how visitors use our site and measure the effectiveness of our advertising. These tools use cookies to collect anonymous usage data. You can reject these cookies at any time—the site will work the same either way.",
+        },
+        dataUse: {
+          title: "How We Use Your Data",
+          content: "Contact form submissions are sent to our email and are not stored in any database. Analytics data is anonymous and is used only to improve our site and understand visitor needs. We do not sell or share your personal information with third parties.",
+        },
+        yourRights: {
+          title: "Your Rights",
+          content: "You can change your cookie preferences at any time by clearing your browser data and revisiting the site. If you have submitted a contact form and wish to request deletion of that information, please email us.",
+        },
+      },
+    },
+    landingPages: {
+      webApplications: {
+        metaTitle: "Custom Web Applications for Business | SGM Software Developers",
+        metaDescription: "We build custom web applications that streamline your operations and help your business grow. From booking systems to internal tools, we deliver software that works.",
+        hero: {
+          title: "Custom Web Applications That Work for Your Business",
+          subtitle: "Stop managing spreadsheets and manual processes. Get software built specifically for your business needs—from booking systems to customer portals to internal tools that save you time every day.",
+          cta: "Start Your Project",
+        },
+        problems: {
+          title: "We Build Solutions For:",
+          items: [
+            "Booking and reservation systems that handle your customers 24/7",
+            "Customer portals that reduce support workload and improve service",
+            "Internal tools that automate repetitive tasks and reduce errors",
+            "Platforms that connect your business with customers or partners",
+            "Systems that integrate with your existing tools and workflows",
+          ],
+        },
+        process: {
+          title: "How We Work",
+          steps: [
+            {
+              title: "Understanding Your Business",
+              description: "We start by understanding what you need, what problems you're solving, and how you work today. No technical jargon—just a conversation about your business.",
+            },
+            {
+              title: "Clear Plan & Timeline",
+              description: "We present a clear plan with realistic timelines and costs. You know exactly what you're getting and when.",
+            },
+            {
+              title: "Building & Testing",
+              description: "We build your application step by step, keeping you involved. You see progress regularly and can provide feedback.",
+            },
+            {
+              title: "Launch & Support",
+              description: "We launch your application and make sure everything runs smoothly. We're available to help if you need changes or support.",
+            },
+          ],
+        },
+        faq: {
+          title: "Common Questions",
+          items: [
+            {
+              question: "How long does it take to build a web application?",
+              answer: "It depends on complexity, but most projects take 2-4 months from start to launch. We'll give you a clear timeline after understanding your needs.",
+            },
+            {
+              question: "Can the application integrate with my existing systems?",
+              answer: "Yes. We build applications that work with your existing tools, whether that's your accounting software, CRM, email system, or anything else you use.",
+            },
+            {
+              question: "What happens after the application is built?",
+              answer: "You own the application. We can provide ongoing support and updates if you need them, or you can manage it yourself. We'll make sure you have everything you need.",
+            },
+            {
+              question: "Do I need technical knowledge to use the application?",
+              answer: "No. We build applications that are easy to use for non-technical users. If you can use a website, you can use what we build.",
+            },
+          ],
+        },
+      },
+      aiAutomation: {
+        metaTitle: "AI Automation for Business | SGM Software Developers",
+        metaDescription: "Automate repetitive work with AI agents. From processing documents to handling customer requests, we build AI automation that saves time and reduces errors.",
+        hero: {
+          title: "AI Automation That Handles Your Repetitive Work",
+          subtitle: "Stop spending hours on data entry, document processing, and routine tasks. Our AI agents work 24/7 to handle repetitive work automatically—with human oversight to ensure quality.",
+          cta: "Explore AI Automation",
+        },
+        problems: {
+          title: "Perfect For:",
+          items: [
+            "Processing invoices, receipts, and documents automatically",
+            "Handling routine customer service requests and inquiries",
+            "Data entry and extraction from emails, PDFs, and forms",
+            "Monitoring systems and alerting you when something needs attention",
+            "Updating spreadsheets and databases with information from multiple sources",
+          ],
+        },
+        process: {
+          title: "How We Work",
+          steps: [
+            {
+              title: "Identify the Task",
+              description: "We identify which repetitive tasks in your business can be automated with AI. Not everything needs automation—we focus on what will save you the most time.",
+            },
+            {
+              title: "Build & Train the Agent",
+              description: "We build an AI agent specifically for your task and train it on your processes. You review its work to make sure it understands what you need.",
+            },
+            {
+              title: "Test with Human Oversight",
+              description: "The agent starts working on real tasks, but we review every output. You stay in control and we fix any issues quickly.",
+            },
+            {
+              title: "Full Automation",
+              description: "Once you're confident, the agent works automatically. You still have oversight and can step in anytime, but the tedious work is handled.",
+            },
+          ],
+        },
+        faq: {
+          title: "Common Questions",
+          items: [
+            {
+              question: "Is my data safe with AI automation?",
+              answer: "Yes. Your data stays within secure systems you control. We don't share it, and the AI only accesses what it needs to do its job.",
+            },
+            {
+              question: "What if the AI makes a mistake?",
+              answer: "That's why we include human oversight. We review the AI's work, especially at the beginning. You can also set up approval steps for critical tasks.",
+            },
+            {
+              question: "How much time can this actually save?",
+              answer: "It depends on the task, but businesses typically save 10-20 hours per week on the tasks we automate. That's time your team can spend on more valuable work.",
+            },
+            {
+              question: "Do I need to understand how AI works?",
+              answer: "No. You just need to know what task you want automated. We handle the technical part and explain everything in plain language.",
+            },
+          ],
+        },
+      },
+      enterpriseSolutions: {
+        metaTitle: "Enterprise Software Solutions | SGM Software Developers",
+        metaDescription: "Secure, scalable software for larger organizations. We've worked with EU institutions and enterprise clients on mission-critical applications.",
+        hero: {
+          title: "Enterprise Software Built for Scale and Security",
+          subtitle: "When your organization needs software that meets strict security requirements, handles complex workflows, and scales with your growth—we have the experience to deliver it.",
+          cta: "Discuss Your Project",
+        },
+        problems: {
+          title: "We Deliver:",
+          items: [
+            "Applications that meet regulatory and compliance requirements",
+            "Multi-tenant platforms that serve multiple organizations securely",
+            "Systems that integrate with existing enterprise infrastructure",
+            "Secure authentication and role-based access control for sensitive data",
+            "Solutions that scale from pilot to organization-wide deployment",
+          ],
+        },
+        process: {
+          title: "How We Work",
+          steps: [
+            {
+              title: "Requirements & Compliance",
+              description: "We document your technical, security, and compliance requirements. We've worked with NIS2, Cyber Resilience Act, and other EU regulations.",
+            },
+            {
+              title: "Architecture & Planning",
+              description: "We design the system architecture to meet your scalability, security, and integration needs. You get a clear technical plan before development starts.",
+            },
+            {
+              title: "Iterative Development",
+              description: "We build and deliver in stages, so you can validate functionality early. Regular demos and testing ensure we're on track.",
+            },
+            {
+              title: "Testing & Deployment",
+              description: "Comprehensive testing, security review, and deployment planning. We make sure your system is production-ready and your team is prepared.",
+            },
+          ],
+        },
+        faq: {
+          title: "Common Questions",
+          items: [
+            {
+              question: "What kind of organizations do you work with?",
+              answer: "We've delivered projects for EU institutions, government agencies, and enterprise clients. Our experience includes cybersecurity platforms, internal applications, and multi-tenant systems.",
+            },
+            {
+              question: "How do you handle security and compliance?",
+              answer: "We follow security best practices and implement authentication, authorization, and data protection from the start. We have experience with EU regulatory requirements.",
+            },
+            {
+              question: "Can you integrate with our existing systems?",
+              answer: "Yes. We've integrated with enterprise systems including identity providers (like Keycloak), APIs, databases, and third-party services.",
+            },
+            {
+              question: "What technologies do you use?",
+              answer: "We use modern, proven technologies appropriate for enterprise needs. Our approach prioritizes security, maintainability, and long-term support.",
+            },
+          ],
+        },
+      },
     },
     footer: {
       copyright: "© {year} SGM Software Developers. All rights reserved.",
@@ -212,9 +441,24 @@ export const translations = {
     hero: {
       title: "Επαγγελματική Ανάπτυξη Λογισμικού",
       subtitle:
-        "Custom web εφαρμογές, React/Next.js development και frontend αρχιτεκτονική. Παραδίδουμε production-ready λύσεις για επιχειρήσεις σε Ελλάδα και Ευρώπη.",
+        "Φτιάχνουμε λογισμικό που κάνει τη δουλειά σας πιο εύκολη: εφαρμογές, πλατφόρμες και αυτοματισμούς με AI, προσαρμοσμένα στις ανάγκες της επιχείρησής σας. Από την ιδέα μέχρι το live, γρήγορα και αξιόπιστα.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
+    },
+    workedWith: {
+      title: "Έχουμε δουλέψει με",
+      organizations: [
+        { name: "ENISA", subtitle: "μέσω Uni Systems" },
+        { name: "European Patent Office", subtitle: "μέσω ARHS / Accenture" },
+        { name: "Accenture", subtitle: "" },
+        { name: "Axiomatics", subtitle: "" },
+        { name: "Let's Ferry", subtitle: "" },
+        { name: "Sword Group", subtitle: "" },
+        { name: "PeoplePerHour", subtitle: "" },
+        { name: "Aegean Taxi", subtitle: "" },
+        { name: "Greeka", subtitle: "" },
+        { name: "Ferries in Greece", subtitle: "" },
+      ],
     },
     aiAgents: {
       title: "AI agents που δουλεύουν για εσάς. Με εμάς στο τιμόνι.",
@@ -249,7 +493,7 @@ export const translations = {
         oversight: {
           title: "Ανθρώπινη Επίβλεψη",
           description:
-            "Κάθε έξοδος ελέγχεται. Θέτουμε κανόνες, παρακολουθούμε απόδοση και διατηρούμε ποιότητα.",
+            "Κάθε αποτέλεσμα ελέγχεται. Θέτουμε κανόνες, παρακολουθούμε απόδοση και διατηρούμε ποιότητα.",
         },
         security: {
           title: "Προστασία Δεδομένων",
@@ -324,6 +568,220 @@ export const translations = {
       email: "Email",
       message: "Μήνυμα",
       submit: "Αποστολή Μηνύματος",
+      successMessage: "Το μήνυμά σας στάλθηκε! Θα επικοινωνήσουμε σύντομα.",
+    },
+    cookieConsent: {
+      message: "Χρησιμοποιούμε cookies για analytics και για να βελτιώσουμε την εμπειρία σας. Μπορείτε να αποδεχτείτε ή να απορρίψετε τα προαιρετικά cookies.",
+      accept: "Αποδοχή",
+      reject: "Απόρριψη",
+      learnMore: "Μάθετε περισσότερα",
+    },
+    privacy: {
+      title: "Απόρρητο & Cookies",
+      lastUpdated: "Τελευταία ενημέρωση: Οκτώβριος 2026",
+      sections: {
+        intro: {
+          title: "Πληροφορίες που Συλλέγουμε",
+          content: "Όταν υποβάλλετε τη φόρμα επικοινωνίας σε αυτόν τον ιστότοπο, συλλέγουμε το όνομα, το email και το μήνυμά σας. Αυτές οι πληροφορίες μας αποστέλλονται μέσω email χρησιμοποιώντας το Resend και χρησιμοποιούνται αποκλειστικά για να απαντήσουμε στο αίτημά σας.",
+        },
+        cookies: {
+          title: "Cookies & Analytics",
+          content: "Αν αποδεχτείτε τα cookies, μπορεί να χρησιμοποιήσουμε Google Analytics και Google Ads για να κατανοήσουμε πώς χρησιμοποιούν οι επισκέπτες τον ιστότοπό μας και να μετρήσουμε την αποτελεσματικότητα της διαφήμισής μας. Αυτά τα εργαλεία χρησιμοποιούν cookies για να συλλέξουν ανώνυμα δεδομένα χρήσης. Μπορείτε να απορρίψετε αυτά τα cookies ανά πάσα στιγμή—ο ιστότοπος θα λειτουργεί το ίδιο ούτως ή άλλως.",
+        },
+        dataUse: {
+          title: "Πώς Χρησιμοποιούμε τα Δεδομένα σας",
+          content: "Οι υποβολές της φόρμας επικοινωνίας μας αποστέλλονται στο email μας και δεν αποθηκεύονται σε καμία βάση δεδομένων. Τα δεδομένα analytics είναι ανώνυμα και χρησιμοποιούνται μόνο για να βελτιώσουμε τον ιστότοπό μας και να κατανοήσουμε τις ανάγκες των επισκεπτών. Δεν πουλάμε ούτε μοιραζόμαστε τις προσωπικές σας πληροφορίες με τρίτους.",
+        },
+        yourRights: {
+          title: "Τα Δικαιώματά σας",
+          content: "Μπορείτε να αλλάξετε τις προτιμήσεις cookies σας ανά πάσα στιγμή διαγράφοντας τα δεδομένα του browser σας και επισκεπτόμενοι ξανά τον ιστότοπο. Αν έχετε υποβάλει φόρμα επικοινωνίας και θέλετε να ζητήσετε διαγραφή αυτών των πληροφοριών, παρακαλούμε στείλτε μας email.",
+        },
+      },
+    },
+    landingPages: {
+      webApplications: {
+        metaTitle: "Ανάπτυξη Web Εφαρμογών για Επιχειρήσεις | SGM Software Developers",
+        metaDescription: "Φτιάχνουμε custom web εφαρμογές που απλοποιούν τις λειτουργίες σας και βοηθούν την επιχείρησή σας να αναπτυχθεί. Από συστήματα κρατήσεων μέχρι εσωτερικά εργαλεία, παραδίδουμε λογισμικό που λειτουργεί.",
+        hero: {
+          title: "Web Εφαρμογές Προσαρμοσμένες στην Επιχείρησή σας",
+          subtitle: "Σταματήστε τα spreadsheets και τις χειροκίνητες διαδικασίες. Αποκτήστε λογισμικό φτιαγμένο για τις ανάγκες της επιχείρησής σας—από συστήματα κρατήσεων μέχρι customer portals και εσωτερικά εργαλεία που σας εξοικονομούν χρόνο κάθε μέρα.",
+          cta: "Ξεκινήστε το Project σας",
+        },
+        problems: {
+          title: "Φτιάχνουμε Λύσεις Για:",
+          items: [
+            "Συστήματα κρατήσεων που εξυπηρετούν τους πελάτες σας 24/7",
+            "Customer portals που μειώνουν το φόρτο υποστήριξης και βελτιώνουν την εξυπηρέτηση",
+            "Εσωτερικά εργαλεία που αυτοματοποιούν επαναλαμβανόμενες εργασίες και μειώνουν λάθη",
+            "Πλατφόρμες που συνδέουν την επιχείρησή σας με πελάτες ή συνεργάτες",
+            "Συστήματα που ενσωματώνονται με τα υπάρχοντα εργαλεία και workflows σας",
+          ],
+        },
+        process: {
+          title: "Πώς Δουλεύουμε",
+          steps: [
+            {
+              title: "Κατανόηση της Επιχείρησής σας",
+              description: "Ξεκινάμε κατανοώντας τι χρειάζεστε, τι προβλήματα λύνετε και πώς δουλεύετε σήμερα. Χωρίς τεχνική ορολογία—απλά μια συζήτηση για την επιχείρησή σας.",
+            },
+            {
+              title: "Ξεκάθαρο Plan & Χρονοδιάγραμμα",
+              description: "Παρουσιάζουμε ένα σαφές σχέδιο με ρεαλιστικά χρονοδιαγράμματα και κόστη. Ξέρετε ακριβώς τι παίρνετε και πότε.",
+            },
+            {
+              title: "Ανάπτυξη & Δοκιμές",
+              description: "Φτιάχνουμε την εφαρμογή σας βήμα βήμα, κρατώντας σας ενήμερους. Βλέπετε την πρόοδο τακτικά και μπορείτε να δώσετε feedback.",
+            },
+            {
+              title: "Λανσάρισμα & Υποστήριξη",
+              description: "Κάνουμε λανσάρισμα της εφαρμογής σας και διασφαλίζουμε ότι όλα τρέχουν ομαλά. Είμαστε διαθέσιμοι αν χρειαστείτε αλλαγές ή υποστήριξη.",
+            },
+          ],
+        },
+        faq: {
+          title: "Συχνές Ερωτήσεις",
+          items: [
+            {
+              question: "Πόσος χρόνος χρειάζεται για να φτιαχτεί μια web εφαρμογή;",
+              answer: "Εξαρτάται από την πολυπλοκότητα, αλλά τα περισσότερα projects διαρκούν 2-4 μήνες από την αρχή μέχρι το λανσάρισμα. Θα σας δώσουμε σαφές χρονοδιάγραμμα αφού καταλάβουμε τις ανάγκες σας.",
+            },
+            {
+              question: "Μπορεί η εφαρμογή να ενσωματωθεί με τα υπάρχοντα συστήματά μου;",
+              answer: "Ναι. Φτιάχνουμε εφαρμογές που δουλεύουν με τα υπάρχοντα εργαλεία σας, είτε αυτό είναι το λογιστικό σας σύστημα, CRM, email, ή οτιδήποτε άλλο χρησιμοποιείτε.",
+            },
+            {
+              question: "Τι γίνεται αφού φτιαχτεί η εφαρμογή;",
+              answer: "Η εφαρμογή είναι δική σας. Μπορούμε να παρέχουμε συνεχή υποστήριξη και ενημερώσεις αν τις χρειάζεστε, ή μπορείτε να τη διαχειριστείτε μόνοι σας. Θα σας δώσουμε ό,τι χρειάζεστε.",
+            },
+            {
+              question: "Χρειάζομαι τεχνικές γνώσεις για να χρησιμοποιήσω την εφαρμογή;",
+              answer: "Όχι. Φτιάχνουμε εφαρμογές που είναι εύκολες στη χρήση για μη-τεχνικούς χρήστες. Αν μπορείτε να χρησιμοποιήσετε ένα website, μπορείτε να χρησιμοποιήσετε αυτό που φτιάχνουμε.",
+            },
+          ],
+        },
+      },
+      aiAutomation: {
+        metaTitle: "Αυτοματοποίηση με AI για Επιχειρήσεις | SGM Software Developers",
+        metaDescription: "Αυτοματοποιήστε επαναλαμβανόμενη δουλειά με AI agents. Από επεξεργασία εγγράφων μέχρι χειρισμό αιτημάτων πελατών, φτιάχνουμε AI automation που εξοικονομεί χρόνο και μειώνει λάθη.",
+        hero: {
+          title: "AI Automation που Χειρίζεται την Επαναλαμβανόμενη Δουλειά σας",
+          subtitle: "Σταματήστε να ξοδεύετε ώρες σε εισαγωγή δεδομένων, επεξεργασία εγγράφων και ρουτίνες. Τα AI agents μας δουλεύουν 24/7 για να χειρίζονται αυτόματα επαναλαμβανόμενη εργασία—με ανθρώπινη επίβλεψη για ποιότητα.",
+          cta: "Εξερευνήστε το AI Automation",
+        },
+        problems: {
+          title: "Ιδανικό Για:",
+          items: [
+            "Επεξεργασία τιμολογίων, αποδείξεων και εγγράφων αυτόματα",
+            "Χειρισμό ρουτίνας αιτημάτων εξυπηρέτησης πελατών",
+            "Εισαγωγή και εξαγωγή δεδομένων από emails, PDFs και φόρμες",
+            "Παρακολούθηση συστημάτων και ειδοποιήσεις όταν κάτι χρειάζεται προσοχή",
+            "Ενημέρωση spreadsheets και βάσεων δεδομένων με πληροφορίες από πολλές πηγές",
+          ],
+        },
+        process: {
+          title: "Πώς Δουλεύουμε",
+          steps: [
+            {
+              title: "Αναγνώριση της Εργασίας",
+              description: "Εντοπίζουμε ποιες επαναλαμβανόμενες εργασίες στην επιχείρησή σας μπορούν να αυτοματοποιηθούν με AI. Όχι όλα χρειάζονται automation—εστιάζουμε σε αυτό που θα σας εξοικονομήσει τον περισσότερο χρόνο.",
+            },
+            {
+              title: "Ανάπτυξη & Εκπαίδευση του Agent",
+              description: "Φτιάχνουμε έναν AI agent ειδικά για την εργασία σας και τον εκπαιδεύουμε στις διαδικασίες σας. Εσείς ελέγχετε τη δουλειά του για να σιγουρευτείτε ότι καταλαβαίνει τι χρειάζεστε.",
+            },
+            {
+              title: "Δοκιμές με Ανθρώπινη Επίβλεψη",
+              description: "Ο agent αρχίζει να δουλεύει σε πραγματικές εργασίες, αλλά ελέγχουμε κάθε αποτέλεσμα. Εσείς διατηρείτε τον έλεγχο και διορθώνουμε τυχόν προβλήματα γρήγορα.",
+            },
+            {
+              title: "Πλήρης Αυτοματοποίηση",
+              description: "Μόλις είστε σίγουροι, ο agent δουλεύει αυτόματα. Εξακολουθείτε να έχετε επίβλεψη και μπορείτε να επέμβετε ανά πάσα στιγμή, αλλά η κουραστική δουλειά χειρίζεται αυτόματα.",
+            },
+          ],
+        },
+        faq: {
+          title: "Συχνές Ερωτήσεις",
+          items: [
+            {
+              question: "Είναι ασφαλή τα δεδομένα μου με AI automation;",
+              answer: "Ναι. Τα δεδομένα σας παραμένουν σε ασφαλή συστήματα που εσείς ελέγχετε. Δεν τα μοιραζόμαστε και το AI έχει πρόσβαση μόνο σε ό,τι χρειάζεται για τη δουλειά του.",
+            },
+            {
+              question: "Τι γίνεται αν το AI κάνει λάθος;",
+              answer: "Για αυτό περιλαμβάνουμε ανθρώπινη επίβλεψη. Ελέγχουμε τη δουλειά του AI, ειδικά στην αρχή. Μπορείτε επίσης να ορίσετε βήματα έγκρισης για κρίσιμες εργασίες.",
+            },
+            {
+              question: "Πόσο χρόνο μπορεί πραγματικά να εξοικονομήσει;",
+              answer: "Εξαρτάται από την εργασία, αλλά οι επιχειρήσεις συνήθως εξοικονομούν 10-20 ώρες την εβδομάδα στις εργασίες που αυτοματοποιούμε. Αυτός είναι χρόνος που η ομάδα σας μπορεί να αφιερώσει σε πιο σημαντική δουλειά.",
+            },
+            {
+              question: "Χρειάζεται να καταλαβαίνω πώς λειτουργεί το AI;",
+              answer: "Όχι. Απλά πρέπει να ξέρετε ποια εργασία θέλετε να αυτοματοποιηθεί. Εμείς χειριζόμαστε το τεχνικό μέρος και εξηγούμε τα πάντα με απλή γλώσσα.",
+            },
+          ],
+        },
+      },
+      enterpriseSolutions: {
+        metaTitle: "Enterprise Λύσεις Λογισμικού | SGM Software Developers",
+        metaDescription: "Ασφαλές, κλιμακώσιμο λογισμικό για μεγαλύτερους οργανισμούς. Έχουμε δουλέψει με φορείς της ΕΕ και εταιρικούς πελάτες σε mission-critical εφαρμογές.",
+        hero: {
+          title: "Enterprise Λογισμικό για Κλιμάκωση και Ασφάλεια",
+          subtitle: "Όταν ο οργανισμός σας χρειάζεται λογισμικό που πληροί αυστηρές απαιτήσεις ασφαλείας, χειρίζεται πολύπλοκα workflows και κλιμακώνεται με την ανάπτυξή σας—έχουμε την εμπειρία να το παραδώσουμε.",
+          cta: "Συζητήστε το Project σας",
+        },
+        problems: {
+          title: "Παραδίδουμε:",
+          items: [
+            "Εφαρμογές που πληρούν κανονιστικές απαιτήσεις και compliance",
+            "Multi-tenant πλατφόρμες που εξυπηρετούν πολλούς οργανισμούς με ασφάλεια",
+            "Συστήματα που ενσωματώνονται με υπάρχοντα enterprise infrastructure",
+            "Ασφαλές authentication και role-based access control για ευαίσθητα δεδομένα",
+            "Λύσεις που κλιμακώνονται από pilot μέχρι οργανισμική ανάπτυξη",
+          ],
+        },
+        process: {
+          title: "Πώς Δουλεύουμε",
+          steps: [
+            {
+              title: "Απαιτήσεις & Compliance",
+              description: "Τεκμηριώνουμε τις τεχνικές, ασφάλειας και compliance απαιτήσεις σας. Έχουμε δουλέψει με NIS2, Cyber Resilience Act και άλλους κανονισμούς της ΕΕ.",
+            },
+            {
+              title: "Αρχιτεκτονική & Σχεδιασμός",
+              description: "Σχεδιάζουμε την αρχιτεκτονική του συστήματος για να καλύψει τις ανάγκες κλιμάκωσης, ασφάλειας και ενσωμάτωσης. Παίρνετε σαφές τεχνικό σχέδιο πριν αρχίσει η ανάπτυξη.",
+            },
+            {
+              title: "Iterative Ανάπτυξη",
+              description: "Φτιάχνουμε και παραδίδουμε σε στάδια, ώστε να επικυρώνετε τη λειτουργικότητα νωρίς. Τακτικά demos και testing διασφαλίζουν ότι είμαστε στο σωστό δρόμο.",
+            },
+            {
+              title: "Testing & Deployment",
+              description: "Ολοκληρωμένο testing, security review και σχεδιασμός deployment. Διασφαλίζουμε ότι το σύστημά σας είναι production-ready και η ομάδα σας είναι έτοιμη.",
+            },
+          ],
+        },
+        faq: {
+          title: "Συχνές Ερωτήσεις",
+          items: [
+            {
+              question: "Με τι είδους οργανισμούς δουλεύετε;",
+              answer: "Έχουμε παραδώσει projects για φορείς της ΕΕ, κυβερνητικούς φορείς και εταιρικούς πελάτες. Η εμπειρία μας περιλαμβάνει cybersecurity platforms, εσωτερικές εφαρμογές και multi-tenant συστήματα.",
+            },
+            {
+              question: "Πώς χειρίζεστε την ασφάλεια και το compliance;",
+              answer: "Ακολουθούμε security best practices και υλοποιούμε authentication, authorization και data protection από την αρχή. Έχουμε εμπειρία με κανονιστικές απαιτήσεις της ΕΕ.",
+            },
+            {
+              question: "Μπορείτε να ενσωματωθείτε με τα υπάρχοντα συστήματά μας;",
+              answer: "Ναι. Έχουμε ενσωματωθεί με enterprise συστήματα συμπεριλαμβανομένων identity providers (όπως Keycloak), APIs, βάσεις δεδομένων και third-party υπηρεσίες.",
+            },
+            {
+              question: "Ποιες τεχνολογίες χρησιμοποιείτε;",
+              answer: "Χρησιμοποιούμε σύγχρονες, αποδεδειγμένες τεχνολογίες κατάλληλες για enterprise ανάγκες. Η προσέγγισή μας δίνει προτεραιότητα στην ασφάλεια, συντηρησιμότητα και μακροπρόθεσμη υποστήριξη.",
+            },
+          ],
+        },
+      },
     },
     footer: {
       copyright:
