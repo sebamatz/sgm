@@ -105,13 +105,11 @@ export default function Contact({
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
+      await response.json();
 
       if (response.ok) {
         setIsSuccess(true);
-        setName("");
-        setEmail("");
-        setMessage("");
+        setError("");
         setHoneypot("");
         setTimestamp(Date.now());
 
@@ -121,10 +119,12 @@ export default function Contact({
 
         trackConversion();
       } else {
-        setError(data.error || t.errorGeneric);
+        setIsSuccess(false);
+        setError(t.errorGeneric);
       }
     } catch (error) {
       console.error("API Error", error);
+      setIsSuccess(false);
       setError(t.errorNetwork);
     } finally {
       setIsSubmitting(false);
@@ -135,8 +135,13 @@ export default function Contact({
     if (isSuccess) {
       setIsSuccess(false);
     }
+    if (error) {
+      setError("");
+    }
     setter(value);
   };
+
+  const buttonLabel = isSubmitting ? t.sending : isSuccess ? t.sent : t.submit;
 
   return (
     <section
@@ -227,30 +232,37 @@ export default function Contact({
                 <div ref={turnstileRef} className="flex justify-start" />
               )}
 
-              {error && (
-                <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200">
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-red-600 text-sm">{error}</p>
-                </div>
-              )}
-
-              {isSuccess && (
-                <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200">
-                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-green-800 text-sm">{t.successMessage}</p>
-                </div>
-              )}
-
               <Button
                 type="submit"
                 disabled={
-                  isSubmitting || !name || !email || !message
+                  isSubmitting || isSuccess || !name || !email || !message
                 }
-                className="w-full h-12 text-sm font-mono font-medium uppercase tracking-wider transition-all shadow-lg bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30 disabled:opacity-50"
+                className="w-full h-12 text-sm font-mono font-medium tracking-wider transition-all shadow-lg bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30 disabled:opacity-50"
               >
-                {isSubmitting ? t.sending : t.submit}
+                {buttonLabel}
               </Button>
             </form>
+
+            {error ? (
+              <div
+                role="alert"
+                className="mt-6 flex items-start gap-3 p-4 bg-red-50 border border-red-200"
+              >
+                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <p className="text-red-600 text-sm">{error}</p>
+              </div>
+            ) : null}
+
+            {isSuccess ? (
+              <div
+                role="status"
+                aria-live="polite"
+                className="mt-6 flex items-start gap-3 p-4 bg-green-50 border border-green-200"
+              >
+                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <p className="text-green-800 text-sm">{t.successMessage}</p>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
