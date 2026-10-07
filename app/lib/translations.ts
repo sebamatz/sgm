@@ -127,6 +127,7 @@ export const translations = {
       email: "Email",
       message: "Message",
       submit: "Send Message",
+      successMessage: "Your message has been sent! We'll get back to you soon.",
     },
     footer: {
       copyright: "© {year} SGM Software Developers. All rights reserved.",
@@ -324,6 +325,7 @@ export const translations = {
       email: "Email",
       message: "Μήνυμα",
       submit: "Αποστολή Μηνύματος",
+      successMessage: "Το μήνυμά σας στάλθηκε! Θα επικοινωνήσουμε σύντομα.",
     },
     footer: {
       copyright:

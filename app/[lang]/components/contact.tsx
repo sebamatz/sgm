@@ -117,8 +117,6 @@ export default function Contact({
         if (window.turnstile && turnstileWidgetId.current) {
           window.turnstile.reset(turnstileWidgetId.current);
         }
-
-        setTimeout(() => setIsSuccess(false), 5000);
       } else {
         setError(data.error || "Failed to send message. Please try again.");
       }
@@ -128,6 +126,13 @@ export default function Contact({
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleFieldChange = (setter: (value: string) => void) => (value: string) => {
+    if (isSuccess) {
+      setIsSuccess(false);
+    }
+    setter(value);
   };
 
   return (
@@ -179,7 +184,7 @@ export default function Contact({
                 <Input
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => handleFieldChange(setName)(e.target.value)}
                   className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
                   required
                   disabled={isSubmitting}
@@ -194,7 +199,7 @@ export default function Contact({
                 <Input
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => handleFieldChange(setEmail)(e.target.value)}
                   className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
                   required
                   disabled={isSubmitting}
@@ -209,7 +214,7 @@ export default function Contact({
                 <Textarea
                   rows={6}
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={(e) => handleFieldChange(setMessage)(e.target.value)}
                   className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan resize-none"
                   required
                   disabled={isSubmitting}
@@ -228,26 +233,21 @@ export default function Contact({
                 </div>
               )}
 
+              {isSuccess && (
+                <div className="flex items-start gap-3 p-4 bg-green-950/50 border border-green-700/50">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-green-300 text-sm">{t.successMessage}</p>
+                </div>
+              )}
+
               <Button
                 type="submit"
                 disabled={
-                  isSubmitting || isSuccess || !name || !email || !message
+                  isSubmitting || !name || !email || !message
                 }
-                className={`w-full h-12 text-sm font-mono font-medium uppercase tracking-wider transition-all shadow-lg ${
-                  isSuccess
-                    ? "bg-green-600 hover:bg-green-600 text-white shadow-green-600/30"
-                    : "bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30"
-                } disabled:opacity-50`}
+                className="w-full h-12 text-sm font-mono font-medium uppercase tracking-wider transition-all shadow-lg bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30 disabled:opacity-50"
               >
-                {isSubmitting ? (
-                  "SENDING..."
-                ) : isSuccess ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <CheckCircle2 className="w-5 h-5" /> SENT
-                  </span>
-                ) : (
-                  t.submit
-                )}
+                {isSubmitting ? "SENDING..." : t.submit}
               </Button>
             </form>
           </div>
