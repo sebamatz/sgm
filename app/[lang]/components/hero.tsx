@@ -24,7 +24,7 @@ export default function Hero({ translations }: { translations: any }) {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-32 md:py-40 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight mb-8 text-white leading-[1.1]">
+            <h1 className="heading-display font-semibold tracking-tight mb-8 text-white">
               {translations.title}
             </h1>
 

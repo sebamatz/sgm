@@ -37,7 +37,7 @@ export default async function PrivacyPage({
           {t.services.back}
         </Link>
 
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-ink mb-4">
+        <h1 className="heading-display font-semibold tracking-tight text-ink mb-4">
           {privacy.title}
         </h1>
 

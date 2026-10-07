@@ -86,7 +86,7 @@ export default async function ServicePage({
           {t.services.back}
         </Link>
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-slate-900 mb-6">
+        <h1 className="heading-display font-semibold tracking-tight text-slate-900 mb-6">
           {serviceData.title}
         </h1>
 

@@ -19,7 +19,7 @@ export default function Clients({ translations }: { translations: any }) {
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
             03 / projects
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-4">
+          <h2 className="heading-section font-semibold tracking-tight text-ink mb-4">
             {t.title}
           </h2>
         </div>
@@ -50,10 +50,12 @@ export default function Clients({ translations }: { translations: any }) {
                           {isTeamMember ? t.roleTeamMember : t.roleFreelance}
                         </span>
                       </div>
-                      <div className="flex items-center gap-3 text-sm text-ink-light mb-3 font-mono">
-                        <span>{project.client}</span>
-                        <span className="text-slate-400">·</span>
-                        <span>{project.role}</span>
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3 text-sm text-ink-light mb-3 font-mono">
+                        <span className="min-w-0">{project.client}</span>
+                        <span className="hidden sm:inline text-slate-400" aria-hidden="true">
+                          ·
+                        </span>
+                        <span className="min-w-0">{project.role}</span>
                       </div>
                       <p className="text-ink-light leading-relaxed">
                         {project.description}

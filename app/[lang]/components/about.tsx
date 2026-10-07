@@ -23,7 +23,7 @@ export default function About({
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink leading-tight">
+            <h3 className="heading-section font-semibold tracking-tight text-ink leading-tight">
               {t.subtitle}
             </h3>
           </div>
