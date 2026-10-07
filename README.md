@@ -11,39 +11,39 @@ Website for SGM Software Developers, built with Next.js and deployed on Vercel.
 
 ## Contact Form Setup
 
-The contact form includes email delivery to Gmail with multiple layers of security and spam protection.
+The contact form includes email delivery via Resend with multiple layers of security and spam protection.
 
-### Required: Gmail Configuration
+### Required: Resend Configuration
 
-To enable email delivery, you need to set up a Gmail account with an App Password:
+To enable email delivery, you need to set up a Resend account and API key:
 
-#### Step 1: Enable 2-Step Verification
+#### Step 1: Create a Resend Account
 
-1. Go to your [Google Account](https://myaccount.google.com/)
-2. Navigate to **Security** → **2-Step Verification**
-3. Follow the steps to enable 2-Step Verification
+1. Go to [resend.com](https://resend.com)
+2. Sign up for a free account
+3. Verify your email address
 
-#### Step 2: Create an App Password
+#### Step 2: Generate an API Key
 
-1. Go to your [Google Account](https://myaccount.google.com/)
-2. Navigate to **Security** → **2-Step Verification** → **App passwords** (at the bottom)
-3. Select **Mail** and **Other (Custom name)**
-4. Enter "SGM Website Contact Form" as the name
-5. Click **Generate**
-6. Copy the 16-character password (without spaces)
+1. Go to your [Resend Dashboard](https://resend.com/api-keys)
+2. Click **Create API Key**
+3. Give it a name (e.g., "SGM Website Contact Form")
+4. Copy the API key (it starts with `re_`)
 
 #### Step 3: Configure Environment Variables
 
 Set the following environment variables in your Vercel project:
 
 **Required:**
-- `GMAIL_USER` - Your Gmail address (e.g., your-email@gmail.com)
-- `GMAIL_APP_PASSWORD` - The 16-character App Password from Step 2
+- `RESEND_API_KEY` - Your Resend API key (from Step 2)
 
 **Optional:**
-- `CONTACT_TO_EMAIL` - Send emails to a different address (defaults to GMAIL_USER)
+- `CONTACT_TO_EMAIL` - Recipient email address (defaults to sevastosmatzouranis@gmail.com)
+- `CONTACT_FROM_EMAIL` - Sender email address (defaults to "SGM Website <onboarding@resend.dev>")
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` - Cloudflare Turnstile site key (public)
 - `TURNSTILE_SECRET_KEY` - Cloudflare Turnstile secret key (server-side)
+
+**Note:** The default sender email `onboarding@resend.dev` is provided by Resend for testing. For production use, you should verify your own domain in the Resend dashboard and update `CONTACT_FROM_EMAIL` to use your domain.
 
 ### Anti-Spam & Security Layers
 
@@ -157,11 +157,11 @@ This project is configured for deployment on Vercel.
 3. Add the following variables (see `.env.example` for details):
 
 **Required:**
-- `GMAIL_USER` - Your Gmail address
-- `GMAIL_APP_PASSWORD` - Gmail App Password (NOT your regular password)
+- `RESEND_API_KEY` - Your Resend API key (get from resend.com/api-keys)
 
 **Optional:**
-- `CONTACT_TO_EMAIL` - Different recipient email (defaults to GMAIL_USER)
+- `CONTACT_TO_EMAIL` - Different recipient email (defaults to sevastosmatzouranis@gmail.com)
+- `CONTACT_FROM_EMAIL` - Sender email address (defaults to "SGM Website <onboarding@resend.dev>")
 - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` - Cloudflare Turnstile site key
 - `TURNSTILE_SECRET_KEY` - Cloudflare Turnstile secret key
 
@@ -181,7 +181,7 @@ No API keys or additional configuration needed - BotID works automatically.
 - **Framework**: Next.js 16
 - **UI**: React 19, Tailwind CSS, Framer Motion
 - **Forms**: React Hook Form, Zod
-- **Email**: Nodemailer with Gmail SMTP
+- **Email**: Resend
 - **Bot Protection**: Vercel BotID (powered by Kasada)
 - **Deployment**: Vercel
 
