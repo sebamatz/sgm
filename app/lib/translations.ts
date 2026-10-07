@@ -15,7 +15,7 @@ export const translations = {
     hero: {
       title: "Professional Software Development",
       subtitle:
-        "Custom web applications, React/Next.js development, and frontend architecture. Delivering production-ready solutions for businesses across Greece and Europe.",
+        "We build software that makes your work easier: applications, platforms and AI-powered automation, tailored to your business. From idea to launch, fast and reliable.",
       cta: "Explore Our Services",
       contact: "Contact",
     },
@@ -228,7 +228,7 @@ export const translations = {
     hero: {
       title: "Επαγγελματική Ανάπτυξη Λογισμικού",
       subtitle:
-        "Custom web εφαρμογές, React/Next.js development και frontend αρχιτεκτονική. Παραδίδουμε production-ready λύσεις για επιχειρήσεις σε Ελλάδα και Ευρώπη.",
+        "Φτιάχνουμε λογισμικό που κάνει τη δουλειά σας πιο εύκολη: εφαρμογές, πλατφόρμες και αυτοματισμούς με AI, προσαρμοσμένα στις ανάγκες της επιχείρησής σας. Από την ιδέα μέχρι το live, γρήγορα και αξιόπιστα.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
     },
