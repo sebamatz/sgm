@@ -10,6 +10,9 @@ const services = [
   "platforms",
   "enterprise",
   "modernization",
+  "web-applications",
+  "ai-automation",
+  "enterprise-solutions",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,6 +28,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           en: `${baseUrl}/en`,
           el: `${baseUrl}/el`,
+        },
+      },
+    });
+
+    // Privacy page
+    routes.push({
+      url: `${baseUrl}/${locale}/privacy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+      alternates: {
+        languages: {
+          en: `${baseUrl}/en/privacy`,
+          el: `${baseUrl}/el/privacy`,
         },
       },
     });

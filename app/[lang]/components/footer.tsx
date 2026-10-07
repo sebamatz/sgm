@@ -47,6 +47,14 @@ export default function Footer({ translations, headerTranslations }: { translati
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-slate-400 hover:text-tech-cyan transition-colors text-sm"
+                >
+                  Privacy & Cookies
+                </Link>
+              </li>
             </ul>
           </div>
 

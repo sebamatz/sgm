@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, CheckCircle2, AlertCircle } from "lucide-react";
 import { contactConfig } from "@/app/lib/contact-config";
+import { trackConversion } from "@/app/lib/analytics";
 
 declare global {
   interface Window {
@@ -117,6 +118,9 @@ export default function Contact({
         if (window.turnstile && turnstileWidgetId.current) {
           window.turnstile.reset(turnstileWidgetId.current);
         }
+
+        // Track conversion for Google Ads / GA4
+        trackConversion();
       } else {
         setError(data.error || "Failed to send message. Please try again.");
       }

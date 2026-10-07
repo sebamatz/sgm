@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { translations, locales } from "../lib/translations";
 import React, { ReactNode } from "react";
+import { GoogleAnalytics } from "../lib/analytics";
+import CookieConsent from "./components/cookie-consent";
 
 export async function generateMetadata({
   params,
@@ -52,11 +54,14 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const t = translations[lang as keyof typeof translations];
 
   return (
     <>
+      <GoogleAnalytics />
       <div lang={lang} className="min-h-screen bg-navy-base text-foreground antialiased">
         {children}
+        <CookieConsent lang={lang} translations={t.cookieConsent} />
       </div>
     </>
   );
