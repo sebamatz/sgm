@@ -12,13 +12,19 @@ export async function generateMetadata({
   const { lang } = await params;
   const t = translations[lang as keyof typeof translations] || translations.en;
 
-  const baseUrl = "https://www.sgmsoftware.gr";
-  const currentUrl = `${baseUrl}/${lang}`;
+  // Domain-specific base URLs
+  const grBase = "https://www.sgmsoftware.gr";
+  const comBase = "https://www.sgmsoftware.com";
+  
+  // Greek pages canonical on .gr, English on .com
+  const canonicalBase = lang === "el" ? grBase : comBase;
+  const currentUrl = `${canonicalBase}/${lang}`;
 
-  const alternateLanguages = locales.reduce((acc, locale) => {
-    acc[locale] = `${baseUrl}/${locale}`;
-    return acc;
-  }, {} as Record<string, string>);
+  // hreflang alternates across domains
+  const alternateLanguages = {
+    en: `${comBase}/en`,
+    el: `${grBase}/el`,
+  };
 
   return {
     title: t.metadata.title,
@@ -27,7 +33,7 @@ export async function generateMetadata({
       canonical: currentUrl,
       languages: {
         ...alternateLanguages,
-        "x-default": `${baseUrl}/en`,
+        "x-default": `${comBase}/en`,
       },
     },
     openGraph: {

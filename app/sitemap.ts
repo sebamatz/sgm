@@ -1,7 +1,9 @@
 import { MetadataRoute } from "next";
 import { locales } from "./lib/translations";
 
-const baseUrl = "https://www.sgmsoftware.gr";
+// Domain-specific base URLs
+const grBase = "https://www.sgmsoftware.gr";
+const comBase = "https://www.sgmsoftware.com";
 
 const services = [
   "frontend",
@@ -10,15 +12,17 @@ const services = [
   "platforms",
   "enterprise",
   "modernization",
-  "web-applications",
-  "ai-automation",
-  "enterprise-solutions",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];
 
   locales.forEach((locale) => {
+    const baseUrl = locale === "el" ? grBase : comBase;
+    const alternateEn = comBase;
+    const alternateEl = grBase;
+
+    // Home page
     routes.push({
       url: `${baseUrl}/${locale}`,
       lastModified: new Date(),
@@ -26,8 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       alternates: {
         languages: {
-          en: `${baseUrl}/en`,
-          el: `${baseUrl}/el`,
+          en: `${alternateEn}/en`,
+          el: `${alternateEl}/el`,
         },
       },
     });
@@ -40,12 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: {
         languages: {
-          en: `${baseUrl}/en/privacy`,
-          el: `${baseUrl}/el/privacy`,
+          en: `${alternateEn}/en/privacy`,
+          el: `${alternateEl}/el/privacy`,
         },
       },
     });
 
+    // Service pages
     services.forEach((service) => {
       routes.push({
         url: `${baseUrl}/${locale}/services/${service}`,
@@ -54,8 +59,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
         alternates: {
           languages: {
-            en: `${baseUrl}/en/services/${service}`,
-            el: `${baseUrl}/el/services/${service}`,
+            en: `${alternateEn}/en/services/${service}`,
+            el: `${alternateEl}/el/services/${service}`,
           },
         },
       });
