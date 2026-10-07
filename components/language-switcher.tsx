@@ -21,9 +21,8 @@ export default function LanguageSwitcher({
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button
-          /* 🛠️ Force variant="ghost" to prevent default blue background */
           variant="ghost"
-          className={`text-white rounded-full p-0 hover:bg-transparent hover:text-white transition-colors ${className}`}
+          className={`text-slate-600 hover:text-indigo-700 hover:bg-transparent p-2 transition-colors ${className}`}
         >
           <Globe className="h-5 w-5" />
           <span className="sr-only">Switch language</span>
@@ -32,18 +31,16 @@ export default function LanguageSwitcher({
 
       <DropdownMenuContent
         align="end"
-        /* Added z-[60] to stay above the header */
-        className="bg-[#0a0a0c]/95 backdrop-blur-xl border border-white/10 rounded-2xl min-w-[140px] p-1.5 mt-2 z-[60] shadow-2xl"
+        className="bg-white border border-indigo-200 min-w-[140px] p-1"
       >
         <DropdownMenuItem asChild disabled={currentLang === "en"}>
           <Link
             href="/en"
-            /* 🛠️ OVERRIDE: focus:bg-white/5 and data-[highlighted] kill the Radix blue highlight */
-            className="flex items-center justify-between px-3 py-2 text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 focus:bg-white/5 focus:text-white data-[highlighted]:bg-white/5 data-[highlighted]:text-white rounded-xl transition-all cursor-pointer outline-none border-none ring-0"
+            className="flex items-center justify-between px-3 py-2 text-sm text-slate-600 hover:text-indigo-700 hover:bg-indigo-50 rounded cursor-pointer"
           >
             English
             {currentLang === "en" && (
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
             )}
           </Link>
         </DropdownMenuItem>
@@ -51,12 +48,11 @@ export default function LanguageSwitcher({
         <DropdownMenuItem asChild disabled={currentLang === "el"}>
           <Link
             href="/el"
-            /* 🛠️ SAME FIX HERE: Killing the accent background */
-            className="flex items-center justify-between px-3 py-2 text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 focus:bg-white/5 focus:text-white data-[highlighted]:bg-white/5 data-[highlighted]:text-white rounded-xl transition-all cursor-pointer outline-none border-none ring-0"
+            className="flex items-center justify-between px-3 py-2 text-sm text-slate-600 hover:text-indigo-700 hover:bg-indigo-50 rounded cursor-pointer"
           >
             Ελληνικά
             {currentLang === "el" && (
-              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+              <div className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
             )}
           </Link>
         </DropdownMenuItem>

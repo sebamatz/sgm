@@ -1,8 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-// Update the interface to include the optional 'id'
 export default function About({
   translations,
   id,
@@ -12,99 +9,58 @@ export default function About({
 }) {
   const t = translations;
 
-  // Const assertion ensures the array is treated as a BezierDefinition
-  const premiumEase = [0.16, 1, 0.3, 1] as const;
-
   return (
     <section
       id={id || "about"}
-      className="relative py-16 md:py-48 bg-black overflow-hidden flex justify-center border-t border-white/5"
+      className="relative py-20 md:py-32 bg-white"
     >
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zinc-900/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
+        <div className="mb-12 md:mb-16">
+          <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
+            03 / about
+          </p>
+        </div>
 
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="mb-12 md:mb-20"
-        >
-          <span className="text-xs font-black tracking-[0.3em] text-zinc-500 uppercase flex items-center gap-4">
-            <span className="w-8 h-[1px] bg-zinc-500" />
-            {t.title}
-          </span>
-        </motion.div>
-
-        <div className="space-y-16 md:space-y-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: premiumEase }}
-              className="lg:col-span-5"
-            >
-              <h3 className="text-4xl md:text-5xl lg:text-[4rem] font-black tracking-[-0.03em] text-white leading-[1.05]">
-                {t.subtitle}
-              </h3>
-            </motion.div>
-
-            <div className="lg:col-span-7 flex flex-col space-y-8 md:space-y-10 lg:mt-4">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.2, ease: premiumEase }}
-                className="text-xl md:text-2xl lg:text-3xl text-zinc-300 font-medium leading-relaxed tracking-tight"
-              >
-                {t.description1}
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: 0.3, ease: premiumEase }}
-                className="text-lg md:text-xl text-zinc-500 font-normal leading-relaxed"
-              >
-                {t.description2}
-              </motion.p>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink leading-tight">
+              {t.subtitle}
+            </h3>
           </div>
 
-          {t.techTitle && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.4, ease: premiumEase }}
-              className="p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-2xl"
-            >
-              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
-                {t.techTitle}
-              </h4>
-              <p className="text-base md:text-lg text-zinc-400 leading-relaxed">
-                {t.techDescription}
+          <div className="lg:col-span-8 space-y-12">
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-ink leading-relaxed">
+                {t.description1}
               </p>
-            </motion.div>
-          )}
 
-          {t.educationTitle && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.5, ease: premiumEase }}
-              className="p-8 md:p-10 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-2xl"
-            >
-              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
-                {t.educationTitle}
-              </h4>
-              <p className="text-base md:text-lg text-zinc-400 leading-relaxed">
-                {t.educationDescription}
+              <p className="text-base text-ink-light leading-relaxed">
+                {t.description2}
               </p>
-            </motion.div>
-          )}
+            </div>
+
+            {t.techTitle && (
+              <div className="p-6 border border-slate-200 bg-slate-50">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-4">
+                  {t.techTitle}
+                </h4>
+                <p className="text-base text-ink-light leading-relaxed">
+                  {t.techDescription}
+                </p>
+              </div>
+            )}
+
+            {t.educationTitle && (
+              <div className="p-6 border border-slate-200 bg-slate-50">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-4">
+                  {t.educationTitle}
+                </h4>
+                <p className="text-base text-ink-light leading-relaxed">
+                  {t.educationDescription}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
