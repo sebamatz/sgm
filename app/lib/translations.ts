@@ -31,12 +31,12 @@ export const translations = {
         "No need to hire, train, or manage additional staff for repetitive work. Deploy intelligent automation quickly and easily, backed by our technical expertise.",
       steps: {
         step1: "initializing task...",
-        step2: "read 24 invoices from inbox",
+        step2: "read invoices from inbox",
         step3: "extracted data, validated totals",
         step4: "awaiting SGM review",
         step5: "approved by human supervisor",
         step6: "updated spreadsheet, sent confirmation",
-        complete: "task completed in 2.3s",
+        complete: "done · reviewed by SGM",
       },
       benefits: {
         speed: {
@@ -228,12 +228,12 @@ export const translations = {
         "Δεν χρειάζεται να προσλάβετε, εκπαιδεύσετε ή διαχειριστείτε επιπλέον προσωπικό για επαναλαμβανόμενες εργασίες. Αναπτύξτε έξυπνη αυτοματοποίηση γρήγορα και εύκολα, με την υποστήριξη της τεχνικής μας εμπειρίας.",
       steps: {
         step1: "αρχικοποίηση εργασίας...",
-        step2: "διαβάστηκαν 24 τιμολόγια από το inbox",
+        step2: "διαβάστηκαν τα τιμολόγια από το inbox",
         step3: "εξήχθησαν δεδομένα, επαληθεύτηκαν σύνολα",
         step4: "αναμονή για έλεγχο SGM",
         step5: "εγκρίθηκε από ανθρώπινο επόπτη",
         step6: "ενημερώθηκε το spreadsheet, στάλθηκε επιβεβαίωση",
-        complete: "η εργασία ολοκληρώθηκε σε 2.3s",
+        complete: "ολοκληρώθηκε · ελέγχθηκε από SGM",
       },
       benefits: {
         speed: {
