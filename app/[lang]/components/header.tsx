@@ -43,16 +43,16 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-200 ${
-        isScrolled ? "bg-white/95 backdrop-blur-sm border-b border-indigo-100" : "bg-white border-b border-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${
+        isScrolled ? "bg-white/80 backdrop-blur-md border-b border-slate-200" : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-5 px-6 md:px-8">
+      <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-8">
         <Link
           href={`/${lang}`}
           className="flex items-center space-x-2 group"
         >
-          <span className="text-xl md:text-2xl font-semibold text-indigo-950 tracking-tight">
+          <span className="text-xl md:text-2xl font-semibold text-ink tracking-tight">
             SGM
           </span>
         </Link>
@@ -66,7 +66,7 @@ export default function Header({
                 e.preventDefault();
                 scrollToSection(item);
               }}
-              className="text-sm font-medium text-slate-600 hover:text-indigo-700 transition-colors"
+              className="text-sm font-medium text-ink-light hover:text-ink transition-colors"
             >
               {translations[item]}
             </a>
@@ -77,7 +77,7 @@ export default function Header({
           <LanguageSwitcher currentLang={lang} />
 
           <Button
-            className="hidden sm:inline-flex bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-5 h-10 transition-colors"
+            className="hidden sm:inline-flex bg-tech-blue hover:bg-tech-cyan text-white text-sm font-mono font-medium px-5 h-10 transition-all shadow-md shadow-tech-blue/20"
             onClick={() => scrollToSection("contact")}
           >
             {translations.getStarted}
@@ -88,7 +88,7 @@ export default function Header({
               <Button
                 variant="outline"
                 size="icon"
-                className="lg:hidden border-indigo-200 text-indigo-700 hover:bg-indigo-50 h-10 w-10"
+                className="lg:hidden border-slate-300 text-ink hover:bg-slate-100 h-10 w-10"
               >
                 <Menu className="h-5 w-5" />
               </Button>
@@ -96,7 +96,7 @@ export default function Header({
 
             <SheetContent
               side="right"
-              className="bg-white text-slate-900"
+              className="bg-white text-ink"
             >
               <SheetTitle className="sr-only">Navigation</SheetTitle>
 
@@ -109,7 +109,7 @@ export default function Header({
                       e.preventDefault();
                       scrollToSection(item);
                     }}
-                    className="text-2xl font-medium text-slate-600 hover:text-indigo-700 transition-colors"
+                    className="text-2xl font-medium text-ink-light hover:text-ink transition-colors"
                   >
                     {translations[item]}
                   </a>

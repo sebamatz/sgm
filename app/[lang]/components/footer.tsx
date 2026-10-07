@@ -9,8 +9,11 @@ export default function Footer({ translations, headerTranslations }: { translati
   const copyright = translations.copyright.replace("{year}", currentYear.toString());
 
   return (
-    <footer className="relative bg-slate-900 py-12 border-t border-slate-800">
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
+    <footer className="relative bg-navy-base py-12 border-t border-slate-800">
+      {/* Faint grid background */}
+      <div className="absolute inset-0 grid-pattern opacity-10" />
+      
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link
@@ -19,13 +22,13 @@ export default function Footer({ translations, headerTranslations }: { translati
             >
               SGM
             </Link>
-            <p className="text-slate-400 max-w-sm text-sm leading-relaxed">
+            <p className="text-slate-400 max-w-sm text-sm leading-relaxed font-mono">
               Building innovative software solutions for the modern web.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-mono font-semibold mb-4 text-xs uppercase tracking-wider">
               {translations.navigate}
             </h4>
             <ul className="space-y-2">
@@ -37,7 +40,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                 <li key={item.key}>
                   <Link
                     href={`#${item.key}`}
-                    className="text-slate-400 hover:text-indigo-400 transition-colors text-sm"
+                    className="text-slate-400 hover:text-tech-cyan transition-colors text-sm"
                   >
                     {item.label}
                   </Link>
@@ -47,7 +50,7 @@ export default function Footer({ translations, headerTranslations }: { translati
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
+            <h4 className="text-white font-mono font-semibold mb-4 text-xs uppercase tracking-wider">
               {translations.connect}
             </h4>
             <div className="flex gap-4 mb-6">
@@ -56,7 +59,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                   href={contactConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-indigo-400 transition-colors"
+                  className="text-slate-400 hover:text-tech-cyan transition-colors"
                 >
                   <Github className="h-5 w-5" />
                 </Link>
@@ -66,7 +69,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                   href={contactConfig.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-indigo-400 transition-colors"
+                  className="text-slate-400 hover:text-tech-cyan transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </Link>
@@ -76,7 +79,7 @@ export default function Footer({ translations, headerTranslations }: { translati
               <div>
                 <a
                   href={`mailto:${contactConfig.email}`}
-                  className="text-slate-400 hover:text-indigo-400 text-sm transition-colors"
+                  className="text-slate-400 hover:text-tech-cyan text-sm font-mono transition-colors"
                 >
                   {contactConfig.email}
                 </a>
@@ -86,7 +89,7 @@ export default function Footer({ translations, headerTranslations }: { translati
         </div>
 
         <div className="pt-8 border-t border-slate-800">
-          <p className="text-slate-500 text-xs">
+          <p className="text-slate-500 text-xs font-mono">
             {copyright}
           </p>
         </div>

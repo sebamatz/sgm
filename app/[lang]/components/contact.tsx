@@ -133,25 +133,24 @@ export default function Contact({
   return (
     <section
       id={id || "contact"}
-      className="relative py-20 md:py-32 bg-white"
+      className="relative py-20 md:py-32 bg-slate-50"
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="mb-12 md:mb-16">
-              <p className="text-xs font-semibold tracking-wider text-indigo-600 uppercase mb-3">
-                {t.title}
+              <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
+                04 / contact
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
                 {t.title}
               </h2>
-              <div className="w-16 h-px bg-indigo-600" />
             </div>
 
             {contactConfig.email && (
-              <div className="flex items-center gap-3 text-slate-600">
-                <Mail className="w-5 h-5 text-indigo-600" />
-                <span className="text-base font-medium">
+              <div className="flex items-center gap-3 text-ink-light">
+                <Mail className="w-5 h-5 text-tech-blue" />
+                <span className="text-base font-mono">
                   {contactConfig.email}
                 </span>
               </div>
@@ -172,14 +171,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-indigo-700 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.name}
                 </label>
                 <Input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="border-indigo-200 focus:border-indigo-600 focus-visible:ring-1 focus-visible:ring-indigo-600 h-12"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={100}
@@ -187,14 +186,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-indigo-700 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.email}
                 </label>
                 <Input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border-indigo-200 focus:border-indigo-600 focus-visible:ring-1 focus-visible:ring-indigo-600 h-12"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={255}
@@ -202,14 +201,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-indigo-700 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.message}
                 </label>
                 <Textarea
                   rows={6}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="border-indigo-200 focus:border-indigo-600 focus-visible:ring-1 focus-visible:ring-indigo-600 resize-none"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue resize-none"
                   required
                   disabled={isSubmitting}
                   maxLength={5000}
@@ -232,10 +231,10 @@ export default function Contact({
                 disabled={
                   isSubmitting || isSuccess || !name || !email || !message
                 }
-                className={`w-full h-12 text-sm font-medium uppercase tracking-wider transition-colors ${
+                className={`w-full h-12 text-sm font-mono font-medium uppercase tracking-wider transition-all shadow-lg ${
                   isSuccess
-                    ? "bg-green-600 hover:bg-green-600 text-white"
-                    : "bg-indigo-600 hover:bg-indigo-700 text-white"
+                    ? "bg-green-600 hover:bg-green-600 text-white shadow-green-600/30"
+                    : "bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30"
                 } disabled:opacity-50`}
               >
                 {isSubmitting ? (
