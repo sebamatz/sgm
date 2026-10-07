@@ -34,6 +34,7 @@ export default function Footer({ translations, headerTranslations }: { translati
             <ul className="space-y-2">
               {[
                 { key: "services", label: headerTranslations.services },
+                { key: "ai-agents", label: headerTranslations.aiAgents },
                 { key: "about", label: headerTranslations.about },
                 { key: "contact", label: headerTranslations.contact },
               ].map((item) => (

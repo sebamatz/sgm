@@ -64,13 +64,13 @@ export default function Header({
         </Link>
 
         <nav className="hidden lg:flex items-center space-x-8">
-          {["services", "about", "contact"].map((item) => (
+          {["services", "aiAgents", "about", "contact"].map((item) => (
             <a
               key={item}
-              href={`#${item}`}
+              href={`#${item === "aiAgents" ? "ai-agents" : item}`}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(item);
+                scrollToSection(item === "aiAgents" ? "ai-agents" : item);
               }}
               className={`text-sm font-medium transition-colors ${
                 isScrolled 
@@ -115,13 +115,13 @@ export default function Header({
               <SheetTitle className="sr-only">Navigation</SheetTitle>
 
               <nav className="flex flex-col space-y-6 mt-12">
-                {["services", "about", "contact"].map((item) => (
+                {["services", "aiAgents", "about", "contact"].map((item) => (
                   <a
                     key={item}
-                    href={`#${item}`}
+                    href={`#${item === "aiAgents" ? "ai-agents" : item}`}
                     onClick={(e) => {
                       e.preventDefault();
-                      scrollToSection(item);
+                      scrollToSection(item === "aiAgents" ? "ai-agents" : item);
                     }}
                     className="text-2xl font-medium text-ink-light hover:text-ink transition-colors"
                   >

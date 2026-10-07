@@ -17,7 +17,7 @@ export default function Clients({ translations }: { translations: any }) {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-16 md:mb-20">
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
-            02 / projects
+            03 / projects
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-4">
             {t.title}

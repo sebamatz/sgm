@@ -1,12 +1,13 @@
 export const translations = {
   en: {
     metadata: {
-      title: "SGM Software Developers - Custom Software & Web Applications | Greece",
+      title: "SGM Software Developers - Custom Software & AI Automation | Greece",
       description:
-        "Professional custom software development in Greece and Europe. Web applications, React/Next.js development, frontend architecture, enterprise solutions, and technical leadership. 10+ years experience delivering for EU institutions and enterprise clients.",
+        "Professional custom software development and AI automation in Greece and Europe. Web applications, React/Next.js development, frontend architecture, AI agents for workflow automation, enterprise solutions, and technical leadership. 10+ years experience delivering for EU institutions and enterprise clients.",
     },
     header: {
       services: "Services",
+      aiAgents: "AI Agents",
       about: "About",
       contact: "Contact",
       getStarted: "Get Started",
@@ -17,6 +18,48 @@ export const translations = {
         "Custom web applications, React/Next.js development, and frontend architecture. Delivering production-ready solutions for businesses across Greece and Europe.",
       cta: "Explore Our Services",
       contact: "Contact",
+    },
+    aiAgents: {
+      title: "AI agents that work for you. With humans at the wheel.",
+      subtitle:
+        "We build and deploy AI agents that automate repetitive work—processing documents, handling support tickets, back-office workflows, and integrating with your tools. Fast, intelligent, and always under human supervision.",
+      description1:
+        "Our AI agents handle time-consuming tasks like invoice processing, data extraction, customer support triage, and workflow automation. They integrate with your existing tools and adapt to your processes.",
+      description2:
+        "Every agent operates with human oversight. We review outputs, set guardrails, and monitor performance. Your data stays protected, and you stay in control.",
+      description3:
+        "No need to hire, train, or manage additional staff for repetitive work. Deploy intelligent automation quickly and easily, backed by our technical expertise.",
+      steps: {
+        step1: "initializing task...",
+        step2: "read 24 invoices from inbox",
+        step3: "extracted data, validated totals",
+        step4: "awaiting SGM review",
+        step5: "approved by human supervisor",
+        step6: "updated spreadsheet, sent confirmation",
+        complete: "task completed in 2.3s",
+      },
+      benefits: {
+        speed: {
+          title: "Fast Deployment",
+          description:
+            "Set up intelligent automation in days, not months. Start handling real work quickly.",
+        },
+        automation: {
+          title: "Repetitive Work",
+          description:
+            "Automate document processing, data entry, support triage, and routine tasks.",
+        },
+        oversight: {
+          title: "Human Oversight",
+          description:
+            "Every output reviewed. We set rules, monitor performance, and maintain quality.",
+        },
+        security: {
+          title: "Your Data Protected",
+          description:
+            "Secure handling, clear boundaries, no unauthorized access. You keep control.",
+        },
+      },
     },
     services: {
       title: "Services",
@@ -155,12 +198,13 @@ export const translations = {
   },
   el: {
     metadata: {
-      title: "SGM Software Developers - Ανάπτυξη Λογισμικού & Web Εφαρμογών | Ελλάδα",
+      title: "SGM Software Developers - Ανάπτυξη Λογισμικού & AI Automation | Ελλάδα",
       description:
-        "Επαγγελματική ανάπτυξη custom εφαρμογών στην Ελλάδα και Ευρώπη. Web εφαρμογές, React/Next.js development, frontend αρχιτεκτονική, εταιρικές λύσεις και τεχνική ηγεσία. 10+ χρόνια εμπειρία με φορείς της ΕΕ και εταιρικούς πελάτες.",
+        "Επαγγελματική ανάπτυξη custom εφαρμογών και AI automation στην Ελλάδα και Ευρώπη. Web εφαρμογές, React/Next.js development, frontend αρχιτεκτονική, AI agents για αυτοματοποίηση workflows, εταιρικές λύσεις και τεχνική ηγεσία. 10+ χρόνια εμπειρία με φορείς της ΕΕ και εταιρικούς πελάτες.",
     },
     header: {
       services: "Υπηρεσίες",
+      aiAgents: "AI Agents",
       about: "Σχετικά",
       contact: "Επικοινωνία",
       getStarted: "Ξεκινήστε",
@@ -171,6 +215,48 @@ export const translations = {
         "Custom web εφαρμογές, React/Next.js development και frontend αρχιτεκτονική. Παραδίδουμε production-ready λύσεις για επιχειρήσεις σε Ελλάδα και Ευρώπη.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
+    },
+    aiAgents: {
+      title: "AI agents που δουλεύουν για εσάς. Με εμάς στο τιμόνι.",
+      subtitle:
+        "Κατασκευάζουμε και τρέχουμε AI agents που αυτοματοποιούν επαναλαμβανόμενες εργασίες—επεξεργασία εγγράφων, διαχείριση αιτημάτων υποστήριξης, back-office workflows και ενσωμάτωση με τα εργαλεία σας. Γρήγορα, έξυπνα και πάντα υπό ανθρώπινη επίβλεψη.",
+      description1:
+        "Τα AI agents μας χειρίζονται χρονοβόρες εργασίες όπως επεξεργασία τιμολογίων, εξαγωγή δεδομένων, triage αιτημάτων πελατών και αυτοματοποίηση workflows. Ενσωματώνονται με τα υπάρχοντα εργαλεία σας και προσαρμόζονται στις διαδικασίες σας.",
+      description2:
+        "Κάθε agent λειτουργεί με ανθρώπινη επίβλεψη. Ελέγχουμε τα αποτελέσματα, θέτουμε όρια και παρακολουθούμε την απόδοση. Τα δεδομένα σας παραμένουν προστατευμένα και εσείς διατηρείτε τον έλεγχο.",
+      description3:
+        "Δεν χρειάζεται να προσλάβετε, εκπαιδεύσετε ή διαχειριστείτε επιπλέον προσωπικό για επαναλαμβανόμενες εργασίες. Αναπτύξτε έξυπνη αυτοματοποίηση γρήγορα και εύκολα, με την υποστήριξη της τεχνικής μας εμπειρίας.",
+      steps: {
+        step1: "αρχικοποίηση εργασίας...",
+        step2: "διαβάστηκαν 24 τιμολόγια από το inbox",
+        step3: "εξήχθησαν δεδομένα, επαληθεύτηκαν σύνολα",
+        step4: "αναμονή για έλεγχο SGM",
+        step5: "εγκρίθηκε από ανθρώπινο επόπτη",
+        step6: "ενημερώθηκε το spreadsheet, στάλθηκε επιβεβαίωση",
+        complete: "η εργασία ολοκληρώθηκε σε 2.3s",
+      },
+      benefits: {
+        speed: {
+          title: "Γρήγορη Ανάπτυξη",
+          description:
+            "Εγκαταστήστε έξυπνη αυτοματοποίηση σε μέρες, όχι μήνες. Ξεκινήστε να χειρίζεστε πραγματική δουλειά γρήγορα.",
+        },
+        automation: {
+          title: "Επαναλαμβανόμενες Εργασίες",
+          description:
+            "Αυτοματοποιήστε επεξεργασία εγγράφων, εισαγωγή δεδομένων, triage υποστήριξης και ρουτίνες.",
+        },
+        oversight: {
+          title: "Ανθρώπινη Επίβλεψη",
+          description:
+            "Κάθε έξοδος ελέγχεται. Θέτουμε κανόνες, παρακολουθούμε απόδοση και διατηρούμε ποιότητα.",
+        },
+        security: {
+          title: "Προστασία Δεδομένων",
+          description:
+            "Ασφαλής διαχείριση, σαφή όρια, χωρίς μη εξουσιοδοτημένη πρόσβαση. Διατηρείτε τον έλεγχο.",
+        },
+      },
     },
     services: {
       title: "Υπηρεσίες",

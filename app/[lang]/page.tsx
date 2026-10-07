@@ -1,6 +1,7 @@
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Services from "./components/services";
+import AIAgents from "./components/ai-agents";
 import Clients from "./components/clients";
 import About from "./components/about";
 import Contact from "./components/contact";
@@ -27,6 +28,7 @@ export default async function Home({
         <main>
           <Hero translations={t.hero} />
           <Services lang={lang} translations={t.services} id="services" />
+          <AIAgents translations={t.aiAgents} id="ai-agents" />
           <Clients translations={t.projects} />
           <About translations={t.about} id="about" />
           <Contact lang={lang} translations={t.contact} id="contact" />

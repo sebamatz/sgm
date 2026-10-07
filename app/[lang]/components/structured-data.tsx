@@ -7,8 +7,8 @@ export default function StructuredData({ lang }: { lang: string }) {
     logo: "https://www.sgmsoftware.gr/icon.svg",
     description:
       lang === "el"
-        ? "Επαγγελματική ανάπτυξη custom εφαρμογών στην Ελλάδα και Ευρώπη. Web εφαρμογές, React/Next.js development, frontend αρχιτεκτονική."
-        : "Professional custom software development in Greece and Europe. Web applications, React/Next.js development, frontend architecture.",
+        ? "Επαγγελματική ανάπτυξη custom εφαρμογών και AI automation στην Ελλάδα και Ευρώπη. Web εφαρμογές, React/Next.js development, frontend αρχιτεκτονική, AI agents."
+        : "Professional custom software development and AI automation in Greece and Europe. Web applications, React/Next.js development, frontend architecture, AI agents.",
     areaServed: [
       {
         "@type": "Country",
@@ -27,6 +27,9 @@ export default function StructuredData({ lang }: { lang: string }) {
       "Next.js Development",
       "TypeScript Development",
       "Technical Consulting",
+      "AI Automation",
+      "AI Agent Development",
+      "Workflow Automation",
     ],
     founder: {
       "@type": "Person",
