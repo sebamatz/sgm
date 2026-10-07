@@ -43,8 +43,8 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-navy-base/80 backdrop-blur-md border-b ${
-        isScrolled ? "border-slate-800" : "border-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-black/80 backdrop-blur-md border-b ${
+        isScrolled ? "border-neutral-800" : "border-transparent"
       }`}
     >
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-8">
@@ -68,7 +68,7 @@ export default function Header({
                 e.preventDefault();
                 scrollToSection(item === "aiAgents" ? "ai-agents" : item);
               }}
-              className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
             >
               {translations[item]}
             </a>
@@ -90,7 +90,7 @@ export default function Header({
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden h-10 w-10 bg-transparent hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-navy-base"
+                className="lg:hidden h-10 w-10 bg-transparent hover:bg-neutral-800 border border-neutral-700 text-neutral-300 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               >
                 <Menu className="h-5 w-5" />
               </Button>
@@ -98,7 +98,7 @@ export default function Header({
 
             <SheetContent
               side="right"
-              className="bg-navy-base border-slate-800"
+              className="bg-black border-neutral-800"
             >
               <SheetTitle className="sr-only">Navigation</SheetTitle>
 
@@ -111,7 +111,7 @@ export default function Header({
                       e.preventDefault();
                       scrollToSection(item === "aiAgents" ? "ai-agents" : item);
                     }}
-                    className="text-2xl font-medium text-slate-300 hover:text-white transition-colors"
+                    className="text-2xl font-medium text-neutral-300 hover:text-white transition-colors"
                   >
                     {translations[item]}
                   </a>

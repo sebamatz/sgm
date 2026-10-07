@@ -34,16 +34,16 @@ export default function WebApplicationsPage({
 
   return (
     <>
-      <div className="min-h-screen bg-navy-base">
+      <div className="min-h-screen bg-black">
         {/* Hero */}
-        <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-navy-base overflow-hidden">
+        <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-black overflow-hidden">
           <div className="absolute inset-0 grid-pattern grid-fade opacity-40" />
-          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-tech-blue/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-neutral-800/10 rounded-full blur-[120px]" />
 
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8 relative z-10">
             <Link
               href={`/${lang}#services`}
-              className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-tech-cyan mb-8 transition-colors group"
+              className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-tech-cyan mb-8 transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               {t.services.back}
@@ -53,7 +53,7 @@ export default function WebApplicationsPage({
               {page.hero.title}
             </h1>
 
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-3xl">
+            <p className="text-xl text-neutral-300 mb-8 leading-relaxed max-w-3xl">
               {page.hero.subtitle}
             </p>
 
@@ -67,7 +67,7 @@ export default function WebApplicationsPage({
         </section>
 
         {/* Problems */}
-        <section className="relative py-20 md:py-32 bg-[#0F172A] border-t border-slate-800">
+        <section className="relative py-20 md:py-32 bg-[#0a0a0a] border-t border-neutral-800">
           <div className="absolute inset-0 grid-pattern opacity-20" />
 
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8 relative z-10">
@@ -79,7 +79,7 @@ export default function WebApplicationsPage({
               {page.problems.items.map((item: string, index: number) => (
                 <div key={index} className="flex items-start gap-4">
                   <CheckCircle2 className="w-6 h-6 text-tech-cyan flex-shrink-0 mt-1" />
-                  <p className="text-lg text-slate-300 leading-relaxed">{item}</p>
+                  <p className="text-lg text-neutral-300 leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
@@ -87,7 +87,7 @@ export default function WebApplicationsPage({
         </section>
 
         {/* How We Work */}
-        <section className="relative py-20 md:py-32 bg-[#111a2e] border-t border-slate-800">
+        <section className="relative py-20 md:py-32 bg-[#111] border-t border-neutral-800">
           <div className="absolute inset-0 grid-pattern opacity-20" />
 
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8 relative z-10">
@@ -109,7 +109,7 @@ export default function WebApplicationsPage({
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-slate-400 leading-relaxed">
+                    <p className="text-neutral-400 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -120,7 +120,7 @@ export default function WebApplicationsPage({
         </section>
 
         {/* FAQ */}
-        <section className="relative py-20 md:py-32 bg-[#0F172A] border-t border-slate-800">
+        <section className="relative py-20 md:py-32 bg-[#0a0a0a] border-t border-neutral-800">
           <div className="absolute inset-0 grid-pattern opacity-20" />
 
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8 relative z-10">
@@ -134,7 +134,7 @@ export default function WebApplicationsPage({
                   <h3 className="text-lg font-semibold text-white mb-3">
                     {item.question}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed">
+                  <p className="text-neutral-400 leading-relaxed">
                     {item.answer}
                   </p>
                 </div>

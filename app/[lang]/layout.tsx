@@ -65,7 +65,7 @@ export default async function LangLayout({
   return (
     <>
       <GoogleAnalytics />
-      <div lang={lang} className="min-h-screen bg-navy-base text-foreground antialiased">
+      <div lang={lang} className="min-h-screen bg-black text-foreground antialiased">
         {children}
         <CookieConsent lang={lang} translations={t.cookieConsent} />
       </div>

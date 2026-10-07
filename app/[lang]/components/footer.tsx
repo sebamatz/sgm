@@ -9,7 +9,7 @@ export default function Footer({ translations, headerTranslations }: { translati
   const copyright = translations.copyright.replace("{year}", currentYear.toString());
 
   return (
-    <footer className="relative bg-navy-base py-12 border-t border-slate-800">
+    <footer className="relative bg-black py-12 border-t border-neutral-800">
       {/* Faint grid background */}
       <div className="absolute inset-0 grid-pattern opacity-10" />
       
@@ -22,7 +22,7 @@ export default function Footer({ translations, headerTranslations }: { translati
             >
               SGM
             </Link>
-            <p className="text-slate-400 max-w-sm text-sm leading-relaxed font-mono">
+            <p className="text-neutral-400 max-w-sm text-sm leading-relaxed font-mono">
               Building innovative software solutions for the modern web.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                 <li key={item.key}>
                   <Link
                     href={`#${item.key}`}
-                    className="text-slate-400 hover:text-tech-cyan transition-colors text-sm"
+                    className="text-neutral-400 hover:text-tech-cyan transition-colors text-sm"
                   >
                     {item.label}
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer({ translations, headerTranslations }: { translati
               <li>
                 <Link
                   href="/privacy"
-                  className="text-slate-400 hover:text-tech-cyan transition-colors text-sm"
+                  className="text-neutral-400 hover:text-tech-cyan transition-colors text-sm"
                 >
                   Privacy & Cookies
                 </Link>
@@ -68,7 +68,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                   href={contactConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-tech-cyan transition-colors"
+                  className="text-neutral-400 hover:text-tech-cyan transition-colors"
                 >
                   <Github className="h-5 w-5" />
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer({ translations, headerTranslations }: { translati
                   href={contactConfig.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-tech-cyan transition-colors"
+                  className="text-neutral-400 hover:text-tech-cyan transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer({ translations, headerTranslations }: { translati
               <div>
                 <a
                   href={`mailto:${contactConfig.email}`}
-                  className="text-slate-400 hover:text-tech-cyan text-sm font-mono transition-colors"
+                  className="text-neutral-400 hover:text-tech-cyan text-sm font-mono transition-colors"
                 >
                   {contactConfig.email}
                 </a>
@@ -97,8 +97,8 @@ export default function Footer({ translations, headerTranslations }: { translati
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800">
-          <p className="text-slate-500 text-xs font-mono">
+        <div className="pt-8 border-t border-neutral-800">
+          <p className="text-neutral-500 text-xs font-mono">
             {copyright}
           </p>
         </div>

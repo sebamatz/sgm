@@ -64,13 +64,13 @@ export default function Services({
   return (
     <section
       id={id || "services"}
-      className="relative py-20 md:py-32 bg-[#0F172A] border-t border-slate-800"
+      className="relative py-20 md:py-32 bg-[#0a0a0a] border-t border-neutral-800"
     >
       <div className="absolute inset-0 grid-pattern opacity-20" />
       
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         <div className="mb-16 md:mb-20">
-          <p className="text-xs font-mono uppercase tracking-wider text-slate-500 mb-4">
+          <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-4">
             01 / services
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -83,13 +83,13 @@ export default function Services({
             <Link
               key={service.key}
               href={`/${lang}/services/${service.key}`}
-              className="group block p-8 border border-slate-800 bg-slate-900/30 hover:border-tech-cyan/50 hover:shadow-lg hover:shadow-tech-cyan/10 transition-all duration-300"
+              className="group block p-8 border border-[#262626] bg-[#111] hover:border-tech-cyan/50 hover:shadow-lg hover:shadow-tech-cyan/10 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="p-3 bg-slate-800/50">
+                <div className="p-3 bg-neutral-800/50">
                   {serviceIcons[service.key as keyof typeof serviceIcons]}
                 </div>
-                <span className="text-xs font-mono text-slate-600">
+                <span className="text-xs font-mono text-neutral-600">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function Services({
                 {service.title}
               </h3>
 
-              <p className="text-slate-400 leading-relaxed text-sm mb-4">
+              <p className="text-neutral-400 leading-relaxed text-sm mb-4">
                 {service.description}
               </p>
               

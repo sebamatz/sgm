@@ -27,11 +27,11 @@ export default async function PrivacyPage({
   const privacy = t.privacy;
 
   return (
-    <div className="min-h-screen bg-navy-base">
+    <div className="min-h-screen bg-black">
       <div className="w-full max-w-4xl mx-auto px-6 md:px-8 py-32">
         <Link
           href={`/${lang}`}
-          className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-tech-cyan mb-8 transition-colors group"
+          className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-tech-cyan mb-8 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           {t.services.back}
@@ -41,7 +41,7 @@ export default async function PrivacyPage({
           {privacy.title}
         </h1>
 
-        <p className="text-sm text-slate-500 mb-12 font-mono">
+        <p className="text-sm text-neutral-500 mb-12 font-mono">
           {privacy.lastUpdated}
         </p>
 
@@ -51,7 +51,7 @@ export default async function PrivacyPage({
               <h2 className="text-2xl font-semibold text-white mb-4">
                 {section.title}
               </h2>
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="text-lg text-neutral-300 leading-relaxed">
                 {section.content}
               </p>
             </div>

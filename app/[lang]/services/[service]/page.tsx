@@ -76,11 +76,11 @@ export default async function ServicePage({
   }
 
   return (
-    <div className="min-h-screen bg-navy-base">
+    <div className="min-h-screen bg-black">
       <div className="w-full max-w-4xl mx-auto px-6 md:px-8 py-32">
         <Link
           href={`/${lang}#services`}
-          className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-tech-cyan mb-12 transition-colors group"
+          className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-tech-cyan mb-12 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           {t.services.back}
@@ -90,14 +90,14 @@ export default async function ServicePage({
           {serviceData.title}
         </h1>
 
-        <p className="text-xl text-slate-400 mb-12 leading-relaxed">
+        <p className="text-xl text-neutral-400 mb-12 leading-relaxed">
           {serviceData.description}
         </p>
 
         <div className="w-16 h-px bg-tech-cyan mb-12" />
 
-        <div className="prose prose-slate prose-invert max-w-none">
-          <p className="text-lg text-slate-300 leading-relaxed">
+        <div className="prose prose-zinc prose-invert max-w-none">
+          <p className="text-lg text-neutral-300 leading-relaxed">
             {serviceData.longDescription}
           </p>
         </div>

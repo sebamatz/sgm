@@ -53,10 +53,10 @@ export default function CookieConsent({ lang, translations }: CookieConsentProps
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
-      <div className="max-w-5xl mx-auto bg-slate-900 border border-slate-700 rounded-lg shadow-2xl p-6">
+      <div className="max-w-5xl mx-auto bg-[#111] border border-[#262626] rounded-lg shadow-2xl p-6">
         <div className="flex items-start gap-4">
           <div className="flex-1">
-            <p className="text-sm text-slate-300 leading-relaxed mb-4">
+            <p className="text-sm text-neutral-300 leading-relaxed mb-4">
               {translations.message}{" "}
               <Link
                 href={`/${lang}/privacy`}
@@ -75,7 +75,7 @@ export default function CookieConsent({ lang, translations }: CookieConsentProps
               </button>
               <button
                 onClick={handleReject}
-                className="px-6 py-2 bg-transparent border border-slate-600 text-slate-300 hover:text-white hover:border-slate-500 text-sm font-medium rounded transition-colors"
+                className="px-6 py-2 bg-transparent border border-neutral-600 text-neutral-300 hover:text-white hover:border-neutral-400 text-sm font-medium rounded transition-colors"
               >
                 {translations.reject}
               </button>
@@ -84,7 +84,7 @@ export default function CookieConsent({ lang, translations }: CookieConsentProps
 
           <button
             onClick={handleReject}
-            className="flex-shrink-0 text-slate-400 hover:text-white transition-colors"
+            className="flex-shrink-0 text-neutral-400 hover:text-white transition-colors"
             aria-label="Close"
           >
             <X className="w-5 h-5" />

@@ -142,7 +142,7 @@ export default function Contact({
   return (
     <section
       id={id || "contact"}
-      className="relative py-20 md:py-32 bg-[#111a2e] border-t border-slate-800"
+      className="relative py-20 md:py-32 bg-[#111] border-t border-neutral-800"
     >
       <div className="absolute inset-0 grid-pattern opacity-20" />
       
@@ -150,7 +150,7 @@ export default function Contact({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="mb-12 md:mb-16">
-          <p className="text-xs font-mono uppercase tracking-wider text-slate-500 mb-4">
+          <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-4">
             05 / contact
           </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">
@@ -159,7 +159,7 @@ export default function Contact({
             </div>
 
             {contactConfig.email && (
-              <div className="flex items-center gap-3 text-slate-400">
+              <div className="flex items-center gap-3 text-neutral-400">
                 <Mail className="w-5 h-5 text-tech-cyan" />
                 <span className="text-base font-mono">
                   {contactConfig.email}
@@ -182,14 +182,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
                   {t.name}
                 </label>
                 <Input
                   type="text"
                   value={name}
                   onChange={(e) => handleFieldChange(setName)(e.target.value)}
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
+                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={100}
@@ -197,14 +197,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
                   {t.email}
                 </label>
                 <Input
                   type="email"
                   value={email}
                   onChange={(e) => handleFieldChange(setEmail)(e.target.value)}
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
+                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={255}
@@ -212,14 +212,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-slate-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
                   {t.message}
                 </label>
                 <Textarea
                   rows={6}
                   value={message}
                   onChange={(e) => handleFieldChange(setMessage)(e.target.value)}
-                  className="bg-slate-900/50 border-slate-700 text-white placeholder:text-slate-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan resize-none"
+                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan resize-none"
                   required
                   disabled={isSubmitting}
                   maxLength={5000}
