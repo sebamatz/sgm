@@ -41,8 +41,7 @@ export default function Hero({ translations }: { translations: any }) {
               </Button>
               <Button
                 onClick={() => scrollToSection("contact")}
-                variant="outline"
-                className="border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 hover:bg-slate-900 px-8 h-12 text-base font-mono font-medium transition-all"
+                className="bg-transparent border border-white/20 text-white hover:border-tech-cyan hover:text-tech-cyan px-8 h-12 text-base font-mono font-medium transition-all"
               >
                 {translations.contact}
               </Button>
