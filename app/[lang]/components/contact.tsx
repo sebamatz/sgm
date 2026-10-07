@@ -139,9 +139,9 @@ export default function Contact({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="mb-12 md:mb-16">
-              <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
-                04 / contact
-              </p>
+          <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
+            05 / contact
+          </p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
                 {t.title}
               </h2>
