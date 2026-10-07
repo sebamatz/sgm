@@ -55,7 +55,7 @@ export default async function LangLayout({
 
   return (
     <>
-      <div lang={lang} className="min-h-screen bg-white text-foreground antialiased">
+      <div lang={lang} className="min-h-screen bg-navy-base text-foreground antialiased">
         {children}
       </div>
     </>
