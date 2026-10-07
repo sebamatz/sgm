@@ -64,16 +64,14 @@ export default function Services({
   return (
     <section
       id={id || "services"}
-      className="relative py-20 md:py-32 bg-[#0a0a0a] border-t border-neutral-800"
+      className="relative py-20 md:py-32 bg-white"
     >
-      <div className="absolute inset-0 grid-pattern opacity-20" />
-      
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-16 md:mb-20">
-          <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-4">
+          <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
             01 / services
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-4">
             {translations.title}
           </h2>
         </div>
@@ -83,26 +81,26 @@ export default function Services({
             <Link
               key={service.key}
               href={`/${lang}/services/${service.key}`}
-              className="group block p-8 border border-[#262626] bg-[#111] hover:border-tech-cyan/50 hover:shadow-lg hover:shadow-tech-cyan/10 transition-all duration-300"
+              className="group block p-8 border border-slate-200 hover:border-tech-blue hover:shadow-lg hover:shadow-tech-blue/10 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="p-3 bg-neutral-800/50">
+                <div className="p-3 bg-slate-100">
                   {serviceIcons[service.key as keyof typeof serviceIcons]}
                 </div>
-                <span className="text-xs font-mono text-neutral-600">
+                <span className="text-xs font-mono text-ink-light">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-tech-cyan transition-colors">
+              <h3 className="text-xl font-semibold text-ink mb-3 group-hover:text-tech-blue transition-colors">
                 {service.title}
               </h3>
 
-              <p className="text-neutral-400 leading-relaxed text-sm mb-4">
+              <p className="text-ink-light leading-relaxed text-sm mb-4">
                 {service.description}
               </p>
               
-              <span className="inline-flex items-center text-xs font-mono text-tech-cyan opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="inline-flex items-center text-xs font-mono text-tech-blue opacity-0 group-hover:opacity-100 transition-opacity">
                 view details →
               </span>
             </Link>

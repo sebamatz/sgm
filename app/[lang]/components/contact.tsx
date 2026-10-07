@@ -119,7 +119,6 @@ export default function Contact({
           window.turnstile.reset(turnstileWidgetId.current);
         }
 
-        // Track conversion for Google Ads / GA4
         trackConversion();
       } else {
         setError(data.error || "Failed to send message. Please try again.");
@@ -142,25 +141,23 @@ export default function Contact({
   return (
     <section
       id={id || "contact"}
-      className="relative py-20 md:py-32 bg-[#111] border-t border-neutral-800"
+      className="relative py-20 md:py-32 bg-slate-50"
     >
-      <div className="absolute inset-0 grid-pattern opacity-20" />
-      
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="mb-12 md:mb-16">
-          <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 mb-4">
+          <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
             05 / contact
           </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
                 {t.title}
               </h2>
             </div>
 
             {contactConfig.email && (
-              <div className="flex items-center gap-3 text-neutral-400">
-                <Mail className="w-5 h-5 text-tech-cyan" />
+              <div className="flex items-center gap-3 text-ink-light">
+                <Mail className="w-5 h-5 text-tech-blue" />
                 <span className="text-base font-mono">
                   {contactConfig.email}
                 </span>
@@ -182,14 +179,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.name}
                 </label>
                 <Input
                   type="text"
                   value={name}
                   onChange={(e) => handleFieldChange(setName)(e.target.value)}
-                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={100}
@@ -197,14 +194,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.email}
                 </label>
                 <Input
                   type="email"
                   value={email}
                   onChange={(e) => handleFieldChange(setEmail)(e.target.value)}
-                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan h-12"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue h-12"
                   required
                   disabled={isSubmitting}
                   maxLength={255}
@@ -212,14 +209,14 @@ export default function Contact({
               </div>
 
               <div>
-                <label className="block text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
+                <label className="block text-xs font-mono uppercase tracking-wider text-ink-light mb-2">
                   {t.message}
                 </label>
                 <Textarea
                   rows={6}
                   value={message}
                   onChange={(e) => handleFieldChange(setMessage)(e.target.value)}
-                  className="bg-[#111] border-[#262626] text-white placeholder:text-neutral-600 focus:border-tech-cyan focus-visible:ring-1 focus-visible:ring-tech-cyan resize-none"
+                  className="border-slate-300 focus:border-tech-blue focus-visible:ring-1 focus-visible:ring-tech-blue resize-none"
                   required
                   disabled={isSubmitting}
                   maxLength={5000}
@@ -231,16 +228,16 @@ export default function Contact({
               )}
 
               {error && (
-                <div className="flex items-start gap-3 p-4 bg-red-950/50 border border-red-800">
-                  <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-red-300 text-sm">{error}</p>
+                <div className="flex items-start gap-3 p-4 bg-red-50 border border-red-200">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-red-600 text-sm">{error}</p>
                 </div>
               )}
 
               {isSuccess && (
-                <div className="flex items-start gap-3 p-4 bg-green-950/50 border border-green-700/50">
-                  <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-green-300 text-sm">{t.successMessage}</p>
+                <div className="flex items-start gap-3 p-4 bg-green-50 border border-green-200">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-green-800 text-sm">{t.successMessage}</p>
                 </div>
               )}
 

@@ -29,7 +29,7 @@ export default async function Image({
     (
       <div
         style={{
-          background: "#000000",
+          background: "#0B1120",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -45,7 +45,7 @@ export default async function Image({
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
             backgroundSize: "32px 32px",
             opacity: 0.4,
           }}
@@ -59,7 +59,7 @@ export default async function Image({
             right: "20%",
             width: 400,
             height: 400,
-            background: "rgba(255, 255, 255, 0.04)",
+            background: "rgba(59, 130, 246, 0.25)",
             borderRadius: "50%",
             filter: "blur(120px)",
           }}
@@ -90,7 +90,7 @@ export default async function Image({
           <p
             style={{
               fontSize: 36,
-              color: "#a1a1aa",
+              color: "#94a3b8",
               textAlign: "center",
               fontWeight: 500,
             }}
@@ -104,7 +104,7 @@ export default async function Image({
               gap: 20,
               marginTop: 40,
               fontSize: 24,
-              color: "#71717a",
+              color: "#64748b",
               fontFamily: "monospace",
             }}
           >
@@ -121,7 +121,7 @@ export default async function Image({
             position: "absolute",
             bottom: 40,
             fontSize: 20,
-            color: "#52525b",
+            color: "#475569",
             fontFamily: "monospace",
           }}
         >

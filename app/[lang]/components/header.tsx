@@ -43,8 +43,10 @@ export default function Header({
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 bg-black/80 backdrop-blur-md border-b ${
-        isScrolled ? "border-neutral-800" : "border-transparent"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${
+        isScrolled
+          ? "bg-white/80 backdrop-blur-md border-b border-slate-200"
+          : "bg-navy-base/80 backdrop-blur-md"
       }`}
     >
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-8">
@@ -52,10 +54,12 @@ export default function Header({
           href={`/${lang}`}
           className="flex items-center space-x-2 group"
         >
-          <span className="text-xl md:text-2xl font-mono font-semibold tracking-tight text-white transition-colors">
-            <span className="text-tech-cyan">{"<"}</span>
+          <span className={`text-xl md:text-2xl font-mono font-semibold tracking-tight transition-colors ${
+            isScrolled ? "text-ink" : "text-white"
+          }`}>
+            <span className={isScrolled ? "text-tech-blue" : "text-tech-cyan"}>{"<"}</span>
             SGM
-            <span className="text-tech-cyan">{" />"}</span>
+            <span className={isScrolled ? "text-tech-blue" : "text-tech-cyan"}>{" />"}</span>
           </span>
         </Link>
 
@@ -68,7 +72,11 @@ export default function Header({
                 e.preventDefault();
                 scrollToSection(item === "aiAgents" ? "ai-agents" : item);
               }}
-              className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
+              className={`text-sm font-medium transition-colors ${
+                isScrolled
+                  ? "text-ink-light hover:text-ink"
+                  : "text-slate-300 hover:text-white"
+              }`}
             >
               {translations[item]}
             </a>
@@ -90,7 +98,11 @@ export default function Header({
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden h-10 w-10 bg-transparent hover:bg-neutral-800 border border-neutral-700 text-neutral-300 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                className={`lg:hidden h-10 w-10 bg-transparent transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan ${
+                  isScrolled
+                    ? "border border-slate-300 text-ink hover:bg-slate-100 hover:text-ink focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    : "border border-slate-600 text-slate-300 hover:bg-slate-800 hover:text-white focus-visible:ring-offset-2 focus-visible:ring-offset-navy-base"
+                }`}
               >
                 <Menu className="h-5 w-5" />
               </Button>
@@ -98,7 +110,7 @@ export default function Header({
 
             <SheetContent
               side="right"
-              className="bg-black border-neutral-800"
+              className="bg-white text-ink"
             >
               <SheetTitle className="sr-only">Navigation</SheetTitle>
 
@@ -111,7 +123,7 @@ export default function Header({
                       e.preventDefault();
                       scrollToSection(item === "aiAgents" ? "ai-agents" : item);
                     }}
-                    className="text-2xl font-medium text-neutral-300 hover:text-white transition-colors"
+                    className="text-2xl font-medium text-ink-light hover:text-ink transition-colors"
                   >
                     {translations[item]}
                   </a>

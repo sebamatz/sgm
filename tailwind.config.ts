@@ -44,9 +44,17 @@ const config: Config = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			navy: {
+  				base: 'hsl(var(--navy-base))',
+  				dark: 'hsl(var(--navy-dark))'
+  			},
   			tech: {
   				blue: 'hsl(var(--tech-blue))',
   				cyan: 'hsl(var(--tech-cyan))'
+  			},
+  			ink: {
+  				DEFAULT: 'hsl(var(--ink))',
+  				light: 'hsl(var(--ink-light))'
   			}
   		},
   		borderRadius: {

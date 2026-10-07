@@ -4,9 +4,9 @@ export default function WorkedWith({ translations }: { translations: any }) {
   const t = translations;
 
   return (
-    <section className="relative py-12 md:py-16 bg-black border-y border-neutral-800">
+    <section className="relative py-12 md:py-16 bg-navy-base border-t border-slate-800">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
-        <p className="text-xs font-mono uppercase tracking-wider text-neutral-500 text-center mb-8">
+        <p className="text-xs font-mono uppercase tracking-wider text-slate-500 text-center mb-8">
           {t.title}
         </p>
 
@@ -16,11 +16,11 @@ export default function WorkedWith({ translations }: { translations: any }) {
               key={index}
               className="group text-center"
             >
-              <div className="text-sm md:text-base font-medium text-neutral-400 group-hover:text-tech-cyan transition-colors duration-300">
+              <div className="text-sm md:text-base font-medium text-slate-400 group-hover:text-tech-cyan transition-colors duration-300">
                 {org.name}
               </div>
               {org.subtitle && (
-                <div className="text-xs font-mono text-neutral-600 mt-1">
+                <div className="text-xs font-mono text-slate-500 mt-1">
                   {org.subtitle}
                 </div>
               )}

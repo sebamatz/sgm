@@ -22,7 +22,7 @@ export default function LanguageSwitcher({
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className={`text-neutral-400 hover:text-white hover:bg-neutral-800 p-2 transition-colors ${className}`}
+          className={`text-slate-600 hover:text-indigo-700 hover:bg-transparent p-2 transition-colors ${className}`}
         >
           <Globe className="h-5 w-5" />
           <span className="sr-only">Switch language</span>
@@ -31,16 +31,16 @@ export default function LanguageSwitcher({
 
       <DropdownMenuContent
         align="end"
-        className="bg-[#111] border border-neutral-800 min-w-[140px] p-1"
+        className="bg-white border border-indigo-200 min-w-[140px] p-1"
       >
         <DropdownMenuItem asChild disabled={currentLang === "en"}>
           <Link
             href="/en"
-            className="flex items-center justify-between px-3 py-2 text-sm text-neutral-300 hover:text-white hover:bg-neutral-800 rounded cursor-pointer"
+            className="flex items-center justify-between px-3 py-2 text-sm text-slate-600 hover:text-indigo-700 hover:bg-indigo-50 rounded cursor-pointer"
           >
             English
             {currentLang === "en" && (
-              <div className="w-1.5 h-1.5 rounded-full bg-tech-cyan" />
+              <div className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
             )}
           </Link>
         </DropdownMenuItem>
@@ -48,11 +48,11 @@ export default function LanguageSwitcher({
         <DropdownMenuItem asChild disabled={currentLang === "el"}>
           <Link
             href="/el"
-            className="flex items-center justify-between px-3 py-2 text-sm text-neutral-300 hover:text-white hover:bg-neutral-800 rounded cursor-pointer"
+            className="flex items-center justify-between px-3 py-2 text-sm text-slate-600 hover:text-indigo-700 hover:bg-indigo-50 rounded cursor-pointer"
           >
             Ελληνικά
             {currentLang === "el" && (
-              <div className="w-1.5 h-1.5 rounded-full bg-tech-cyan" />
+              <div className="w-1.5 h-1.5 rounded-full bg-indigo-600" />
             )}
           </Link>
         </DropdownMenuItem>
