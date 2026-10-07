@@ -52,7 +52,7 @@ export default function AIAgents({
           <p className="text-xs font-mono uppercase tracking-wider text-slate-500 mb-4">
             02 / ai agents
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-white mb-6">
+          <h2 className="heading-section font-semibold tracking-tight text-white mb-6">
             {translations.title}
           </h2>
           <p className="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">

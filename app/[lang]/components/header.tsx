@@ -112,7 +112,7 @@ export default function Header({
               side="right"
               className="bg-white text-ink"
             >
-              <SheetTitle className="sr-only">Navigation</SheetTitle>
+              <SheetTitle className="sr-only">{translations.navigation}</SheetTitle>
 
               <nav className="flex flex-col space-y-6 mt-12">
                 {["services", "aiAgents", "about", "contact"].map((item) => (

@@ -35,7 +35,7 @@ export default async function Home({
           <About translations={t.about} id="about" />
           <Contact lang={lang} translations={t.contact} id="contact" />
         </main>
-        <Footer translations={t.footer} headerTranslations={t.header} />
+        <Footer lang={lang} translations={t.footer} headerTranslations={t.header} />
       </div>
     </>
   );

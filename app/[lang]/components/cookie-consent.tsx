@@ -12,6 +12,7 @@ interface CookieConsentProps {
     accept: string;
     reject: string;
     learnMore: string;
+    close: string;
   };
 }
 
@@ -84,7 +85,7 @@ export default function CookieConsent({ lang, translations }: CookieConsentProps
           <button
             onClick={handleReject}
             className="flex-shrink-0 text-ink-light hover:text-ink transition-colors"
-            aria-label="Close"
+            aria-label={translations.close}
           >
             <X className="w-5 h-5" />
           </button>

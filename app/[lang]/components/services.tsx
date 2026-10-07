@@ -71,7 +71,7 @@ export default function Services({
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
             01 / services
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-4">
+          <h2 className="heading-section font-semibold tracking-tight text-ink mb-4">
             {translations.title}
           </h2>
         </div>
@@ -101,7 +101,7 @@ export default function Services({
               </p>
               
               <span className="inline-flex items-center text-xs font-mono text-tech-blue opacity-0 group-hover:opacity-100 transition-opacity">
-                view details →
+                {translations.viewDetails}
               </span>
             </Link>
           ))}

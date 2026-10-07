@@ -11,6 +11,7 @@ export const translations = {
       about: "About",
       contact: "Contact",
       getStarted: "Get Started",
+      navigation: "Navigation",
     },
     hero: {
       title: "Professional Software Development",
@@ -79,6 +80,7 @@ export const translations = {
     services: {
       title: "Services",
       back: "Back",
+      viewDetails: "view details →",
       frontend: {
         title: "Frontend Development & Architecture",
         description:
@@ -142,13 +144,17 @@ export const translations = {
       email: "Email",
       message: "Message",
       submit: "Send Message",
+      sending: "SENDING...",
       successMessage: "Your message has been sent! We'll get back to you soon.",
+      errorGeneric: "Something went wrong. Please try again.",
+      errorNetwork: "Network error. Please try again.",
     },
     cookieConsent: {
       message: "We use cookies for analytics and to improve your experience. You can choose to accept or reject optional cookies.",
       accept: "Accept",
       reject: "Reject",
       learnMore: "Learn more",
+      close: "Close",
     },
     privacy: {
       title: "Privacy & Cookies",
@@ -361,6 +367,8 @@ export const translations = {
       copyright: "© {year} SGM Software Developers. All rights reserved.",
       navigate: "Navigate",
       connect: "Connect",
+      tagline: "Building innovative software solutions for the modern web.",
+      privacy: "Privacy & Cookies",
     },
     projects: {
       title: "Experience & Collaborations",
@@ -437,6 +445,7 @@ export const translations = {
       about: "Σχετικά",
       contact: "Επικοινωνία",
       getStarted: "Ξεκινήστε",
+      navigation: "Πλοήγηση",
     },
     hero: {
       title: "Επαγγελματική Ανάπτυξη Λογισμικού",
@@ -505,6 +514,7 @@ export const translations = {
     services: {
       title: "Υπηρεσίες",
       back: "Πίσω",
+      viewDetails: "λεπτομέρειες →",
       frontend: {
         title: "Frontend Development & Αρχιτεκτονική",
         description:
@@ -568,13 +578,17 @@ export const translations = {
       email: "Email",
       message: "Μήνυμα",
       submit: "Αποστολή Μηνύματος",
+      sending: "ΑΠΟΣΤΟΛΗ...",
       successMessage: "Το μήνυμά σας στάλθηκε! Θα επικοινωνήσουμε σύντομα.",
+      errorGeneric: "Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.",
+      errorNetwork: "Σφάλμα δικτύου. Παρακαλώ δοκιμάστε ξανά.",
     },
     cookieConsent: {
       message: "Χρησιμοποιούμε cookies για analytics και για να βελτιώσουμε την εμπειρία σας. Μπορείτε να αποδεχτείτε ή να απορρίψετε τα προαιρετικά cookies.",
       accept: "Αποδοχή",
       reject: "Απόρριψη",
       learnMore: "Μάθετε περισσότερα",
+      close: "Κλείσιμο",
     },
     privacy: {
       title: "Απόρρητο & Cookies",
@@ -788,6 +802,8 @@ export const translations = {
         "© {year} SGM Software Developers. Όλα τα δικαιώματα διατηρούνται.",
       navigate: "Πλοήγηση",
       connect: "Επικοινωνία",
+      tagline: "Φτιάχνουμε καινοτόμες λύσεις λογισμικού για τον σύγχρονο ιστό.",
+      privacy: "Απόρρητο & Cookies",
     },
     projects: {
       title: "Εμπειρία & Συνεργασίες",

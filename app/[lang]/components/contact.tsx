@@ -121,11 +121,11 @@ export default function Contact({
 
         trackConversion();
       } else {
-        setError(data.error || "Failed to send message. Please try again.");
+        setError(data.error || t.errorGeneric);
       }
     } catch (error) {
       console.error("API Error", error);
-      setError("Network error. Please check your connection and try again.");
+      setError(t.errorNetwork);
     } finally {
       setIsSubmitting(false);
     }
@@ -144,13 +144,13 @@ export default function Contact({
       className="relative py-20 md:py-32 bg-slate-50"
     >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
           <div className="lg:col-span-5">
-            <div className="mb-12 md:mb-16">
+            <div className="mb-3 lg:mb-12">
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
             05 / contact
           </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-ink mb-6">
+              <h2 className="heading-section font-semibold tracking-tight text-ink mb-0 lg:mb-6">
                 {t.title}
               </h2>
             </div>
@@ -248,7 +248,7 @@ export default function Contact({
                 }
                 className="w-full h-12 text-sm font-mono font-medium uppercase tracking-wider transition-all shadow-lg bg-tech-blue hover:bg-tech-cyan text-white shadow-tech-blue/30 disabled:opacity-50"
               >
-                {isSubmitting ? "SENDING..." : t.submit}
+                {isSubmitting ? t.sending : t.submit}
               </Button>
             </form>
           </div>

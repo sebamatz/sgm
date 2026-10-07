@@ -47,7 +47,7 @@ export default function WebApplicationsPage({
               {t.services.back}
             </Link>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6">
+            <h1 className="heading-display font-semibold tracking-tight text-white mb-6">
               {page.hero.title}
             </h1>
 
@@ -66,7 +66,7 @@ export default function WebApplicationsPage({
 
         <section className="relative py-20 md:py-32 bg-white">
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink mb-12">
+            <h2 className="heading-section font-semibold tracking-tight text-ink mb-12">
               {page.problems.title}
             </h2>
 
@@ -83,7 +83,7 @@ export default function WebApplicationsPage({
 
         <section className="relative py-20 md:py-32 bg-slate-50">
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink mb-12">
+            <h2 className="heading-section font-semibold tracking-tight text-ink mb-12">
               {page.process.title}
             </h2>
 
@@ -113,7 +113,7 @@ export default function WebApplicationsPage({
 
         <section className="relative py-20 md:py-32 bg-white">
           <div className="w-full max-w-4xl mx-auto px-6 md:px-8">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-ink mb-12">
+            <h2 className="heading-section font-semibold tracking-tight text-ink mb-12">
               {page.faq.title}
             </h2>
 

@@ -4,7 +4,15 @@ import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { contactConfig } from "@/app/lib/contact-config";
 
-export default function Footer({ translations, headerTranslations }: { translations: any; headerTranslations: any }) {
+export default function Footer({
+  lang,
+  translations,
+  headerTranslations,
+}: {
+  lang: string;
+  translations: any;
+  headerTranslations: any;
+}) {
   const currentYear = new Date().getFullYear();
   const copyright = translations.copyright.replace("{year}", currentYear.toString());
 
@@ -23,7 +31,7 @@ export default function Footer({ translations, headerTranslations }: { translati
               SGM
             </Link>
             <p className="text-slate-400 max-w-sm text-sm leading-relaxed font-mono">
-              Building innovative software solutions for the modern web.
+              {translations.tagline}
             </p>
           </div>
 
@@ -49,10 +57,10 @@ export default function Footer({ translations, headerTranslations }: { translati
               ))}
               <li>
                 <Link
-                  href="/privacy"
+                  href={`/${lang}/privacy`}
                   className="text-slate-400 hover:text-tech-cyan transition-colors text-sm"
                 >
-                  Privacy & Cookies
+                  {translations.privacy}
                 </Link>
               </li>
             </ul>
