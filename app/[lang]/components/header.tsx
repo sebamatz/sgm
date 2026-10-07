@@ -88,9 +88,9 @@ export default function Header({
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button
-                variant="outline"
+                variant="ghost"
                 size="icon"
-                className="lg:hidden h-10 w-10 border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white transition-colors"
+                className="lg:hidden h-10 w-10 bg-transparent hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors focus-visible:ring-2 focus-visible:ring-tech-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-navy-base"
               >
                 <Menu className="h-5 w-5" />
               </Button>

@@ -1,4 +1,5 @@
 "use client";
+import { use } from "react";
 
 import { notFound } from "next/navigation";
 import { translations } from "../../../lib/translations";
@@ -10,9 +11,9 @@ import Contact from "../../components/contact";
 export default function EnterpriseSolutionsPage({
   params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 }) {
-  const { lang } = params;
+  const { lang } = use(params);
   const t = translations[lang as keyof typeof translations];
 
   if (!t) {
