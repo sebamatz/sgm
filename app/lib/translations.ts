@@ -132,11 +132,8 @@ export const translations = {
       description2:
         "We recently led frontend development of ENISA's Single Reporting Platform, used by national cybersecurity teams across the EU. We have also worked for the European Patent Office, major travel and booking platforms, enterprise SaaS products and marketplaces. We build complex applications that hold up under real-world requirements.",
       techTitle: "Technology Stack",
-      techDescription:
-        "React, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Redux, Zustand, TanStack Query, React Hook Form, Zod, Material UI, Jest, Vitest, Cypress, Testing Library, Storybook",
-      educationTitle: "Education & Background",
-      educationDescription:
-        "Bachelor's Degree in Applied Informatics in Management & Finance from the Technological Educational Institute of Messolonghi. Graduation thesis: complete time-off management platform with database design, web frontend, and institutional deployment.",
+      techFrontend: "Frontend",
+      techBackend: "Backend",
     },
     contact: {
       title: "Get in Touch",
@@ -567,11 +564,8 @@ export const translations = {
       description2:
         "Πρόσφατα ηγηθήκαμε της frontend ανάπτυξης του Single Reporting Platform του ENISA, της πλατφόρμας που χρησιμοποιούν οι εθνικές ομάδες κυβερνοασφάλειας σε όλη την ΕΕ. Έχουμε επίσης δουλέψει για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, μεγάλες πλατφόρμες ταξιδιών και κρατήσεων, επιχειρησιακά SaaS προϊόντα και marketplaces. Φτιάχνουμε σύνθετες εφαρμογές που λειτουργούν αξιόπιστα σε πραγματικές συνθήκες.",
       techTitle: "Τεχνολογίες",
-      techDescription:
-        "React, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Redux, Zustand, TanStack Query, React Hook Form, Zod, Material UI, Jest, Vitest, Cypress, Testing Library, Storybook",
-      educationTitle: "Εκπαίδευση & Υπόβαθρο",
-      educationDescription:
-        "Πτυχίο στην Εφαρμοσμένη Πληροφορική στη Διοίκηση & Οικονομία από το Τεχνολογικό Εκπαιδευτικό Ίδρυμα Μεσολογγίου. Διπλωματική εργασία: ολοκληρωμένη πλατφόρμα διαχείρισης αδειών με σχεδιασμό βάσης δεδομένων, web frontend και θεσμική ανάπτυξη.",
+      techFrontend: "Frontend",
+      techBackend: "Backend",
     },
     contact: {
       title: "Επικοινωνήστε μαζί μας",

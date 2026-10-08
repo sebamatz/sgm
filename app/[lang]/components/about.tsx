@@ -1,5 +1,7 @@
 "use client";
 
+import TechLogos from "./tech-logos";
+
 export default function About({
   translations,
   id,
@@ -28,7 +30,7 @@ export default function About({
             </h3>
           </div>
 
-          <div className="lg:col-span-8 space-y-12">
+          <div className="lg:col-span-8 space-y-10">
             <div className="space-y-6">
               <p className="text-lg md:text-xl text-ink leading-relaxed">
                 {t.description1}
@@ -40,24 +42,14 @@ export default function About({
             </div>
 
             {t.techTitle && (
-              <div className="p-6 border border-slate-200 bg-slate-50">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-4">
+              <div className="p-5 border border-slate-200 bg-slate-50">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-3">
                   {t.techTitle}
                 </h4>
-                <p className="text-base text-ink-light leading-relaxed">
-                  {t.techDescription}
-                </p>
-              </div>
-            )}
-
-            {t.educationTitle && (
-              <div className="p-6 border border-slate-200 bg-slate-50">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-4">
-                  {t.educationTitle}
-                </h4>
-                <p className="text-base text-ink-light leading-relaxed">
-                  {t.educationDescription}
-                </p>
+                <TechLogos
+                  frontendLabel={t.techFrontend}
+                  backendLabel={t.techBackend}
+                />
               </div>
             )}
           </div>
