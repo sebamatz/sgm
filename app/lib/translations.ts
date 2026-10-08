@@ -130,7 +130,7 @@ export const translations = {
       description1:
         "SGM Software Developers is led by Sevastos Matzouranis, a Senior Frontend Engineer and Team Leader with more than 10 years of professional experience. Based in Greece, working fully remotely with clients across Greece and Europe.",
       description2:
-        "Our founder recently led the frontend team building ENISA's Single Reporting Platform for national cybersecurity teams across the EU. Prior experience includes work for the European Patent Office, major travel and booking platforms, enterprise SaaS products, and marketplaces. We specialize in React, Next.js, TypeScript, complex UI architecture, and production systems that handle real-world requirements.",
+        "We recently led frontend development of ENISA's Single Reporting Platform, used by national cybersecurity teams across the EU. We have also worked for the European Patent Office, major travel and booking platforms, enterprise SaaS products and marketplaces. We build complex applications that hold up under real-world requirements.",
       techTitle: "Technology Stack",
       techDescription:
         "React, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Redux, Zustand, TanStack Query, React Hook Form, Zod, Material UI, Jest, Vitest, Cypress, Testing Library, Storybook",
@@ -387,49 +387,49 @@ export const translations = {
           name: "ENISA Single Reporting Platform",
           client: "via Uni Systems",
           role: "Frontend Team Leader",
-          description: "Led frontend delivery of ENISA's cybersecurity platform for national CSIRTs across the EU. Multi-tenant application with complex workflows for vulnerability reporting under NIS2 and Cyber Resilience Act. React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Keycloak authentication.",
+          description: "We led frontend delivery of ENISA's cybersecurity platform for national CSIRTs across the EU. Multi-tenant application with complex workflows for vulnerability reporting under NIS2 and Cyber Resilience Act. React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Keycloak authentication.",
         },
         letsferry: {
           name: "Let's Ferry Booking Platform",
           client: "Let's Ferry",
           role: "Lead Frontend Engineer",
-          description: "Led UI development of ferry booking platform. TypeScript, React, Next.js, Tailwind CSS. Responsive booking flows, unit testing, cross-browser compatibility, and performance optimization.",
+          description: "We led UI development of ferry booking platform. TypeScript, React, Next.js, Tailwind CSS. Responsive booking flows, unit testing, cross-browser compatibility, and performance optimization.",
         },
         epo: {
           name: "European Patent Office Applications",
           client: "via ARHS Developments",
           role: "Senior Frontend Engineer",
-          description: "Maintained and developed internal web applications with complex interfaces for the EPO. Micro-frontend architecture, React, TypeScript, Tailwind CSS. Unit testing, cross-browser implementation, mentoring.",
+          description: "We maintained and developed internal web applications with complex interfaces for the EPO. Micro-frontend architecture, React, TypeScript, Tailwind CSS. Unit testing, cross-browser implementation, mentoring.",
         },
         axiomatics: {
           name: "Axiomatics Product Features",
           client: "Axiomatics",
           role: "Senior Frontend Engineer",
-          description: "Implemented new UI features in React and TypeScript. Extended shared UI library, Storybook coverage, SPA architecture integration.",
+          description: "We implemented new UI features in React and TypeScript. Extended shared UI library, Storybook coverage, SPA architecture integration.",
         },
         peoplerhour: {
           name: "PeoplePerHour Platform",
           client: "PeoplePerHour",
           role: "Senior Frontend Engineer (Team Member)",
-          description: "Worked on the PeoplePerHour freelance marketplace GUI. React, Redux, Webpack, Jest, Enzyme, Storybook. Reusable components, Webpack maintenance and upgrades, performance improvements.",
+          description: "We worked on the PeoplePerHour freelance marketplace GUI. React, Redux, Webpack, Jest, Enzyme, Storybook. Reusable components, Webpack maintenance and upgrades, performance improvements.",
         },
         greeka: {
           name: "Greeka.com Members Area",
           client: "via Codibee",
           role: "Frontend Developer (Team Member)",
-          description: "Built members-area GUI for Greeka.com travel site using TypeScript and React.",
+          description: "We built members-area GUI for Greeka.com travel site using TypeScript and React.",
         },
         ferriesingreece: {
           name: "Ferries in Greece Booking",
           client: "via Codibee",
           role: "Frontend Developer (Team Member)",
-          description: "Developed GUI for Ferries in Greece booking platform with HTML, CSS, JavaScript, jQuery, and React.",
+          description: "We developed GUI for Ferries in Greece booking platform with HTML, CSS, JavaScript, jQuery, and React.",
         },
         aegean: {
           name: "Aegean Taxi Dispatch",
           client: "Aegean Taxi",
           role: "Frontend Developer (Team Member)",
-          description: "Developed GUI for taxi dispatch application. React, Material UI, Reactstrap, DevExtreme. Led GUI structure, cross-browser testing.",
+          description: "We developed GUI for taxi dispatch application. React, Material UI, Reactstrap, DevExtreme. We led the GUI structure and cross-browser testing.",
         },
       },
     },
@@ -565,7 +565,7 @@ export const translations = {
       description1:
         "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, έναν Senior Frontend Engineer και Team Leader με περισσότερα από 10 χρόνια επαγγελματικής εμπειρίας. Με έδρα την Ελλάδα, εργαζόμαστε πλήρως απομακρυσμένα με πελάτες σε Ελλάδα και Ευρώπη.",
       description2:
-        "Ο ιδρυτής μας πρόσφατα ηγήθηκε της frontend ομάδας που κατασκεύασε το Single Reporting Platform του ENISA για εθνικές ομάδες κυβερνοασφάλειας σε ολόκληρη την ΕΕ. Προηγούμενη εμπειρία περιλαμβάνει εργασία για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, σημαντικές travel και booking platforms, enterprise SaaS προϊόντα και marketplaces. Ειδικευόμαστε σε React, Next.js, TypeScript, πολύπλοκη UI αρχιτεκτονική και production συστήματα που χειρίζονται πραγματικές απαιτήσεις.",
+        "Πρόσφατα ηγηθήκαμε της frontend ανάπτυξης του Single Reporting Platform του ENISA, της πλατφόρμας που χρησιμοποιούν οι εθνικές ομάδες κυβερνοασφάλειας σε όλη την ΕΕ. Έχουμε επίσης δουλέψει για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, μεγάλες πλατφόρμες ταξιδιών και κρατήσεων, επιχειρησιακά SaaS προϊόντα και marketplaces. Φτιάχνουμε σύνθετες εφαρμογές που λειτουργούν αξιόπιστα σε πραγματικές συνθήκες.",
       techTitle: "Τεχνολογίες",
       techDescription:
         "React, Next.js, TypeScript, JavaScript, Tailwind CSS, shadcn/ui, Redux, Zustand, TanStack Query, React Hook Form, Zod, Material UI, Jest, Vitest, Cypress, Testing Library, Storybook",
@@ -823,13 +823,13 @@ export const translations = {
           name: "ENISA Single Reporting Platform",
           client: "μέσω Uni Systems",
           role: "Frontend Team Leader",
-          description: "Ηγήθηκα της frontend παράδοσης της πλατφόρμας κυβερνοασφάλειας του ENISA για εθνικά CSIRTs σε ολόκληρη την ΕΕ. Multi-tenant εφαρμογή με πολύπλοκα workflows για αναφορά ευπαθειών υπό NIS2 και Cyber Resilience Act. React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Keycloak authentication.",
+          description: "Ηγηθήκαμε της frontend ανάπτυξης της πλατφόρμας κυβερνοασφάλειας του ENISA για εθνικά CSIRTs σε ολόκληρη την ΕΕ. Multi-tenant εφαρμογή με πολύπλοκα workflows για αναφορά ευπαθειών υπό NIS2 και Cyber Resilience Act. React, Next.js, TypeScript, Tailwind CSS, shadcn/ui, Keycloak authentication.",
         },
         letsferry: {
           name: "Let's Ferry Booking Platform",
           client: "Let's Ferry",
           role: "Lead Frontend Engineer",
-          description: "Ηγήθηκα της UI ανάπτυξης της ferry booking platform. TypeScript, React, Next.js, Tailwind CSS. Responsive booking flows, unit testing, cross-browser συμβατότητα και βελτιστοποίηση απόδοσης.",
+          description: "Ηγηθήκαμε της UI ανάπτυξης της ferry booking platform. TypeScript, React, Next.js, Tailwind CSS. Responsive booking flows, unit testing, cross-browser συμβατότητα και βελτιστοποίηση απόδοσης.",
         },
         epo: {
           name: "Εφαρμογές Ευρωπαϊκού Γραφείου Διπλωμάτων Ευρεσιτεχνίας",
@@ -865,7 +865,7 @@ export const translations = {
           name: "Aegean Taxi Dispatch",
           client: "Aegean Taxi",
           role: "Frontend Developer (Μέλος Ομάδας)",
-          description: "Ανάπτυξη GUI για taxi dispatch εφαρμογή. React, Material UI, Reactstrap, DevExtreme. Ηγήθηκα της δομής GUI, cross-browser testing.",
+          description: "Ανάπτυξη GUI για taxi dispatch εφαρμογή. React, Material UI, Reactstrap, DevExtreme. Ηγηθήκαμε της δομής του GUI και του cross-browser testing.",
         },
       },
     },
