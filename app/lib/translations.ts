@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       title: "Professional software development.",
       subtitle:
-        "We build applications, platforms and AI-powered automation for your business. From the first idea through to launch.",
+        "We design and build applications, platforms and automation for your business. We use modern AI-assisted development methods, with experienced engineers designing, guiding and reviewing every step.",
       cta: "Explore Our Services",
       contact: "Contact",
       editorFocus: "Custom software for business",
@@ -38,11 +38,11 @@ export const translations = {
       ],
     },
     aiAgents: {
-      title: "AI agents that work for you, with human oversight.",
+      title: "AI automation, designed and supervised by experienced engineers.",
       subtitle:
         "We automate repetitive work and keep a person in the review. The agents work with the tools you already use.",
       description1:
-        "Our AI agents handle time-consuming tasks like invoice processing, data extraction, customer support triage, and workflow automation. They integrate with your existing tools and adapt to your processes.",
+        "We take on time-consuming, repetitive work such as invoice processing, data extraction and handling customer requests. Each automation is designed around your processes and fitted into the systems you already use, with experienced engineers overseeing how it runs.",
       description2:
         "Every agent operates with human oversight. We review outputs, set guardrails, and monitor performance. Your data stays protected, and you stay in control.",
       description3:
@@ -459,7 +459,7 @@ export const translations = {
     hero: {
       title: "Επαγγελματική ανάπτυξη λογισμικού.",
       subtitle:
-        "Φτιάχνουμε εφαρμογές, πλατφόρμες και αυτοματισμούς με AI για την επιχείρησή σας. Από την ιδέα μέχρι την κυκλοφορία.",
+        "Σχεδιάζουμε και αναπτύσσουμε εφαρμογές, πλατφόρμες και αυτοματισμούς για την επιχείρησή σας. Αξιοποιούμε σύγχρονες μεθόδους ανάπτυξης με AI, ενώ έμπειροι μηχανικοί σχεδιάζουν, καθοδηγούν και ελέγχουν κάθε βήμα.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
       editorFocus: "Προσαρμοσμένο λογισμικό για επιχειρήσεις",
@@ -480,11 +480,11 @@ export const translations = {
       ],
     },
     aiAgents: {
-      title: "Πράκτορες AI που εργάζονται για εσάς, με ανθρώπινη επίβλεψη.",
+      title: "Αυτοματισμοί με AI, σχεδιασμένοι και ελεγχόμενοι από έμπειρους μηχανικούς.",
       subtitle:
         "Αυτοματοποιούμε επαναλαμβανόμενες εργασίες και κρατάμε έναν άνθρωπο στον έλεγχο. Οι πράκτορες συνεργάζονται με τα εργαλεία που ήδη χρησιμοποιείτε.",
       description1:
-        "Οι πράκτορες AI μας χειρίζονται χρονοβόρες εργασίες όπως επεξεργασία τιμολογίων, εξαγωγή δεδομένων, αρχική διαλογή αιτημάτων πελατών και αυτοματοποίηση διαδικασιών. Ενσωματώνονται με τα υπάρχοντα εργαλεία σας και προσαρμόζονται στις διαδικασίες σας.",
+        "Αναλαμβάνουμε χρονοβόρες, επαναλαμβανόμενες εργασίες, όπως επεξεργασία τιμολογίων, εξαγωγή δεδομένων και διαχείριση αιτημάτων πελατών. Σχεδιάζουμε κάθε αυτοματισμό με βάση τις διαδικασίες σας και τον εντάσσουμε στα συστήματα που ήδη χρησιμοποιείτε, με έμπειρους μηχανικούς να ελέγχουν τη λειτουργία του.",
       description2:
         "Κάθε agent λειτουργεί με ανθρώπινη επίβλεψη. Ελέγχουμε τα αποτελέσματα, θέτουμε όρια και παρακολουθούμε την απόδοση. Τα δεδομένα σας παραμένουν προστατευμένα και εσείς διατηρείτε τον έλεγχο.",
       description3:
