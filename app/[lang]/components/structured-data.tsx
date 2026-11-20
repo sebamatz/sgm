@@ -34,7 +34,7 @@ export default function StructuredData({ lang }: { lang: string }) {
     founder: {
       "@type": "Person",
       name: "Sevastos Matzouranis",
-      jobTitle: "Senior Frontend Engineer & Team Leader",
+      jobTitle: "Senior Software Engineer & Team Leader",
       sameAs: [
         "https://www.linkedin.com/in/sevastos-matzouranis/",
         "https://github.com/sebamatz",
