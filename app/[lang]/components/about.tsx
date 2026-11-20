@@ -41,6 +41,30 @@ export default function About({
               </p>
             </div>
 
+            {t.approachTitle && t.approach ? (
+              <div className="space-y-3">
+                <h4 className="text-xl font-semibold tracking-tight text-ink">
+                  {t.approachTitle}
+                </h4>
+                <p className="text-base text-ink-light leading-relaxed">
+                  {t.approach}
+                </p>
+              </div>
+            ) : null}
+
+            {Array.isArray(t.capabilities) && t.capabilities.length > 0 ? (
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5">
+                {t.capabilities.map((item: string) => (
+                  <li
+                    key={item}
+                    className="text-sm text-ink-light leading-relaxed"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+
             {t.techTitle && (
               <div className="p-5 border border-slate-200 bg-slate-50">
                 <h4 className="text-xs font-mono uppercase tracking-wider text-ink mb-3">
