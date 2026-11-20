@@ -84,7 +84,10 @@ export default function Header({
         </nav>
 
         <div className="flex items-center space-x-4">
-          <LanguageSwitcher currentLang={lang} />
+          <LanguageSwitcher
+            currentLang={lang}
+            switchLabel={translations.switchLanguage}
+          />
 
           <Button
             className="hidden sm:inline-flex bg-tech-blue hover:bg-tech-cyan text-white text-sm font-mono font-medium px-5 h-10 transition-all shadow-md shadow-tech-blue/20"

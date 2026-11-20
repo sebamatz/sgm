@@ -98,22 +98,6 @@ export default async function Image({
             {subtitle}
           </p>
 
-          <div
-            style={{
-              display: "flex",
-              gap: 20,
-              marginTop: 40,
-              fontSize: 24,
-              color: "#64748b",
-              fontFamily: "monospace",
-            }}
-          >
-            <span>React</span>
-            <span>·</span>
-            <span>Next.js</span>
-            <span>·</span>
-            <span>TypeScript</span>
-          </div>
         </div>
 
         <div
@@ -125,7 +109,7 @@ export default async function Image({
             fontFamily: "monospace",
           }}
         >
-          www.sgmsoftware.gr
+          {lang === "el" ? "www.sgmsoftware.gr" : "www.sgmsoftware.com"}
         </div>
       </div>
     ),

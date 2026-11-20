@@ -153,7 +153,7 @@ export default function Contact({
           <div className="lg:col-span-5">
             <div className="mb-3 lg:mb-12">
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
-            05 / contact
+            {t.sectionLabel}
           </p>
               <h2 className="heading-section font-semibold tracking-tight text-ink mb-0 lg:mb-6">
                 {t.title}

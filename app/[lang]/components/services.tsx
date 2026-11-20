@@ -69,7 +69,7 @@ export default function Services({
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-16 md:mb-20">
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
-            01 / services
+            {translations.sectionLabel}
           </p>
           <h2 className="heading-section font-semibold tracking-tight text-ink mb-4">
             {translations.title}
