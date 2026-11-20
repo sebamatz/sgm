@@ -15,9 +15,9 @@ export const translations = {
       switchLanguage: "Switch language",
     },
     hero: {
-      title: "Professional Software Development",
+      title: "Professional software development.",
       subtitle:
-        "We build software that makes your work easier: applications, platforms and AI-powered automation, tailored to your business. From idea to launch, fast and reliable.",
+        "We build applications, platforms and AI-powered automation for your business. From the first idea through to launch.",
       cta: "Explore Our Services",
       contact: "Contact",
       editorFocus: "Custom software for business",
@@ -40,13 +40,13 @@ export const translations = {
     aiAgents: {
       title: "AI agents that work for you, with human oversight.",
       subtitle:
-        "We build and deploy AI agents that automate repetitive work: processing documents, handling support tickets, back-office workflows, and integrating with your tools. Fast, intelligent, and always under human supervision.",
+        "We automate repetitive work and keep a person in the review. The agents work with the tools you already use.",
       description1:
         "Our AI agents handle time-consuming tasks like invoice processing, data extraction, customer support triage, and workflow automation. They integrate with your existing tools and adapt to your processes.",
       description2:
         "Every agent operates with human oversight. We review outputs, set guardrails, and monitor performance. Your data stays protected, and you stay in control.",
       description3:
-        "No need to hire, train, or manage additional staff for repetitive work. Deploy intelligent automation quickly and easily, backed by our technical expertise.",
+        "There is no need to hire or train extra staff for the repetitive part. We set up the automation and stay involved in the technical work.",
       steps: {
         step1: "initializing task...",
         step2: "read invoices from inbox",
@@ -58,30 +58,31 @@ export const translations = {
       },
       benefits: {
         speed: {
-          title: "Fast Deployment",
+          title: "Ready without a long programme.",
           description:
-            "Set up intelligent automation in days, not months. Start handling real work quickly.",
+            "We put the automation in place and start on real work.",
         },
         automation: {
-          title: "Repetitive Work",
+          title: "Repetitive work.",
           description:
-            "Automate document processing, data entry, support triage, and routine tasks.",
+            "Document processing, data entry, request triage and routine tasks.",
         },
         oversight: {
-          title: "Human Oversight",
+          title: "Human oversight.",
           description:
-            "Every output reviewed. We set rules, monitor performance, and maintain quality.",
+            "Every output can be reviewed. We set the rules and you keep control.",
         },
         security: {
-          title: "Your Data Protected",
+          title: "Your data stays protected.",
           description:
-            "Secure handling, clear boundaries, no unauthorized access. You keep control.",
+            "Clear boundaries, and no access beyond the task. You remain in control.",
         },
       },
       sectionLabel: "02 / AI",
     },
     services: {
-      title: "Services",
+      title: "Software that supports your business.",
+      subtitle: "We design applications, platforms and automation around the way you already work.",
       back: "Back",
       viewDetails: "View details →",
       sectionLabel: "01 / services",
@@ -130,18 +131,30 @@ export const translations = {
     },
     about: {
       title: "About SGM Software Developers",
-      subtitle: "Experience & Expertise",
+      subtitle: "Who we are, and how we work.",
       description1:
         "SGM Software Developers is led by Sevastos Matzouranis, a Senior Software Engineer with more than 10 years of experience building software for businesses and organisations.",
       description2:
         "We recently led frontend development of ENISA's Single Reporting Platform, used by national cybersecurity teams across the EU. We have also worked for the European Patent Office, major travel and booking platforms, enterprise SaaS products and marketplaces. We build complex applications that hold up under real-world requirements.",
+      approachTitle: "Our approach.",
+      approach:
+        "We start by understanding how the organisation works. We then design practical, reliable software, in direct collaboration with the people who build it. The work is meant to sit alongside the systems you already have.",
+      capabilities: [
+        "Software architecture & development",
+        "Web applications & customer portals",
+        "Business systems integration",
+        "API design & development",
+        "AI automation with human oversight",
+        "Technical guidance & support",
+      ],
       techTitle: "Technology Stack",
       techFrontend: "Frontend",
       techBackend: "Backend",
       sectionLabel: "04 / about",
     },
     contact: {
-      title: "Get in Touch",
+      title: "Tell us about your project.",
+      subtitle: "Send a short note about what you need. We will reply and arrange a conversation.",
       name: "Name",
       email: "Email",
       message: "Message",
@@ -187,12 +200,12 @@ export const translations = {
         metaTitle: "Custom Web Applications for Business | SGM Software Developers",
         metaDescription: "We build custom web applications that streamline your operations and help your business grow. From booking systems to internal tools, we deliver software that works.",
         hero: {
-          title: "Custom Web Applications That Work for Your Business",
-          subtitle: "Stop managing spreadsheets and manual processes. Get software built specifically for your business needs—from booking systems to customer portals to internal tools that save you time every day.",
+          title: "Applications built around your work.",
+          subtitle: "Software for booking, customer portals and internal tools. It is meant to replace scattered spreadsheets and manual steps.",
           cta: "Start Your Project",
         },
         problems: {
-          title: "We Build Solutions For:",
+          title: "What this software is for.",
           items: [
             "Booking and reservation systems that handle your customers 24/7",
             "Customer portals that reduce support workload and improve service",
@@ -202,28 +215,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "How We Work",
+          title: "How we work.",
           steps: [
             {
-              title: "Understanding Your Business",
+              title: "Understanding your business.",
               description: "We start by understanding what you need, what problems you're solving, and how you work today. No technical jargon—just a conversation about your business.",
             },
             {
-              title: "Clear Plan & Timeline",
+              title: "A clear plan and timeline.",
               description: "We present a clear plan with realistic timelines and costs. You know exactly what you're getting and when.",
             },
             {
-              title: "Building & Testing",
+              title: "Building and testing.",
               description: "We build your application step by step, keeping you involved. You see progress regularly and can provide feedback.",
             },
             {
-              title: "Launch & Support",
+              title: "Launch and support.",
               description: "We launch your application and make sure everything runs smoothly. We're available to help if you need changes or support.",
             },
           ],
         },
         faq: {
-          title: "Common Questions",
+          title: "Common questions.",
           items: [
             {
               question: "How long does it take to build a web application?",
@@ -248,12 +261,12 @@ export const translations = {
         metaTitle: "AI Automation for Business | SGM Software Developers",
         metaDescription: "Automate repetitive work with AI agents. From processing documents to handling customer requests, we build AI automation that saves time and reduces errors.",
         hero: {
-          title: "AI Automation That Handles Your Repetitive Work",
-          subtitle: "Stop spending hours on data entry, document processing, and routine tasks. Our AI agents work 24/7 to handle repetitive work automatically—with human oversight to ensure quality.",
+          title: "Automation for work that repeats.",
+          subtitle: "Agents can process documents, handle routine requests and update records. A person remains in the review.",
           cta: "Explore AI Automation",
         },
         problems: {
-          title: "Perfect For:",
+          title: "Where this is useful.",
           items: [
             "Processing invoices, receipts, and documents automatically",
             "Handling routine customer service requests and inquiries",
@@ -263,28 +276,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "How We Work",
+          title: "How we work.",
           steps: [
             {
-              title: "Identify the Task",
+              title: "Identify the task.",
               description: "We identify which repetitive tasks in your business can be automated with AI. Not everything needs automation—we focus on what will save you the most time.",
             },
             {
-              title: "Build & Train the Agent",
+              title: "Build and train the agent.",
               description: "We build an AI agent specifically for your task and train it on your processes. You review its work to make sure it understands what you need.",
             },
             {
-              title: "Test with Human Oversight",
+              title: "Test with human oversight.",
               description: "The agent starts working on real tasks, but we review every output. You stay in control and we fix any issues quickly.",
             },
             {
-              title: "Full Automation",
+              title: "Full automation.",
               description: "Once you're confident, the agent works automatically. You still have oversight and can step in anytime, but the tedious work is handled.",
             },
           ],
         },
         faq: {
-          title: "Common Questions",
+          title: "Common questions.",
           items: [
             {
               question: "Is my data safe with AI automation?",
@@ -309,12 +322,12 @@ export const translations = {
         metaTitle: "Enterprise Software Solutions | SGM Software Developers",
         metaDescription: "Secure, scalable software for larger organizations. We've worked with EU institutions and enterprise clients on mission-critical applications.",
         hero: {
-          title: "Enterprise Software Built for Scale and Security",
-          subtitle: "When your organization needs software that meets strict security requirements, handles complex workflows, and scales with your growth—we have the experience to deliver it.",
+          title: "Software for organisations with strict requirements.",
+          subtitle: "We build applications that meet security and regulatory needs, and that fit the systems you already run.",
           cta: "Discuss Your Project",
         },
         problems: {
-          title: "We Deliver:",
+          title: "What we deliver.",
           items: [
             "Applications that meet regulatory and compliance requirements",
             "Multi-tenant platforms that serve multiple organizations securely",
@@ -324,28 +337,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "How We Work",
+          title: "How we work.",
           steps: [
             {
-              title: "Requirements & Compliance",
+              title: "Requirements and compliance.",
               description: "We document your technical, security, and compliance requirements. We've worked with NIS2, Cyber Resilience Act, and other EU regulations.",
             },
             {
-              title: "Architecture & Planning",
+              title: "Architecture and planning.",
               description: "We design the system architecture to meet your scalability, security, and integration needs. You get a clear technical plan before development starts.",
             },
             {
-              title: "Iterative Development",
+              title: "Development in stages.",
               description: "We build and deliver in stages, so you can validate functionality early. Regular demos and testing ensure we're on track.",
             },
             {
-              title: "Testing & Deployment",
+              title: "Testing and deployment.",
               description: "Comprehensive testing, security review, and deployment planning. We make sure your system is production-ready and your team is prepared.",
             },
           ],
         },
         faq: {
-          title: "Common Questions",
+          title: "Common questions.",
           items: [
             {
               question: "What kind of organizations do you work with?",
@@ -375,8 +388,8 @@ export const translations = {
       privacy: "Privacy & Cookies",
     },
     projects: {
-      title: "Experience & Collaborations",
-      subtitle: "Projects & Experience",
+      title: "Selected work with organisations and companies.",
+      subtitle: "A few of the collaborations we have delivered.",
       sectionLabel: "03 / projects",
       categories: {
         government: "Government & EU Institutions",
@@ -444,9 +457,9 @@ export const translations = {
       switchLanguage: "Αλλαγή γλώσσας",
     },
     hero: {
-      title: "Επαγγελματική Ανάπτυξη Λογισμικού",
+      title: "Επαγγελματική ανάπτυξη λογισμικού.",
       subtitle:
-        "Φτιάχνουμε λογισμικό που κάνει τη δουλειά σας πιο εύκολη: εφαρμογές, πλατφόρμες και αυτοματισμούς με AI, προσαρμοσμένα στις ανάγκες της επιχείρησής σας. Από την ιδέα μέχρι την κυκλοφορία, γρήγορα και αξιόπιστα.",
+        "Φτιάχνουμε εφαρμογές, πλατφόρμες και αυτοματισμούς με AI για την επιχείρησή σας. Από την ιδέα μέχρι την κυκλοφορία.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
       editorFocus: "Προσαρμοσμένο λογισμικό για επιχειρήσεις",
@@ -469,13 +482,13 @@ export const translations = {
     aiAgents: {
       title: "Πράκτορες AI που εργάζονται για εσάς, με ανθρώπινη επίβλεψη.",
       subtitle:
-        "Κατασκευάζουμε και τρέχουμε πράκτορες AI που αυτοματοποιούν επαναλαμβανόμενες εργασίες: επεξεργασία εγγράφων, διαχείριση αιτημάτων υποστήριξης, διαδικασίες γραφείου και ενσωμάτωση με τα εργαλεία σας. Γρήγορα, έξυπνα και πάντα υπό ανθρώπινη επίβλεψη.",
+        "Αυτοματοποιούμε επαναλαμβανόμενες εργασίες και κρατάμε έναν άνθρωπο στον έλεγχο. Οι πράκτορες συνεργάζονται με τα εργαλεία που ήδη χρησιμοποιείτε.",
       description1:
         "Οι πράκτορες AI μας χειρίζονται χρονοβόρες εργασίες όπως επεξεργασία τιμολογίων, εξαγωγή δεδομένων, αρχική διαλογή αιτημάτων πελατών και αυτοματοποίηση διαδικασιών. Ενσωματώνονται με τα υπάρχοντα εργαλεία σας και προσαρμόζονται στις διαδικασίες σας.",
       description2:
         "Κάθε agent λειτουργεί με ανθρώπινη επίβλεψη. Ελέγχουμε τα αποτελέσματα, θέτουμε όρια και παρακολουθούμε την απόδοση. Τα δεδομένα σας παραμένουν προστατευμένα και εσείς διατηρείτε τον έλεγχο.",
       description3:
-        "Δεν χρειάζεται να προσλάβετε, εκπαιδεύσετε ή διαχειριστείτε επιπλέον προσωπικό για επαναλαμβανόμενες εργασίες. Αναπτύξτε έξυπνη αυτοματοποίηση γρήγορα και εύκολα, με την υποστήριξη της τεχνικής μας εμπειρίας.",
+        "Δεν χρειάζεται να προσλάβετε ή να εκπαιδεύσετε επιπλέον προσωπικό για το επαναλαμβανόμενο μέρος. Θέτουμε σε λειτουργία την αυτοματοποίηση και παραμένουμε στην τεχνική εργασία.",
       steps: {
         step1: "αρχικοποίηση εργασίας...",
         step2: "διαβάστηκαν τα τιμολόγια από τα εισερχόμενα",
@@ -487,30 +500,31 @@ export const translations = {
       },
       benefits: {
         speed: {
-          title: "Γρήγορη Ανάπτυξη",
+          title: "Σε λειτουργία χωρίς καθυστέρηση.",
           description:
-            "Θέστε σε λειτουργία έξυπνη αυτοματοποίηση σε ημέρες, όχι σε μήνες. Ξεκινήστε να χειρίζεστε πραγματική δουλειά γρήγορα.",
+            "Θέτουμε σε λειτουργία την αυτοματοποίηση και ξεκινάμε με πραγματική εργασία.",
         },
         automation: {
-          title: "Επαναλαμβανόμενες Εργασίες",
+          title: "Επαναλαμβανόμενη εργασία.",
           description:
-            "Αυτοματοποιήστε επεξεργασία εγγράφων, εισαγωγή δεδομένων, αρχική διαλογή αιτημάτων υποστήριξης και ρουτίνες.",
+            "Επεξεργασία εγγράφων, εισαγωγή δεδομένων, αρχική διαλογή αιτημάτων και ρουτίνες.",
         },
         oversight: {
-          title: "Ανθρώπινη Επίβλεψη",
+          title: "Ανθρώπινη επίβλεψη.",
           description:
-            "Κάθε αποτέλεσμα ελέγχεται. Θέτουμε κανόνες, παρακολουθούμε απόδοση και διατηρούμε ποιότητα.",
+            "Κάθε αποτέλεσμα μπορεί να ελεγχθεί. Θέτουμε τους κανόνες και εσείς διατηρείτε τον έλεγχο.",
         },
         security: {
-          title: "Προστασία Δεδομένων",
+          title: "Τα δεδομένα σας προστατεύονται.",
           description:
-            "Ασφαλής διαχείριση, σαφή όρια, χωρίς μη εξουσιοδοτημένη πρόσβαση. Διατηρείτε τον έλεγχο.",
+            "Σαφή όρια και χωρίς πρόσβαση πέρα από την εργασία. Διατηρείτε τον έλεγχο.",
         },
       },
       sectionLabel: "02 / AI",
     },
     services: {
-      title: "Υπηρεσίες",
+      title: "Λογισμικό που στηρίζει την επιχείρησή σας.",
+      subtitle: "Σχεδιάζουμε εφαρμογές, πλατφόρμες και αυτοματισμούς γύρω από τον τρόπο που ήδη εργάζεστε.",
       back: "Πίσω",
       viewDetails: "Δείτε περισσότερα →",
       sectionLabel: "01 / υπηρεσίες",
@@ -559,18 +573,30 @@ export const translations = {
     },
     about: {
       title: "Σχετικά με την SGM Software Developers",
-      subtitle: "Εμπειρία & Τεχνογνωσία",
+      subtitle: "Ποιοι είμαστε και πώς δουλεύουμε.",
       description1:
         "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, Senior Software Engineer με πάνω από 10 χρόνια εμπειρίας στην ανάπτυξη λογισμικού για επιχειρήσεις και οργανισμούς.",
       description2:
         "Πρόσφατα ηγηθήκαμε της frontend ανάπτυξης του Single Reporting Platform του ENISA, της πλατφόρμας που χρησιμοποιούν οι εθνικές ομάδες κυβερνοασφάλειας σε όλη την ΕΕ. Έχουμε επίσης δουλέψει για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, μεγάλες πλατφόρμες ταξιδιών και κρατήσεων, επιχειρησιακά SaaS προϊόντα και marketplaces. Φτιάχνουμε σύνθετες εφαρμογές που λειτουργούν αξιόπιστα σε πραγματικές συνθήκες.",
+      approachTitle: "Η προσέγγισή μας.",
+      approach:
+        "Ξεκινάμε κατανοώντας πώς λειτουργεί ο οργανισμός. Στη συνέχεια σχεδιάζουμε πρακτικές και αξιόπιστες λύσεις, σε άμεση συνεργασία με όσους τις αναπτύσσουν. Η εργασία εντάσσεται στα συστήματα που ήδη έχετε.",
+      capabilities: [
+        "Αρχιτεκτονική & ανάπτυξη λογισμικού",
+        "Διαδικτυακές εφαρμογές & πύλες πελατών",
+        "Διασύνδεση επιχειρησιακών συστημάτων",
+        "Σχεδιασμός & ανάπτυξη APIs",
+        "Αυτοματισμοί με AI υπό ανθρώπινη επίβλεψη",
+        "Τεχνική καθοδήγηση & υποστήριξη",
+      ],
       techTitle: "Τεχνολογίες",
       techFrontend: "Frontend",
       techBackend: "Backend",
       sectionLabel: "04 / σχετικά",
     },
     contact: {
-      title: "Επικοινωνήστε μαζί μας",
+      title: "Πείτε μας για το έργο σας.",
+      subtitle: "Στείλτε μας μια σύντομη περιγραφή του τι χρειάζεστε. Θα απαντήσουμε και θα κανονίσουμε μια συζήτηση.",
       name: "Όνομα",
       email: "Email",
       message: "Μήνυμα",
@@ -616,12 +642,12 @@ export const translations = {
         metaTitle: "Ανάπτυξη Web Εφαρμογών για Επιχειρήσεις | SGM Software Developers",
         metaDescription: "Φτιάχνουμε προσαρμοσμένες διαδικτυακές εφαρμογές που απλοποιούν τις λειτουργίες σας και βοηθούν την επιχείρησή σας να αναπτυχθεί. Από συστήματα κρατήσεων μέχρι εσωτερικά εργαλεία, παραδίδουμε λογισμικό που λειτουργεί.",
         hero: {
-          title: "Web Εφαρμογές Προσαρμοσμένες στην Επιχείρησή σας",
-          subtitle: "Σταματήστε τα υπολογιστικά φύλλα και τις χειροκίνητες διαδικασίες. Αποκτήστε λογισμικό φτιαγμένο για τις ανάγκες της επιχείρησής σας – από συστήματα κρατήσεων μέχρι πύλες πελατών και εσωτερικά εργαλεία που σας εξοικονομούν χρόνο κάθε μέρα.",
+          title: "Εφαρμογές φτιαγμένες γύρω από την εργασία σας.",
+          subtitle: "Λογισμικό για κρατήσεις, πύλες πελατών και εσωτερικά εργαλεία. Στόχος είναι να αντικαταστήσει διάσπαρτα υπολογιστικά φύλλα και χειροκίνητα βήματα.",
           cta: "Ξεκινήστε το έργο σας",
         },
         problems: {
-          title: "Φτιάχνουμε Λύσεις Για:",
+          title: "Για ποιες ανάγκες είναι αυτό το λογισμικό.",
           items: [
             "Συστήματα κρατήσεων που εξυπηρετούν τους πελάτες σας 24/7",
             "Πύλες πελατών που μειώνουν το φόρτο υποστήριξης και βελτιώνουν την εξυπηρέτηση",
@@ -631,28 +657,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "Πώς Δουλεύουμε",
+          title: "Πώς δουλεύουμε.",
           steps: [
             {
-              title: "Κατανόηση της Επιχείρησής σας",
+              title: "Κατανόηση της επιχείρησής σας.",
               description: "Ξεκινάμε κατανοώντας τι χρειάζεστε, τι προβλήματα λύνετε και πώς δουλεύετε σήμερα. Χωρίς τεχνική ορολογία – απλά μια συζήτηση για την επιχείρησή σας.",
             },
             {
-              title: "Σαφές σχέδιο και χρονοδιάγραμμα",
+              title: "Σαφές σχέδιο και χρονοδιάγραμμα.",
               description: "Παρουσιάζουμε ένα σαφές σχέδιο με ρεαλιστικά χρονοδιαγράμματα και κόστη. Ξέρετε ακριβώς τι παίρνετε και πότε.",
             },
             {
-              title: "Ανάπτυξη & Δοκιμές",
+              title: "Ανάπτυξη και έλεγχοι.",
               description: "Φτιάχνουμε την εφαρμογή σας βήμα βήμα, κρατώντας σας ενήμερους. Βλέπετε την πρόοδο τακτικά και μπορείτε να δώσετε σχόλια.",
             },
             {
-              title: "Λανσάρισμα & Υποστήριξη",
+              title: "Θέση σε λειτουργία και υποστήριξη.",
               description: "Θέτουμε την εφαρμογή σε λειτουργία και φροντίζουμε να τρέχουν όλα ομαλά. Είμαστε διαθέσιμοι αν χρειαστείτε αλλαγές ή υποστήριξη.",
             },
           ],
         },
         faq: {
-          title: "Συχνές Ερωτήσεις",
+          title: "Συχνές ερωτήσεις.",
           items: [
             {
               question: "Πόσος χρόνος χρειάζεται για να φτιαχτεί μια διαδικτυακή εφαρμογή;",
@@ -677,12 +703,12 @@ export const translations = {
         metaTitle: "Αυτοματοποίηση με AI για Επιχειρήσεις | SGM Software Developers",
         metaDescription: "Αυτοματοποιήστε επαναλαμβανόμενη εργασία με πράκτορες AI. Από επεξεργασία εγγράφων μέχρι χειρισμό αιτημάτων πελατών, φτιάχνουμε αυτοματοποίηση AI που εξοικονομεί χρόνο και μειώνει λάθη.",
         hero: {
-          title: "AI Automation που Χειρίζεται την Επαναλαμβανόμενη Δουλειά σας",
-          subtitle: "Σταματήστε να ξοδεύετε ώρες σε εισαγωγή δεδομένων, επεξεργασία εγγράφων και ρουτίνες. Οι πράκτορες AI μας δουλεύουν 24/7 για να χειρίζονται αυτόματα επαναλαμβανόμενη εργασία, με ανθρώπινη επίβλεψη για ποιότητα.",
+          title: "Αυτοματοποίηση για εργασίες που επαναλαμβάνονται.",
+          subtitle: "Οι πράκτορες μπορούν να επεξεργάζονται έγγραφα, να χειρίζονται αιτήματα ρουτίνας και να ενημερώνουν αρχεία. Ένας άνθρωπος παραμένει στον έλεγχο.",
           cta: "Εξερευνήστε το AI Automation",
         },
         problems: {
-          title: "Ιδανικό Για:",
+          title: "Πού είναι χρήσιμο.",
           items: [
             "Επεξεργασία τιμολογίων, αποδείξεων και εγγράφων αυτόματα",
             "Χειρισμό ρουτίνας αιτημάτων εξυπηρέτησης πελατών",
@@ -692,28 +718,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "Πώς Δουλεύουμε",
+          title: "Πώς δουλεύουμε.",
           steps: [
             {
-              title: "Αναγνώριση της Εργασίας",
+              title: "Αναγνώριση της εργασίας.",
               description: "Εντοπίζουμε ποιες επαναλαμβανόμενες εργασίες στην επιχείρησή σας μπορούν να αυτοματοποιηθούν με AI. Δεν χρειάζονται όλα αυτοματοποίηση· εστιάζουμε σε ό,τι θα σας εξοικονομήσει τον περισσότερο χρόνο.",
             },
             {
-              title: "Ανάπτυξη & Εκπαίδευση του Agent",
-              description: "Φτιάχνουμε έναν AI agent ειδικά για την εργασία σας και τον εκπαιδεύουμε στις διαδικασίες σας. Εσείς ελέγχετε τη δουλειά του για να σιγουρευτείτε ότι καταλαβαίνει τι χρειάζεστε.",
+              title: "Ανάπτυξη και εκπαίδευση του πράκτορα.",
+              description: "Φτιάχνουμε έναν πράκτορα AI ειδικά για την εργασία σας και τον εκπαιδεύουμε στις διαδικασίες σας. Εσείς ελέγχετε τη δουλειά του για να σιγουρευτείτε ότι καταλαβαίνει τι χρειάζεστε.",
             },
             {
-              title: "Δοκιμές με Ανθρώπινη Επίβλεψη",
-              description: "Ο agent αρχίζει να δουλεύει σε πραγματικές εργασίες, αλλά ελέγχουμε κάθε αποτέλεσμα. Εσείς διατηρείτε τον έλεγχο και διορθώνουμε τυχόν προβλήματα γρήγορα.",
+              title: "Δοκιμές με ανθρώπινη επίβλεψη.",
+              description: "Ο πράκτορας αρχίζει να δουλεύει σε πραγματικές εργασίες, αλλά ελέγχουμε κάθε αποτέλεσμα. Εσείς διατηρείτε τον έλεγχο και διορθώνουμε τυχόν προβλήματα γρήγορα.",
             },
             {
-              title: "Πλήρης Αυτοματοποίηση",
-              description: "Μόλις είστε σίγουροι, ο agent δουλεύει αυτόματα. Εξακολουθείτε να έχετε επίβλεψη και μπορείτε να επέμβετε ανά πάσα στιγμή, αλλά η κουραστική εργασία γίνεται αυτόματα.",
+              title: "Πλήρης αυτοματοποίηση.",
+              description: "Μόλις είστε σίγουροι, ο πράκτορας δουλεύει αυτόματα. Εξακολουθείτε να έχετε επίβλεψη και μπορείτε να επέμβετε ανά πάσα στιγμή, αλλά η κουραστική εργασία γίνεται αυτόματα.",
             },
           ],
         },
         faq: {
-          title: "Συχνές Ερωτήσεις",
+          title: "Συχνές ερωτήσεις.",
           items: [
             {
               question: "Είναι ασφαλή τα δεδομένα μου με αυτοματοποίηση AI;",
@@ -738,12 +764,12 @@ export const translations = {
         metaTitle: "Enterprise Λύσεις Λογισμικού | SGM Software Developers",
         metaDescription: "Ασφαλές, κλιμακώσιμο λογισμικό για μεγαλύτερους οργανισμούς. Έχουμε δουλέψει με φορείς της ΕΕ και εταιρικούς πελάτες σε εφαρμογές κρίσιμες για τη λειτουργία.",
         hero: {
-          title: "Enterprise Λογισμικό για Κλιμάκωση και Ασφάλεια",
-          subtitle: "Όταν ο οργανισμός σας χρειάζεται λογισμικό που πληροί αυστηρές απαιτήσεις ασφαλείας, χειρίζεται σύνθετες διαδικασίες και κλιμακώνεται με την ανάπτυξή σας – έχουμε την εμπειρία να το παραδώσουμε.",
+          title: "Λογισμικό για οργανισμούς με αυστηρές απαιτήσεις.",
+          subtitle: "Κατασκευάζουμε εφαρμογές που καλύπτουν ανάγκες ασφαλείας και κανονισμών, και εντάσσονται στα συστήματα που ήδη λειτουργείτε.",
           cta: "Συζητήστε το έργο σας",
         },
         problems: {
-          title: "Παραδίδουμε:",
+          title: "Τι παραδίδουμε.",
           items: [
             "Εφαρμογές που πληρούν κανονιστικές απαιτήσεις",
             "Πλατφόρμες που εξυπηρετούν πολλούς οργανισμούς με ασφάλεια",
@@ -753,28 +779,28 @@ export const translations = {
           ],
         },
         process: {
-          title: "Πώς Δουλεύουμε",
+          title: "Πώς δουλεύουμε.",
           steps: [
             {
-              title: "Απαιτήσεις και συμμόρφωση",
+              title: "Απαιτήσεις και συμμόρφωση.",
               description: "Τεκμηριώνουμε τις τεχνικές απαιτήσεις, τις απαιτήσεις ασφαλείας και συμμόρφωσης. Έχουμε δουλέψει με NIS2, Cyber Resilience Act και άλλους κανονισμούς της ΕΕ.",
             },
             {
-              title: "Αρχιτεκτονική & Σχεδιασμός",
+              title: "Αρχιτεκτονική και σχεδιασμός.",
               description: "Σχεδιάζουμε την αρχιτεκτονική του συστήματος για να καλύψει τις ανάγκες κλιμάκωσης, ασφάλειας και ενσωμάτωσης. Παίρνετε σαφές τεχνικό σχέδιο πριν αρχίσει η ανάπτυξη.",
             },
             {
-              title: "Σταδιακή ανάπτυξη",
+              title: "Σταδιακή ανάπτυξη.",
               description: "Φτιάχνουμε και παραδίδουμε σε στάδια, ώστε να επικυρώνετε τη λειτουργικότητα νωρίς. Τακτικές επιδείξεις και έλεγχοι διασφαλίζουν ότι είμαστε στο σωστό δρόμο.",
             },
             {
-              title: "Έλεγχοι και θέση σε λειτουργία",
+              title: "Έλεγχοι και θέση σε λειτουργία.",
               description: "Ολοκληρωμένοι έλεγχοι ποιότητας, ανασκόπηση ασφαλείας και σχεδιασμός θέσης σε λειτουργία. Διασφαλίζουμε ότι το σύστημά σας είναι έτοιμο για παραγωγική χρήση και η ομάδα σας είναι έτοιμη.",
             },
           ],
         },
         faq: {
-          title: "Συχνές Ερωτήσεις",
+          title: "Συχνές ερωτήσεις.",
           items: [
             {
               question: "Με τι είδους οργανισμούς δουλεύετε;",
@@ -805,8 +831,8 @@ export const translations = {
       privacy: "Απόρρητο & Cookies",
     },
     projects: {
-      title: "Εμπειρία & Συνεργασίες",
-      subtitle: "Έργα & Εμπειρία",
+      title: "Επιλεγμένες συνεργασίες με οργανισμούς και επιχειρήσεις.",
+      subtitle: "Μερικά από τα έργα που έχουμε παραδώσει.",
       sectionLabel: "03 / έργα",
       categories: {
         government: "Κυβερνητικοί & Φορείς ΕΕ",

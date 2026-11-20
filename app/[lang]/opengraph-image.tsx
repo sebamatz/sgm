@@ -22,8 +22,8 @@ export default async function Image({
 
   const subtitle =
     lang === "el"
-      ? "Επαγγελματική Ανάπτυξη Λογισμικού"
-      : "Professional Software Development";
+      ? "Επαγγελματική ανάπτυξη λογισμικού."
+      : "Professional software development.";
 
   return new ImageResponse(
     (

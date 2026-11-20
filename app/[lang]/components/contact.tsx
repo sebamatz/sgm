@@ -158,6 +158,11 @@ export default function Contact({
               <h2 className="heading-section font-semibold tracking-tight text-ink mb-0 lg:mb-6">
                 {t.title}
               </h2>
+              {t.subtitle ? (
+                <p className="mt-4 text-base md:text-lg text-ink-light leading-relaxed max-w-xl">
+                  {t.subtitle}
+                </p>
+              ) : null}
             </div>
 
             {contactConfig.email && (

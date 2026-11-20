@@ -74,6 +74,11 @@ export default function Services({
           <h2 className="heading-section font-semibold tracking-tight text-ink mb-4">
             {translations.title}
           </h2>
+          {translations.subtitle ? (
+            <p className="text-lg md:text-xl text-ink-light leading-relaxed max-w-3xl">
+              {translations.subtitle}
+            </p>
+          ) : null}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -22,6 +22,11 @@ export default function Clients({ translations }: { translations: any }) {
           <h2 className="heading-section font-semibold tracking-tight text-ink mb-4">
             {t.title}
           </h2>
+          {t.subtitle ? (
+            <p className="text-lg md:text-xl text-ink-light leading-relaxed max-w-3xl">
+              {t.subtitle}
+            </p>
+          ) : null}
         </div>
 
         <div className="space-y-16">
