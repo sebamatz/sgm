@@ -86,7 +86,7 @@ export const translations = {
       viewDetails: "View details →",
       sectionLabel: "01 / services",
       frontend: {
-        title: "Frontend Development & Architecture",
+        title: "Application Development & Architecture",
         description:
           "Modern web applications with clear structure: complex forms, multi-organisation systems and reusable interface architecture.",
         longDescription:
@@ -515,7 +515,7 @@ export const translations = {
       viewDetails: "Δείτε περισσότερα →",
       sectionLabel: "01 / υπηρεσίες",
       frontend: {
-        title: "Ανάπτυξη διεπαφών και αρχιτεκτονική",
+        title: "Ανάπτυξη και αρχιτεκτονική εφαρμογών",
         description:
           "Σύγχρονες διαδικτυακές εφαρμογές με σαφή δομή: σύνθετες φόρμες, συστήματα για πολλούς οργανισμούς και επαναχρησιμοποιούμενη αρχιτεκτονική διεπαφών.",
         longDescription:
