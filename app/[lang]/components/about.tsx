@@ -19,7 +19,7 @@ export default function About({
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="mb-12 md:mb-16">
           <p className="text-xs font-mono uppercase tracking-wider text-ink-light mb-4">
-            04 / about
+            {t.sectionLabel}
           </p>
         </div>
 

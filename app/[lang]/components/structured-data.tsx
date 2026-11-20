@@ -7,8 +7,8 @@ export default function StructuredData({ lang }: { lang: string }) {
     logo: "https://www.sgmsoftware.gr/icon.svg",
     description:
       lang === "el"
-        ? "Επαγγελματική ανάπτυξη custom εφαρμογών και AI automation στην Ελλάδα και Ευρώπη. Web εφαρμογές, React/Next.js development, frontend αρχιτεκτονική, AI agents."
-        : "Professional custom software development and AI automation in Greece and Europe. Web applications, React/Next.js development, frontend architecture, AI agents.",
+        ? "Επαγγελματική ανάπτυξη προσαρμοσμένων εφαρμογών και αυτοματισμών με τεχνητή νοημοσύνη στην Ελλάδα και την Ευρώπη. Διαδικτυακές εφαρμογές, αυτοματοποίηση διαδικασιών, εταιρικές λύσεις και τεχνική καθοδήγηση. Περισσότερα από 10 χρόνια εμπειρίας με φορείς της ΕΕ και εταιρικούς πελάτες."
+        : "Professional custom software development and AI automation in Greece and Europe. Web applications, workflow automation, enterprise solutions and technical guidance. More than 10 years of experience delivering for EU institutions and enterprise clients.",
     areaServed: [
       {
         "@type": "Country",
@@ -20,16 +20,13 @@ export default function StructuredData({ lang }: { lang: string }) {
       },
     ],
     serviceType: [
-      "Frontend Development",
       "Custom Software Development",
       "Web Application Development",
-      "React Development",
-      "Next.js Development",
-      "TypeScript Development",
       "Technical Consulting",
       "AI Automation",
       "AI Agent Development",
       "Workflow Automation",
+      "Enterprise Solutions",
     ],
     founder: {
       "@type": "Person",

@@ -12,9 +12,11 @@ import { Globe } from "lucide-react";
 
 export default function LanguageSwitcher({
   currentLang,
+  switchLabel,
   className = "",
 }: {
   currentLang: string;
+  switchLabel: string;
   className?: string;
 }) {
   return (
@@ -25,7 +27,7 @@ export default function LanguageSwitcher({
           className={`text-slate-600 hover:text-indigo-700 hover:bg-transparent p-2 transition-colors ${className}`}
         >
           <Globe className="h-5 w-5" />
-          <span className="sr-only">Switch language</span>
+          <span className="sr-only">{switchLabel}</span>
         </Button>
       </DropdownMenuTrigger>
 

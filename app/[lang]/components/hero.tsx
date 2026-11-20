@@ -96,25 +96,9 @@ export default function Hero({ translations }: { translations: any }) {
                   <span className="text-slate-400">,</span>
                 </div>
                 <div className="text-slate-500 ml-4">
-                  <span className="text-blue-300">stack</span>
+                  <span className="text-blue-300">focus</span>
                   <span className="text-slate-400">:</span>{" "}
-                  <span className="text-yellow-400">[</span>
-                </div>
-                <div className="text-slate-500 ml-8">
-                  <span className="text-green-400">'React'</span>
-                  <span className="text-slate-400">,</span>{" "}
-                  <span className="text-green-400">'Next.js'</span>
-                  <span className="text-slate-400">,</span>{" "}
-                  <span className="text-green-400">'TypeScript'</span>
-                </div>
-                <div className="text-slate-500 ml-4">
-                  <span className="text-yellow-400">]</span>
-                  <span className="text-slate-400">,</span>
-                </div>
-                <div className="text-slate-500 ml-4">
-                  <span className="text-blue-300">location</span>
-                  <span className="text-slate-400">:</span>{" "}
-                  <span className="text-green-400">'Greece · Remote'</span>
+                  <span className="text-green-400">'{translations.editorFocus}'</span>
                 </div>
                 <div className="text-slate-500">
                   <span className="text-yellow-400">{"}"}</span>
