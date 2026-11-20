@@ -38,7 +38,7 @@ export const translations = {
       ],
     },
     aiAgents: {
-      title: "AI agents that work for you, with human oversight.",
+      title: "AI automation, designed and supervised by experienced engineers.",
       subtitle:
         "We automate repetitive work and keep a person in the review. The agents work with the tools you already use.",
       description1:
@@ -480,7 +480,7 @@ export const translations = {
       ],
     },
     aiAgents: {
-      title: "Πράκτορες AI που εργάζονται για εσάς, με ανθρώπινη επίβλεψη.",
+      title: "Αυτοματισμοί με AI, σχεδιασμένοι και ελεγχόμενοι από έμπειρους μηχανικούς.",
       subtitle:
         "Αυτοματοποιούμε επαναλαμβανόμενες εργασίες και κρατάμε έναν άνθρωπο στον έλεγχο. Οι πράκτορες συνεργάζονται με τα εργαλεία που ήδη χρησιμοποιείτε.",
       description1:
