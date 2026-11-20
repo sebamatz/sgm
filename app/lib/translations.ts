@@ -128,7 +128,7 @@ export const translations = {
       title: "About SGM Software Developers",
       subtitle: "Experience & Expertise",
       description1:
-        "SGM Software Developers is led by Sevastos Matzouranis, a Senior Frontend Engineer and Team Leader with more than 10 years of experience building software for businesses and organisations.",
+        "SGM Software Developers is led by Sevastos Matzouranis, a Senior Software Engineer with more than 10 years of experience building software for businesses and organisations.",
       description2:
         "We recently led frontend development of ENISA's Single Reporting Platform, used by national cybersecurity teams across the EU. We have also worked for the European Patent Office, major travel and booking platforms, enterprise SaaS products and marketplaces. We build complex applications that hold up under real-world requirements.",
       techTitle: "Technology Stack",
@@ -560,7 +560,7 @@ export const translations = {
       title: "Σχετικά με την SGM Software Developers",
       subtitle: "Εμπειρία & Τεχνογνωσία",
       description1:
-        "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, Senior Frontend Engineer και Team Leader με πάνω από 10 χρόνια εμπειρίας στην ανάπτυξη λογισμικού για επιχειρήσεις και οργανισμούς.",
+        "Η SGM Software Developers διευθύνεται από τον Σεβαστό Ματζουράνη, Senior Software Engineer με πάνω από 10 χρόνια εμπειρίας στην ανάπτυξη λογισμικού για επιχειρήσεις και οργανισμούς.",
       description2:
         "Πρόσφατα ηγηθήκαμε της frontend ανάπτυξης του Single Reporting Platform του ENISA, της πλατφόρμας που χρησιμοποιούν οι εθνικές ομάδες κυβερνοασφάλειας σε όλη την ΕΕ. Έχουμε επίσης δουλέψει για το Ευρωπαϊκό Γραφείο Διπλωμάτων Ευρεσιτεχνίας, μεγάλες πλατφόρμες ταξιδιών και κρατήσεων, επιχειρησιακά SaaS προϊόντα και marketplaces. Φτιάχνουμε σύνθετες εφαρμογές που λειτουργούν αξιόπιστα σε πραγματικές συνθήκες.",
       techTitle: "Τεχνολογίες",
