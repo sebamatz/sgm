@@ -17,7 +17,7 @@ export const translations = {
     hero: {
       title: "Professional software development.",
       subtitle:
-        "We build applications, platforms and AI-powered automation for your business. From the first idea through to launch.",
+        "We design and build applications, platforms and automation for your business. We use modern AI-assisted development methods, with experienced engineers designing, guiding and reviewing every step.",
       cta: "Explore Our Services",
       contact: "Contact",
       editorFocus: "Custom software for business",
@@ -459,7 +459,7 @@ export const translations = {
     hero: {
       title: "Επαγγελματική ανάπτυξη λογισμικού.",
       subtitle:
-        "Φτιάχνουμε εφαρμογές, πλατφόρμες και αυτοματισμούς με AI για την επιχείρησή σας. Από την ιδέα μέχρι την κυκλοφορία.",
+        "Σχεδιάζουμε και αναπτύσσουμε εφαρμογές, πλατφόρμες και αυτοματισμούς για την επιχείρησή σας. Αξιοποιούμε σύγχρονες μεθόδους ανάπτυξης με AI, ενώ έμπειροι μηχανικοί σχεδιάζουν, καθοδηγούν και ελέγχουν κάθε βήμα.",
       cta: "Οι Υπηρεσίες μας",
       contact: "Επικοινωνία",
       editorFocus: "Προσαρμοσμένο λογισμικό για επιχειρήσεις",
